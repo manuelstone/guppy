@@ -3,8 +3,8 @@ id: nilovelez-flypad-keepalive
 nombre: Flypad Keepalive
 repo: https://github.com/nilovelez/flypad-keepalive
 status_url: https://raw.githubusercontent.com/nilovelez/flypad-keepalive/main/guppy/STATUS.md
-estado: activo
-siguiente_paso: "H2: mensajes de error claros (falta ViGEmBus, Bluetooth apagado) y que la ventana no se cierre de golpe"
+estado: terminado
+siguiente_paso: Nada pendiente. Versión 1.0.0 publicada.
 bloqueo: ""
 actualizado: 2026-10-08
 ---
@@ -34,3 +34,4 @@ Stack: Python 3 con `bleak` (BLE) y `vgamepad` (mando virtual). Plataforma: Wind
 
 - 2026-10-08: ficha creada a partir del `CLAUDE.md` del repo; mensaje de alta entregado.
 - 2026-10-08: corregida la nota de que no existía `guppy/STATUS.md` (la URL raw devolvía 404 por caché); ficha sincronizada con él.
+- 2026-10-09: sincronizada con `guppy/STATUS.md`: terminado, 1.0.0 publicada. En el backlog para la próxima versión: número de versión en el .exe y en el pie de la ventana.
