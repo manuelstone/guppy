@@ -2,7 +2,7 @@
 id: <usuario>-<slug>
 nombre: <Nombre legible>
 repo: https://github.com/<usuario>/<slug>
-status_url: https://github.com/<usuario>/<slug>/blob/main/guppy/STATUS.md
+status_url: https://raw.githubusercontent.com/<usuario>/<slug>/main/guppy/STATUS.md
 estado: pendiente            # activo | bloqueado | en-pausa | pendiente | terminado
 siguiente_paso: <una frase>
 bloqueo: ""                  # qué lo bloquea y quién/qué se espera; vacío si no aplica

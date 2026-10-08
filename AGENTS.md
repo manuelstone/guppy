@@ -49,7 +49,7 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 
 ### Al consultar el estado ("qué está a medias", "qué está bloqueado", "con cuál sigo")
 
-1. Para cada proyecto implicado, lee su `guppy/STATUS.md` en la URL de la ficha (`status_url`).
+1. Para cada proyecto implicado, lee su `guppy/STATUS.md` por HTTP desde la URL raw de la ficha (`status_url`, en `raw.githubusercontent.com`). **No clones el repo del proyecto**: con muchos proyectos no escala y solo hace falta ese archivo.
 2. Si el estado ha cambiado, actualiza la cabecera de la ficha y su línea en `index.md`, con `actualizado:` a la fecha de hoy.
 3. Responde a partir del estado actualizado. Si no puedes leer un STATUS.md, dilo y usa el estado guardado indicando su fecha.
 

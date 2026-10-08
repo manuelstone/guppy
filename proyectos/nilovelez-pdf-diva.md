@@ -2,7 +2,7 @@
 id: nilovelez-pdf-diva
 nombre: PDF Diva
 repo: https://github.com/nilovelez/pdf-diva
-status_url: https://github.com/nilovelez/pdf-diva/blob/main/guppy/STATUS.md
+status_url: https://raw.githubusercontent.com/nilovelez/pdf-diva/main/guppy/STATUS.md
 estado: bloqueado
 siguiente_paso: Probar el .dmg del Mac en un Mac real y corregir lo que salga; después, Linux (Debian y Ubuntu)
 bloqueo: "Nilo: resultado de la prueba del .dmg en un Mac real. Microsoft: certificación de la 1.3.0 en la Store (al aprobarse, volver a poner el botón de la Store en la web)."
