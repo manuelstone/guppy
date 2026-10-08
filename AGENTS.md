@@ -49,13 +49,13 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 
 ### Al consultar el estado ("qué está a medias", "qué está bloqueado", "con cuál sigo")
 
-1. Para cada proyecto implicado, lee su `guppy/STATUS.md` por HTTP desde la URL raw de la ficha (`status_url`, en `raw.githubusercontent.com`). **No clones el repo del proyecto**: con muchos proyectos no escala y solo hace falta ese archivo.
+1. Para cada proyecto implicado, lee su `guppy/STATUS.md` por HTTP desde la URL raw de la ficha (`status_url`, en `raw.githubusercontent.com`), añadiendo siempre el parámetro `nocache` con la fecha Unix del momento de la lectura (`date +%s`), por ejemplo `.../guppy/STATUS.md?nocache=1791478800`. Así cada lectura usa una URL única y no puede devolver una versión en caché, ni un 404 antiguo ni un estado viejo. Usa ese nombre de parámetro y no `t`: con `?t=` se comprobó (2026-10-08) que seguía llegando un 404 cacheado de la URL sin parámetros. **No clones el repo del proyecto**: con muchos proyectos no escala y solo hace falta ese archivo.
 2. Si el estado ha cambiado, actualiza la cabecera de la ficha y su línea en `index.md`, con `actualizado:` a la fecha de hoy.
 3. Responde a partir del estado actualizado. Si no puedes leer un STATUS.md, dilo y usa el estado guardado indicando su fecha.
 
 ### Al añadir un proyecto
 
-1. Si el proyecto tiene repo, intenta leer su `guppy/STATUS.md` por la URL raw. Si no puedes leerlo (un 404, un error o un bloqueo), dile al usuario exactamente eso: que no has podido leer el archivo y por qué. No concluyas ni escribas que no existe. Puede que aún no le haya pedido al agente del proyecto que lo cree (para eso es el mensaje del paso 4), pero eso lo confirma el usuario. Mientras no lo hayas leído, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
+1. Si el proyecto tiene repo, intenta leer su `guppy/STATUS.md` por la URL raw, con el parámetro de fecha Unix descrito en «Al consultar el estado». Si no puedes leerlo (un 404, un error o un bloqueo), dile al usuario exactamente eso: que no has podido leer el archivo y por qué. No concluyas ni escribas que no existe. Puede que aún no le haya pedido al agente del proyecto que lo cree (para eso es el mensaje del paso 4), pero eso lo confirma el usuario. Mientras no lo hayas leído, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
 2. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
 3. Añade su línea a `index.md`.
 4. Si el proyecto tiene repo, entrega al usuario el mensaje de `plantillas/mensaje-alta.md`, listo para pegar en una sesión de ese proyecto. Es autocontenido: el agente del proyecto no necesita acceso a Guppy.
