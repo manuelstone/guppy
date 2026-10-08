@@ -13,10 +13,10 @@ Este proyecto está registrado en Guppy, mi gestor de proyectos. Haz esto una so
 ```markdown
 ## Estado del proyecto (Guppy)
 
-El estado de este proyecto vive en `STATUS.md`, en la raíz del repo. Lo lee Guppy, el gestor de proyectos de Nilo.
+Todo lo relacionado con Guppy, el gestor de proyectos de Nilo, vive en el directorio `guppy/` de la raíz del repo, separado de los archivos del proyecto. No guardes datos de Guppy fuera de ese directorio ni datos del proyecto dentro de él.
 
-Al terminar cualquier sesión que cambie el estado del proyecto:
-1. Actualiza la cabecera de `STATUS.md` (estado, siguiente_paso, bloqueo, actualizado).
+El estado del proyecto está en `guppy/STATUS.md`. Al terminar cualquier sesión que cambie el estado del proyecto:
+1. Actualiza la cabecera de `guppy/STATUS.md` (estado, siguiente_paso, bloqueo, actualizado).
 2. Añade una entrada breve al principio de su Diario.
 3. Incluye el cambio en el commit.
 
@@ -24,7 +24,7 @@ Estados: activo, bloqueado, en-pausa, pendiente, terminado. Si está bloqueado, 
 No uses CHANGELOG.md para esto: es para usuarios.
 ```
 
-2. Crea `STATUS.md` en la raíz con este formato y el estado real del proyecto:
+2. Crea el directorio `guppy/` en la raíz del repo y, dentro, `guppy/STATUS.md` con este formato y el estado real del proyecto:
 
 ```markdown
 ---
@@ -40,8 +40,9 @@ actualizado: <HOY>
 
 ## Diario
 
-- <HOY>: STATUS.md creado.
+- <HOY>: guppy/STATUS.md creado.
 ```
 
-3. Si el `CLAUDE.md` ya tenía una sección de estado, déjala en una línea que remita a `STATUS.md`, para no tener el estado duplicado.
-4. Haz commit y push, y dime la URL del repo para registrarla en Guppy.
+3. Si el `CLAUDE.md` ya tenía una sección de estado, déjala en una línea que remita a `guppy/STATUS.md`, para no tener el estado duplicado. Si existe un `STATUS.md` en la raíz, muévelo a `guppy/STATUS.md`.
+4. Comprueba que ninguna regla de build, empaquetado o publicación (por ejemplo, la configuración del empaquetador o de la web) incluye el directorio `guppy/`; si alguna lo incluiría, exclúyelo.
+5. Haz commit y push, y dime la URL del repo para registrarla en Guppy.

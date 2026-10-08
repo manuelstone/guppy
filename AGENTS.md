@@ -10,7 +10,7 @@ CLAUDE.md                  ← remite a este archivo
 proyectos/index.md         ← panorama: una línea por proyecto
 proyectos/<id>.md          ← ficha de cada proyecto
 plantillas/ficha.md        ← plantilla para fichas nuevas
-plantillas/STATUS.md       ← plantilla del STATUS.md que vive en cada proyecto
+plantillas/STATUS.md       ← plantilla del guppy/STATUS.md que vive en cada proyecto
 plantillas/mensaje-alta.md ← mensaje de alta para la sesión de cada proyecto
 ```
 
@@ -20,9 +20,11 @@ Hay dos niveles de información y cada uno tiene un dueño:
 
 | Dónde | Qué es | Quién lo escribe |
 |---|---|---|
-| `STATUS.md` en el repo de cada proyecto | Estado operativo y diario de trabajo. **Fuente de verdad del estado.** | El agente que trabaja en ese proyecto, al terminar cada sesión |
+| `guppy/STATUS.md` en el repo de cada proyecto | Estado operativo y diario de trabajo. **Fuente de verdad del estado.** | El agente que trabaja en ese proyecto, al terminar cada sesión |
 | `proyectos/<id>.md` aquí | Ficha: de qué va, dependencias, relación con otros proyectos, notas, puntero al STATUS.md y una copia del estado | El agente de Guppy |
 | `proyectos/index.md` aquí | Una línea por proyecto para consultas rápidas | El agente de Guppy |
+
+En cada proyecto, **todo lo de Guppy vive en el directorio `guppy/`** de la raíz del repo, para no mezclarlo con los archivos del propio proyecto. Hoy contiene `guppy/STATUS.md`; cualquier archivo nuevo de Guppy en un proyecto va también ahí.
 
 El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa como diario.
 
@@ -47,7 +49,7 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 
 ### Al consultar el estado ("qué está a medias", "qué está bloqueado", "con cuál sigo")
 
-1. Para cada proyecto implicado, lee su `STATUS.md` en la URL de la ficha.
+1. Para cada proyecto implicado, lee su `guppy/STATUS.md` en la URL de la ficha (`status_url`).
 2. Si el estado ha cambiado, actualiza la cabecera de la ficha y su línea en `index.md`, con `actualizado:` a la fecha de hoy.
 3. Responde a partir del estado actualizado. Si no puedes leer un STATUS.md, dilo y usa el estado guardado indicando su fecha.
 

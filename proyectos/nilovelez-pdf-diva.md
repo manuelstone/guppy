@@ -2,7 +2,7 @@
 id: nilovelez-pdf-diva
 nombre: PDF Diva
 repo: https://github.com/nilovelez/pdf-diva
-status_url: https://github.com/nilovelez/pdf-diva/blob/main/STATUS.md
+status_url: https://github.com/nilovelez/pdf-diva/blob/main/guppy/STATUS.md
 estado: bloqueado
 siguiente_paso: Probar en un Mac real el .dmg universal de la rama feat/mac (hito 10)
 bloqueo: Espera a que Nilo pruebe el .dmg en un Mac; no hay Mac en el entorno de desarrollo
@@ -25,7 +25,7 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 
 ## Notas operativas
 
-- Mientras el repo no tenga `STATUS.md`, el estado está en la sección "Estado actual" de su `CLAUDE.md`. El `CHANGELOG.md` es para usuarios.
+- Mientras el repo no tenga `guppy/STATUS.md`, el estado está en la sección "Estado actual" de su `CLAUDE.md`. El `CHANGELOG.md` es para usuarios.
 - Documentación técnica: `docs/developer-guide.md`; la web, en `docs/website.md`.
 - Equipo dedicado de pruebas y compilación MSIX: "Marcianito".
 - Principios del proyecto: sencillo de mantener, estable, autocontenido; contención frente a funciones nuevas.
@@ -34,3 +34,4 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 ## Historial de la ficha
 
 - 2026-10-08: ficha creada a partir del README, CHANGELOG y CLAUDE.md del repo.
+- 2026-10-08: el estado pasa a `guppy/STATUS.md`; mensaje de alta entregado, pendiente de que la sesión de PDF Diva lo aplique.
