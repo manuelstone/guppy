@@ -43,6 +43,6 @@ actualizado: <HOY>
 - <HOY>: guppy/STATUS.md creado.
 ```
 
-3. Si el `CLAUDE.md` ya tenía una sección de estado, déjala en una línea que remita a `guppy/STATUS.md`, para no tener el estado duplicado. Si existe un `STATUS.md` en la raíz, muévelo a `guppy/STATUS.md`.
+3. Si el `CLAUDE.md` ya tenía una sección de estado, déjala en una línea que remita a `guppy/STATUS.md`, para no tener el estado duplicado.
 4. Comprueba que ninguna regla de build, empaquetado o publicación (por ejemplo, la configuración del empaquetador o de la web) incluye el directorio `guppy/`; si alguna lo incluiría, exclúyelo.
 5. Haz commit y push, y dime la URL del repo para registrarla en Guppy.
