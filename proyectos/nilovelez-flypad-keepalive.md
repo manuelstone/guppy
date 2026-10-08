@@ -4,7 +4,7 @@ nombre: Flypad Keepalive
 repo: https://github.com/nilovelez/flypad-keepalive
 status_url: https://raw.githubusercontent.com/nilovelez/flypad-keepalive/main/guppy/STATUS.md
 estado: activo
-siguiente_paso: Empaquetar flypad_bridge.py como un único .exe con PyInstaller
+siguiente_paso: "H2: mensajes de error claros (falta ViGEmBus, Bluetooth apagado) y que la ventana no se cierre de golpe"
 bloqueo: ""
 actualizado: 2026-10-08
 ---
@@ -26,9 +26,11 @@ Stack: Python 3 con `bleak` (BLE) y `vgamepad` (mando virtual). Plataforma: Wind
 
 - La documentación técnica (protocolo BLE, lo que no funciona, tareas abiertas) está en el `CLAUDE.md` del repo.
 - El emparejamiento en Windows y la conexión por USB se cortan a los 60-120 s; la solución es la conexión GATT directa. Por USB no hay solución.
-- Situación a 2026-10-08, según el `CLAUDE.md`: el script funciona más de 10 minutos en Uncrashed sin cortes y con el keep-alive desactivado (disponible con `--keepalive`). Pendiente: .exe con PyInstaller, copia del instalador de ViGEmBus 1.22.0 en el repo, aviso claro si falta el driver, README y decidir entre consola o app con icono en la bandeja.
-- El repo aún no tiene `guppy/STATUS.md`; el estado de esta ficha sale del `CLAUDE.md` y de lo que ha contado Nilo.
+- El estado está en `guppy/STATUS.md` del repo (creado el 2026-10-08).
+- Decisiones: programa de consola en una ventana pequeña que se deja abierta, sin icono en la bandeja. El keep-alive se ha quitado del código porque las pruebas mostraron que no hace falta. Dependencias fijadas: bleak 3.0.2 y vgamepad 0.1.0 (Python 3.14).
+- Hitos: H1 (limpieza, dependencias, `.gitignore`) terminado. Quedan H2 (mensajes de error y que la ventana no se cierre de golpe), H3 (instalador de ViGEmBus 1.22.0 con su licencia en `drivers/`), H4 (.exe único con PyInstaller), H5 (README) y H6 opcional (release en GitHub).
 
 ## Historial de la ficha
 
 - 2026-10-08: ficha creada a partir del `CLAUDE.md` del repo; mensaje de alta entregado.
+- 2026-10-08: corregida la nota de que no existía `guppy/STATUS.md` (la URL raw devolvía 404 por caché); ficha sincronizada con él.
