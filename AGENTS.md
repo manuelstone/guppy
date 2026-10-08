@@ -55,7 +55,7 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 
 ### Al añadir un proyecto
 
-1. Si el proyecto tiene repo, comprueba si ya existe su `guppy/STATUS.md` (por la URL raw). Si no existe, avisa al usuario de forma explícita: lo normal es que aún no le haya pedido al agente del proyecto que lo cree, y para eso es el mensaje del paso 4. Mientras no exista, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
+1. Si el proyecto tiene repo, intenta leer su `guppy/STATUS.md` por la URL raw. Si no puedes leerlo (un 404, un error o un bloqueo), dile al usuario exactamente eso: que no has podido leer el archivo y por qué. No concluyas ni escribas que no existe. Puede que aún no le haya pedido al agente del proyecto que lo cree (para eso es el mensaje del paso 4), pero eso lo confirma el usuario. Mientras no lo hayas leído, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
 2. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
 3. Añade su línea a `index.md`.
 4. Si el proyecto tiene repo, entrega al usuario el mensaje de `plantillas/mensaje-alta.md`, listo para pegar en una sesión de ese proyecto. Es autocontenido: el agente del proyecto no necesita acceso a Guppy.
@@ -67,6 +67,7 @@ Commit y push con un mensaje claro (`estado: pdf-diva bloqueado esperando prueba
 ## Reglas
 
 - No inventes estado: si no lo has leído en un STATUS.md o no te lo ha dicho el usuario, no lo escribas.
+- No poder leer un archivo no significa que no exista. Si una lectura falla, informa del fallo tal cual.
 - No edites repos de otros proyectos desde aquí, salvo petición expresa.
 - La ficha es contexto y memoria; el estado de verdad está en el STATUS.md del proyecto.
 - Escribe en español de España, conciso.
