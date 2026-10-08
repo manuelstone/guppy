@@ -55,9 +55,10 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 
 ### Al añadir un proyecto
 
-1. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
-2. Añade su línea a `index.md`.
-3. Si el proyecto tiene repo, entrega al usuario el mensaje de `plantillas/mensaje-alta.md`, listo para pegar en una sesión de ese proyecto. Es autocontenido: el agente del proyecto no necesita acceso a Guppy.
+1. Si el proyecto tiene repo, comprueba si ya existe su `guppy/STATUS.md` (por la URL raw). Si no existe, avisa al usuario de forma explícita: lo normal es que aún no le haya pedido al agente del proyecto que lo cree, y para eso es el mensaje del paso 4. Mientras no exista, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
+2. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
+3. Añade su línea a `index.md`.
+4. Si el proyecto tiene repo, entrega al usuario el mensaje de `plantillas/mensaje-alta.md`, listo para pegar en una sesión de ese proyecto. Es autocontenido: el agente del proyecto no necesita acceso a Guppy.
 
 ### Al terminar una sesión que haya cambiado algo
 
