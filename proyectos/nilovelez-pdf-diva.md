@@ -5,8 +5,8 @@ repo: https://github.com/nilovelez/pdf-diva
 status_url: https://raw.githubusercontent.com/nilovelez/pdf-diva/main/guppy/STATUS.md
 estado: bloqueado
 siguiente_paso: Probar el .dmg del Mac en un Mac real y corregir lo que salga; después, Linux (Debian y Ubuntu)
-bloqueo: "Nilo: resultado de la prueba del .dmg en un Mac real. Microsoft: certificación de la 1.3.0 en la Store (al aprobarse, volver a poner el botón de la Store en la web)."
-actualizado: 2026-10-08
+bloqueo: "Nilo: resultado de la prueba del .dmg en un Mac real."
+actualizado: 2026-10-09
 ---
 
 # PDF Diva
@@ -29,10 +29,11 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 - Documentación técnica: `docs/developer-guide.md`; la web, en `docs/website.md`.
 - Equipo dedicado de pruebas y compilación MSIX: "Marcianito".
 - Principios del proyecto: sencillo de mantener, estable, autocontenido; contención frente a funciones nuevas.
-- Situación a 2026-10-08: v1.3.0 publicada en GitHub (2026-10-07). En la Store, la 1.2.0 está aprobada y la 1.3.0 se envió el 2026-10-08 y está en certificación.
+- Situación a 2026-10-08: v1.3.0 publicada en GitHub (2026-10-07). En la Store, la 1.3.0 se aprobó el 2026-10-09 y ha vuelto el botón de la Store a la web.
 
 ## Historial de la ficha
 
 - 2026-10-08: ficha creada a partir del README, CHANGELOG y CLAUDE.md del repo.
 - 2026-10-08: el estado pasa a `guppy/STATUS.md`; mensaje de alta entregado.
 - 2026-10-08: la sesión de PDF Diva crea `guppy/STATUS.md`; ficha sincronizada con él.
+- 2026-10-09: sincronizada con `guppy/STATUS.md`: la Store aprueba la 1.3.0; queda solo el bloqueo de la prueba en Mac.
