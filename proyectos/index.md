@@ -1,6 +1,6 @@
 # Panorama de proyectos
 
-Una línea por proyecto. Detalle en cada ficha. Ordenado por estado: bloqueado, activo, en-pausa, pendiente, terminado.
+Una línea por proyecto. Detalle en cada ficha. Ordenado por estado: bloqueado, activo, en-pausa, pendiente, terminado. Las ideas sin decidir están en el [backlog](BACKLOG.md).
 
 | Proyecto | Estado | Siguiente paso / bloqueo | Actualizado |
 |---|---|---|---|

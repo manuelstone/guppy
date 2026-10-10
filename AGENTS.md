@@ -9,6 +9,7 @@ AGENTS.md                  ← este archivo: reglas y flujo de trabajo
 CLAUDE.md                  ← remite a este archivo
 proyectos/index.md         ← panorama: una línea por proyecto
 proyectos/<id>.md          ← ficha de cada proyecto
+proyectos/BACKLOG.md       ← ideas de proyectos sin decidir
 plantillas/ficha.md        ← plantilla para fichas nuevas
 plantillas/STATUS.md       ← plantilla del guppy/STATUS.md que vive en cada proyecto
 plantillas/mensaje-alta.md ← mensaje de alta para la sesión de cada proyecto
@@ -59,6 +60,16 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 2. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
 3. Añade su línea a `index.md`.
 4. Si el proyecto tiene repo, entrega al usuario el mensaje de `plantillas/mensaje-alta.md`, listo para pegar en una sesión de ese proyecto. Es autocontenido: el agente del proyecto no necesita acceso a Guppy.
+
+### Al añadir una idea al backlog
+
+1. Añade una fila arriba de la tabla de `proyectos/BACKLOG.md` (lo más reciente, primero): nombre de la idea, resumen de una frase y fecha de hoy. Usa las palabras del usuario; no amplíes la idea.
+2. El backlog es solo para proyectos nuevos sin decidir. Las mejoras de un proyecto que ya existe van al backlog de su propio repo, no aquí; si el usuario pide apuntar una, díselo.
+
+### Al sacar una idea del backlog para hacerla
+
+1. Quita su fila de `BACKLOG.md`.
+2. Sigue el ritual de «Al añadir un proyecto», con estado `pendiente` o `activo` según diga el usuario. Así cada cosa está en un solo sitio.
 
 ### Al terminar una sesión que haya cambiado algo
 
