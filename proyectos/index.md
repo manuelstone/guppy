@@ -4,5 +4,5 @@ Una línea por proyecto. Detalle en cada ficha. Ordenado por estado: bloqueado, 
 
 | Proyecto | Estado | Siguiente paso / bloqueo | Actualizado |
 |---|---|---|---|
-| [PDF Diva](nilovelez-pdf-diva.md) | bloqueado | Espera prueba del .dmg en un Mac real (hito 10); Linux ya probado | 2026-10-09 |
+| [PDF Diva](nilovelez-pdf-diva.md) | bloqueado | Espera certificación de la 1.4.0 en la Store; después, mantenimiento y promoción | 2026-10-10 |
 | [Flypad Keepalive](nilovelez-flypad-keepalive.md) | terminado | Nada pendiente. Versión 1.0.0 publicada | 2026-10-08 |
