@@ -1,8 +1,8 @@
 ---
-id: nilovelez-cf7-honeypot-classic
+id: nilovelez-classic-honeypot-for-cf7
 nombre: Classic Honeypot for CF7
-repo: https://github.com/nilovelez/cf7-honeypot-classic
-status_url: https://raw.githubusercontent.com/nilovelez/cf7-honeypot-classic/main/guppy/STATUS.md
+repo: https://github.com/nilovelez/classic-honeypot-for-cf7
+status_url: https://raw.githubusercontent.com/nilovelez/classic-honeypot-for-cf7/main/guppy/STATUS.md
 estado: activo
 siguiente_paso: "Decidir y autorizar el hito 5 (el siguiente tras las correcciones de upstream)"
 bloqueo: ""
@@ -30,3 +30,4 @@ Fork GPL del plugin de WordPress Honeypot for Contact Form 7 (de Nocean), a part
 
 - 2026-10-11: ficha creada a partir de `guppy/STATUS.md` y `CLAUDE.md` del repo; sale del backlog, donde estaba como «CF7 Honeypot Classic».
 - 2026-10-11: Nilo confirma que aún no hay README ni empaquetado.
+- 2026-10-11: el repo cambia de nombre a `nilovelez/classic-honeypot-for-cf7` (antes `cf7-honeypot-classic`); actualizados id, repo y status_url.
