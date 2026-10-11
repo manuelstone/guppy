@@ -56,6 +56,13 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 
 ### Al añadir un proyecto
 
+Hay dos vías:
+
+- **Desde una sesión de Guppy** (como hasta ahora): sigue los pasos de abajo y entrega al usuario el mensaje de alta.
+- **Desde la sesión del propio proyecto, con la skill `registrar-en-guppy`** de la cuenta de Nilo. La skill clona Guppy en una carpeta fuera del proyecto, aplica `plantillas/mensaje-alta.md` en el proyecto y después sigue estos mismos pasos aquí, con dos diferencias: el paso 1 usa el `guppy/STATUS.md` que acaba de crear en local (no hace falta leerlo por HTTP) y el paso 4 no aplica. La skill no lleva reglas propias: todo lo lee de este archivo y de `plantillas/`, así que cualquier cambio de flujo se hace aquí.
+
+En los dos casos: si ya existe una ficha para ese repo, no crees otra; actualízala. Si el proyecto estaba en `BACKLOG.md` (aunque sea con otro nombre), quita su fila y anótalo en el historial de la ficha.
+
 1. Si el proyecto tiene repo, intenta leer su `guppy/STATUS.md` por la URL raw, con el parámetro de fecha Unix descrito en «Al consultar el estado». Si no puedes leerlo (un 404, un error o un bloqueo), dile al usuario exactamente eso: que no has podido leer el archivo y por qué. No concluyas ni escribas que no existe. Puede que aún no le haya pedido al agente del proyecto que lo cree (para eso es el mensaje del paso 4), pero eso lo confirma el usuario. Mientras no lo hayas leído, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
 2. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
 3. Añade su línea a `index.md`.
