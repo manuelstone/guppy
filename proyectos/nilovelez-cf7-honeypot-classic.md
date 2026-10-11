@@ -24,8 +24,9 @@ Fork GPL del plugin de WordPress Honeypot for Contact Form 7 (de Nocean), a part
 
 - El estado está en `guppy/STATUS.md` del repo (creado el 2026-10-11).
 - Situación a 2026-10-11: hitos 1 a 4 terminados y fusionados en `main` (cambio de marca, retirada de anuncios, revisión de código y correcciones de upstream). Versión de trabajo: 1.0.0.
-- Sin confirmar: si el empaquetado del plugin (zip, SVN de WordPress.org) excluye el directorio `guppy/`.
+- Aún no hay README ni herramienta de empaquetado (proyecto recién empezado). Cuando se monte el empaquetado (zip, SVN de WordPress.org), debe excluir el directorio `guppy/`.
 
 ## Historial de la ficha
 
 - 2026-10-11: ficha creada a partir de `guppy/STATUS.md` y `CLAUDE.md` del repo; sale del backlog, donde estaba como «CF7 Honeypot Classic».
+- 2026-10-11: Nilo confirma que aún no hay README ni empaquetado.
