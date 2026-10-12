@@ -4,6 +4,6 @@ Una línea por proyecto. Detalle en cada ficha. Ordenado por estado: bloqueado, 
 
 | Proyecto | Estado | Siguiente paso / bloqueo | Actualizado |
 |---|---|---|---|
-| [PDF Diva](nilovelez-pdf-diva.md) | bloqueado | Espera certificación de la 1.4.0 en la Store; después, mantenimiento y promoción | 2026-10-10 |
-| [Classic Honeypot for CF7](nilovelez-classic-honeypot-for-cf7.md) | activo | Decidir y autorizar el hito 5 | 2026-10-11 |
+| [Classic Honeypot for CF7](nilovelez-classic-honeypot-for-cf7.md) | bloqueado | Espera respuesta de WordPress.org a la apelación del rechazo por duplicado | 2026-10-12 |
+| [PDF Diva](nilovelez-pdf-diva.md) | activo | Promoción y mantenimiento; hito 11 (v1.5.0) espera opiniones de usuarios | 2026-10-12 |
 | [Flypad Keepalive](nilovelez-flypad-keepalive.md) | terminado | Nada pendiente. Versión 1.0.0 publicada | 2026-10-08 |

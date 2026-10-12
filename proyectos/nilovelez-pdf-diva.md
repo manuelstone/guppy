@@ -3,10 +3,10 @@ id: nilovelez-pdf-diva
 nombre: PDF Diva
 repo: https://github.com/nilovelez/pdf-diva
 status_url: https://raw.githubusercontent.com/nilovelez/pdf-diva/main/guppy/STATUS.md
-estado: bloqueado
-siguiente_paso: "Mantenimiento y promoción. Después del 19 de octubre, comprobar que el build de Linux sigue bien con Ubuntu 26 (o fijar ubuntu-24.04)"
-bloqueo: "Microsoft: certificación de la 1.4.0 en la Store."
-actualizado: 2026-10-10
+estado: activo
+siguiente_paso: "Promoción y mantenimiento. El hito 11 (refinamiento, v1.5.0) espera más opiniones de usuarios. Después del 19 de octubre, comprobar el build de Linux con Ubuntu 26 (o fijar ubuntu-24.04)"
+bloqueo: ""
+actualizado: 2026-10-12
 ---
 
 # PDF Diva
@@ -20,7 +20,7 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 ## Dependencias y relaciones
 
 - Distribución en Windows: Microsoft Store (MSIX) y releases de GitHub (instalador NSIS sin firmar).
-- Web del proyecto en GitHub Pages: https://nilovelez.github.io/pdf-diva/
+- Web del proyecto: https://pdfdiva.nilovelez.com (desde el 2026-10-11; las direcciones antiguas de GitHub Pages redirigen).
 - Hito 10 (Mac y Linux) terminado: .dmg probado en un MacBook con Apple silicon; ramas `feat/mac` y `feat/linux` fusionadas en `main`. La web enlaza las descargas de Windows, Mac y Linux.
 
 ## Notas operativas
@@ -29,7 +29,7 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 - Documentación técnica: `docs/developer-guide.md`; la web, en `docs/website.md`.
 - Equipo dedicado de pruebas y compilación MSIX: "Marcianito".
 - Principios del proyecto: sencillo de mantener, estable, autocontenido; contención frente a funciones nuevas.
-- Situación a 2026-10-10: v1.4.0 publicada en GitHub (Windows, Mac y Linux, con los idiomas nuevos registrados) y enviada a la Store, en certificación.
+- Situación a 2026-10-12: v1.4.0 publicada en GitHub y aprobada en la Store (2026-10-11). Empieza la promoción: textos de prensa y BrandScript (StoryBrand) en `press/`, portada de la web reescrita. Hito 11 (refinamiento, v1.5.0) abierto, con tres cambios menores en el `BACKLOG.md` del repo.
 
 ## Historial de la ficha
 
@@ -39,3 +39,4 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 - 2026-10-09: sincronizada con `guppy/STATUS.md`: la Store aprueba la 1.3.0; queda solo el bloqueo de la prueba en Mac.
 - 2026-10-10: sincronizada con `guppy/STATUS.md`: Linux probado en máquinas reales; sigue bloqueado por la prueba en Mac.
 - 2026-10-11: sincronizada con `guppy/STATUS.md`: Mac probado, v1.4.0 publicada; bloqueado solo por la certificación de la Store.
+- 2026-10-12: sincronizada con `guppy/STATUS.md`: la Store aprueba la 1.4.0 y pasa a activo (promoción y mantenimiento); web nueva en pdfdiva.nilovelez.com.
