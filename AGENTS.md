@@ -54,6 +54,7 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 2. Lee su `guppy/STATUS.md` por HTTP desde la URL raw de la ficha (`status_url`, en `raw.githubusercontent.com`), añadiendo siempre el parámetro `nocache` con la fecha Unix del momento de la lectura (`date +%s`), por ejemplo `.../guppy/STATUS.md?nocache=1791478800`. Así cada lectura usa una URL única y no puede devolver una versión en caché, ni un 404 antiguo ni un estado viejo. Usa ese nombre de parámetro y no `t`: con `?t=` se comprobó (2026-10-08) que seguía llegando un 404 cacheado de la URL sin parámetros. **No clones el repo del proyecto**: con muchos proyectos no escala y solo hace falta ese archivo.
 3. Si el estado ha cambiado, actualiza la cabecera de la ficha y su línea en `index.md`, con `actualizado:` a la fecha de hoy.
 4. Responde a partir del estado actualizado. Si no puedes leer un STATUS.md, dilo y usa el estado guardado indicando su fecha.
+5. No menciones los proyectos `terminado` salvo que el usuario pregunte por ellos expresamente. Sigue leyendo su STATUS.md igualmente: si alguno ha dejado de estar terminado (se ha reabierto), eso sí se cuenta.
 
 ### Al añadir un proyecto
 
