@@ -13,6 +13,7 @@ proyectos/BACKLOG.md       ← ideas de proyectos sin decidir
 plantillas/ficha.md        ← plantilla para fichas nuevas
 plantillas/STATUS.md       ← plantilla del guppy/STATUS.md que vive en cada proyecto
 plantillas/mensaje-alta.md ← mensaje de alta para la sesión de cada proyecto
+skills/registrar-en-guppy/ ← skill para dar de alta un proyecto desde su propia sesión
 ```
 
 ## Modelo
@@ -61,7 +62,7 @@ El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa 
 Hay dos vías:
 
 - **Desde una sesión de Guppy** (como hasta ahora): sigue los pasos de abajo y entrega al usuario el mensaje de alta.
-- **Desde la sesión del propio proyecto, con la skill `registrar-en-guppy`** de la cuenta de Nilo. La skill clona Guppy en una carpeta fuera del proyecto, aplica `plantillas/mensaje-alta.md` en el proyecto y después sigue estos mismos pasos aquí, con dos diferencias: el paso 1 usa el `guppy/STATUS.md` que acaba de crear en local (no hace falta leerlo por HTTP) y el paso 4 no aplica. La skill no lleva reglas propias: todo lo lee de este archivo y de `plantillas/`, así que cualquier cambio de flujo se hace aquí.
+- **Desde la sesión del propio proyecto en Claude Code local, con la skill `registrar-en-guppy`**, que vive en `skills/registrar-en-guppy/` de este repo. Se instala en cada equipo con `npx skills add manuelstone/guppy -g -a claude-code` y se actualiza con `npx skills update -g`. Si cambias la skill, haz commit aquí y recuérdale a Nilo que la actualice en sus equipos. La skill clona Guppy en una carpeta fuera del proyecto, aplica `plantillas/mensaje-alta.md` en el proyecto y después sigue estos mismos pasos aquí, con dos diferencias: el paso 1 usa el `guppy/STATUS.md` que acaba de crear en local (no hace falta leerlo por HTTP) y el paso 4 no aplica. La skill no lleva reglas propias: todo lo lee de este archivo y de `plantillas/`, así que cualquier cambio de flujo se hace aquí.
 
 En los dos casos: si ya existe una ficha para ese repo, no crees otra; actualízala. Si el proyecto estaba en `BACKLOG.md` (aunque sea con otro nombre), quita su fila y anótalo en el historial de la ficha.
 
