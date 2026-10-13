@@ -4,9 +4,9 @@ nombre: PDF Diva
 repo: https://github.com/nilovelez/pdf-diva
 status_url: https://raw.githubusercontent.com/nilovelez/pdf-diva/main/guppy/STATUS.md
 estado: activo
-siguiente_paso: "Promoción y mantenimiento. El hito 11 (refinamiento, v1.5.0) espera más opiniones de usuarios. Después del 19 de octubre, comprobar el build de Linux con Ubuntu 26 (o fijar ubuntu-24.04)"
+siguiente_paso: "Nilo publica la release v1.5.0 en GitHub (instalador, dmg y deb) y envía el .appx a la Store; después, la web enlaza la 1.5.0. Después del 19 de octubre, comprobar el build de Linux con Ubuntu 26 (o fijar ubuntu-24.04)"
 bloqueo: ""
-actualizado: 2026-10-12
+actualizado: 2026-10-13
 ---
 
 # PDF Diva
@@ -29,7 +29,7 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 - Documentación técnica: `docs/developer-guide.md`; la web, en `docs/website.md`.
 - Equipo dedicado de pruebas y compilación MSIX: "Marcianito".
 - Principios del proyecto: sencillo de mantener, estable, autocontenido; contención frente a funciones nuevas.
-- Situación a 2026-10-12: v1.4.0 publicada en GitHub y aprobada en la Store (2026-10-11). Empieza la promoción: textos de prensa y BrandScript (StoryBrand) en `press/`, portada de la web reescrita. Hito 11 (refinamiento, v1.5.0) abierto, con tres cambios menores en el `BACKLOG.md` del repo.
+- Situación a 2026-10-13: hito 11 (refinamiento) hecho y v1.5.0 aprobada y etiquetada (marco uniforme en la vista del orador, selector de tema con tarjetas, miniaturas centradas, imagen nueva del instalador de Windows); pendiente de publicar. Promoción en marcha: textos de prensa y BrandScript en `press/`, cierre de la web «Let the PDF be the star.».
 
 ## Historial de la ficha
 
@@ -40,3 +40,4 @@ Stack: Electron + TypeScript + PDF.js, UI sin framework, empaquetado con electro
 - 2026-10-10: sincronizada con `guppy/STATUS.md`: Linux probado en máquinas reales; sigue bloqueado por la prueba en Mac.
 - 2026-10-11: sincronizada con `guppy/STATUS.md`: Mac probado, v1.4.0 publicada; bloqueado solo por la certificación de la Store.
 - 2026-10-12: sincronizada con `guppy/STATUS.md`: la Store aprueba la 1.4.0 y pasa a activo (promoción y mantenimiento); web nueva en pdfdiva.nilovelez.com.
+- 2026-10-13: sincronizada con `guppy/STATUS.md`: v1.5.0 (hito 11) aprobada y etiquetada, pendiente de publicar.
