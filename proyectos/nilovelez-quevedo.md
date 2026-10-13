@@ -24,8 +24,9 @@ Plugin de WordPress, publicado en WordPress.org, con herramientas para quien usa
 
 - El estado está en `guppy/STATUS.md` del repo (creado el 2026-10-13). La rama principal es `master`, no `main`.
 - Versión publicada: 1.4 (2026-05-22), probada hasta WordPress 7.0, requiere WordPress 5.9. Traducción al español en `languages/`.
-- El repo no tiene configuración de empaquetado (`.distignore` ni similar); al montar uno, excluir `guppy/`, `CLAUDE.md` y `_PSD/`.
+- El zip de release se genera con `git archive` (instrucciones en el README.md); los archivos de desarrollo, `guppy/` incluido, se excluyen con `export-ignore` en `.gitattributes`.
 
 ## Historial de la ficha
 
 - 2026-10-13: ficha creada con la skill `registrar-en-guppy` desde la sesión del proyecto, a partir del repo y del `guppy/STATUS.md` recién creado.
+- 2026-10-13: el repo añade `.gitattributes` con `export-ignore` y la guía del zip de release en el README.md.
