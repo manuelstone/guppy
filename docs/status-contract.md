@@ -13,17 +13,19 @@ The machine-readable version of this contract is in [`schema/`](../schema/). If 
 ## Architecture
 
 ```
-Project repo                          Guppy repo
-────────────                          ──────────
+Project repo                          Guppy repo                                      GitHub Pages
+────────────                          ──────────                                      ────────────
 guppy/STATUS.md   (detail + log)
-guppy/STATUS.json (summary) ──sync──▶ projects/<id>.json ──generate──▶ index.json
-                                      (one per project)                index.md
+guppy/STATUS.json (summary) ──sync──▶ projects/<id>.json ──generate──▶ site/projects.json ──deploy──▶ /projects.json
+                                      (one per project)                site/projects.md              /projects.md
 ```
 
-- **In each project**, `guppy/STATUS.md` holds the extended status and the work log, written for the agent working on that project. `guppy/STATUS.json` holds the summary defined below. It is the only file that is synced to Guppy.
-- **A GitHub Action in each project** copies `guppy/STATUS.json` to `projects/<id>.json` in Guppy whenever it changes.
-- **A GitHub Action in Guppy** regenerates `index.json` and `index.md` whenever anything in `projects/` changes, whether it came from a project sync or from a manual edit.
-- **Projects without a repo** have an orphan `projects/<id>.json` that is edited by hand in Guppy. The generator treats it like any other.
+1. **In each project**, an agent updates `guppy/STATUS.md` and `guppy/STATUS.json`. `guppy/STATUS.md` holds the extended status and the work log, written for the agent working on that project. `guppy/STATUS.json` holds the summary defined below. It is the only file that is synced to Guppy.
+2. **A GitHub Action in each project** copies `guppy/STATUS.json` to `projects/<id>.json` in Guppy whenever it changes.
+3. **A GitHub Action in Guppy** regenerates `site/projects.json` and `site/projects.md` whenever anything in `projects/` changes, whether it came from a project sync or from a manual edit, and deploys `site/` to GitHub Pages in the same run.
+4. **Clients** read the public [endpoints](#endpoints).
+
+**Projects without a repo** have an orphan `projects/<id>.json` that is edited by hand in Guppy. The generator treats it like any other.
 
 Nothing runs on a schedule: every update cascades from a change. If the sync fails, each project keeps its own status up to date and nothing is lost.
 
@@ -123,11 +125,38 @@ Examples:
 - `active`: "Working on the social media marketing strategy. Version 1.5.0 has been submitted to the Microsoft Store for certification."
 - `archived`: "Version 1.0.0 is published. No further work is planned."
 
-## Indexes
+## Public site
 
-Guppy publishes two indexes generated from `projects/*.json`. Nobody edits them by hand.
+Everything public lives in `site/` in the Guppy repo and is deployed to GitHub Pages. Some files are generated and some are maintained by hand:
+
+| File | Maintained | Content |
+|---|---|---|
+| `site/index.html` | By hand | Human entry point: links to the published files. |
+| `site/index.json` | By hand | API entry point: lists the available endpoints. |
+| `site/projects.json` | Generated | All project statuses. Nobody edits it by hand. |
+| `site/projects.md` | Generated | The same data for humans and agents. Nobody edits it by hand. |
+
+`site/` leaves room for Guppy to publish other things later, each with its own files next to these.
 
 ### `index.json`
+
+```json
+{
+  "name": "Guppy",
+  "description": "Nilo Vélez's personal project manager.",
+  "endpoints": {
+    "projects": {
+      "json": "https://manuelstone.github.io/guppy/projects.json",
+      "md": "https://manuelstone.github.io/guppy/projects.md",
+      "schema": "https://github.com/manuelstone/guppy/blob/main/schema/projects.schema.json"
+    }
+  }
+}
+```
+
+A new endpoint is added here when Guppy starts publishing something new.
+
+### `projects.json`
 
 ```json
 {
@@ -142,18 +171,18 @@ Guppy publishes two indexes generated from `projects/*.json`. Nobody edits them 
 - `generated` and `generated_unix` follow the same convention as `last_update`.
 - `projects` contains one entry per file in `projects/`, each with exactly the fields of `STATUS.json`, sorted by `id` so that diffs stay small. Clients sort and group as they need.
 
-### `index.md`
+### `projects.md`
 
 The same data in a Markdown document for humans and agents. Projects are grouped by status in this order: `blocked`, `active`, `planned`, `inactive`, `archived`. Within each group, the most recently updated come first. Each project shows its title (linked to `url`), its `status_text` and its `last_update`.
 
 ## Endpoints
 
-Both indexes live at the root of the Guppy repo and are meant to be read like an API, over raw URLs:
+- `https://manuelstone.github.io/guppy/` — human entry point
+- `https://manuelstone.github.io/guppy/index.json` — API entry point
+- `https://manuelstone.github.io/guppy/projects.json`
+- `https://manuelstone.github.io/guppy/projects.md`
 
-- `https://raw.githubusercontent.com/manuelstone/guppy/main/index.json`
-- `https://raw.githubusercontent.com/manuelstone/guppy/main/index.md`
-
-`raw.githubusercontent.com` caches responses for a few minutes. Clients that need a fresh copy add a `nocache` query parameter with the current Unix timestamp, for example `index.json?nocache=1792058400`.
+GitHub Pages caches responses for a few minutes. Clients that need a fresh copy add a `nocache` query parameter with the current Unix timestamp, for example `projects.json?nocache=1792058400`.
 
 ## Changing the contract
 

@@ -25,7 +25,7 @@ skills/registrar-en-guppy/        ← skill to register a project from its own s
 
 ## Migration in progress
 
-Guppy is moving to the data contract in [docs/status-contract.md](docs/status-contract.md): each project publishes a `guppy/STATUS.json`, a GitHub Action syncs it to `projects/<id>.json`, and another one generates `index.json` and `index.md`. Until that rollout is finished, **the workflow below is still the one in force**. The data formats it uses (card front matter and the YAML header of `guppy/STATUS.md`) keep their legacy Spanish keys and values on purpose: existing projects use them. Do not mix the two formats.
+Guppy is moving to the data contract in [docs/status-contract.md](docs/status-contract.md): each project publishes a `guppy/STATUS.json`, a GitHub Action syncs it to `projects/<id>.json`, and another one generates `site/projects.json` and `site/projects.md` and publishes them on GitHub Pages. Until that rollout is finished, **the workflow below is still the one in force**. The data formats it uses (card front matter and the YAML header of `guppy/STATUS.md`) keep their legacy Spanish keys and values on purpose: existing projects use them. Do not mix the two formats.
 
 ## Model
 

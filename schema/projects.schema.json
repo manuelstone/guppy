@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/manuelstone/guppy/schema/index.schema.json",
-  "title": "Guppy index",
-  "description": "All project statuses, generated from projects/*.json. See docs/status-contract.md.",
+  "$id": "https://github.com/manuelstone/guppy/schema/projects.schema.json",
+  "title": "Guppy projects",
+  "description": "All project statuses, published as site/projects.json and generated from projects/*.json. See docs/status-contract.md.",
   "type": "object",
   "additionalProperties": false,
   "required": ["generated", "generated_unix", "projects"],
