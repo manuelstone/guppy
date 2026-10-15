@@ -1,0 +1,69 @@
+# Regenerates site/projects.json and site/projects.md from projects/*.json,
+# commits them if they changed and deploys site/ to GitHub Pages.
+# See docs/status-contract.md.
+
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/**'
+      - 'site/**'
+      - 'schema/**'
+      - 'scripts/generate.mjs'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+# One run at a time; queued runs wait instead of being cancelled, so no update is lost.
+concurrency:
+  group: publish-site
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate indexes
+        run: node scripts/generate.mjs
+
+      # Commits made with GITHUB_TOKEN do not trigger other workflow runs, so this cannot loop.
+      - name: Commit generated files
+        run: |
+          git add site/projects.json site/projects.md
+          if git diff --cached --quiet; then
+            echo "No changes in generated files."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Regenerate project indexes"
+          for attempt in 1 2 3 4; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((attempt * 2))
+          done
+          echo "Could not push the generated files." >&2
+          exit 1
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

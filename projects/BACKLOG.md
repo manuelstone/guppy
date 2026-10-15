@@ -1,6 +1,6 @@
 # Project backlog
 
-Ideas for new projects, not yet decided. When one is decided, it leaves this list and gets a card in the [overview](index.md). Improvements to existing projects go to their own repo's backlog.
+Ideas for new projects, not yet decided. When one is decided, it leaves this list and gets its own `projects/<id>.json`. Improvements to existing projects go to their own repo's backlog.
 
 | Idea | Summary | Added |
 |---|---|---|

@@ -1,0 +1,12 @@
+{
+  "id": "nilovelez-quevedo",
+  "title": "Quevedo",
+  "description": "WordPress plugin with writing-focused tools: removes features single-author blogs don't need, simplifies the editor and adds Open Graph metadata.",
+  "status": "active",
+  "status_text": "Version 1.5 is tagged on GitHub and pending release to the WordPress.org plugin directory via SVN. Version 1.4 is still the published one.",
+  "last_update": "2026-10-13 19:00:35 +0200",
+  "last_update_unix": 1791910835,
+  "url": "https://github.com/nilovelez/quevedo",
+  "status_url": "https://raw.githubusercontent.com/nilovelez/quevedo/master/guppy/STATUS.md",
+  "icon": null
+}
