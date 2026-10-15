@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-15 09:52:03 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-15 18:00:49 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -34,6 +34,6 @@ Updated: 2026-10-13 14:56:07 +0200
 
 ### [Flypad Keepalive](https://github.com/nilovelez/flypad-keepalive)
 
-Version 1.0.0 is published on GitHub. No further work is planned.
+Version 1.0.0 is published as a release on GitHub. No further work is planned.
 
-Updated: 2026-10-08 21:37:47 +0200
+Updated: 2026-10-15 20:00:06 +0200
