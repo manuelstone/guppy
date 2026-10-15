@@ -8,7 +8,7 @@ This document defines the data format Guppy uses to publish the status of Nilo's
 
 The machine-readable version of this contract is in [`schema/`](../schema/). If this document and the schemas disagree, fix whichever is wrong; they must always say the same thing.
 
-> **Migration note.** This contract is being rolled out in milestones. Until the rollout is complete, the workflow in [AGENTS.md](../AGENTS.md) still uses the legacy format (project cards in `projects/<id>.md` and a YAML header in `guppy/STATUS.md`).
+> **Migration note.** This contract is being rolled out in milestones. The Guppy side is in place. Until each project is migrated, it keeps a legacy YAML header in `guppy/STATUS.md` and the Guppy agent maintains its `projects/<id>.json` by hand. See [AGENTS.md](../AGENTS.md).
 
 ## Architecture
 
@@ -174,7 +174,7 @@ A new endpoint is added here when Guppy starts publishing something new.
 }
 ```
 
-- `generated` and `generated_unix` follow the same convention as `last_update`.
+- `generated` and `generated_unix` follow the same convention as `last_update`, in UTC. They only change when the project data changes.
 - `projects` contains one entry per file in `projects/`, each with exactly the fields of `STATUS.json`, sorted by `id` so that diffs stay small. Clients sort and group as they need.
 
 ### `projects.md`

@@ -1,0 +1,66 @@
+{
+  "generated": "2026-10-15 09:52:03 +0000",
+  "generated_unix": 1792057923,
+  "projects": [
+    {
+      "id": "nilovelez-classic-honeypot-for-cf7",
+      "title": "Classic Honeypot for CF7",
+      "description": "Ad-free GPL fork of the Honeypot for Contact Form 7 WordPress plugin, based on version 2.1.1.",
+      "status": "blocked",
+      "status_text": "Waiting for a manual review by the WordPress.org plugin team after the duplicate-plugin appeal. If approved, version 1.0.0 will be published.",
+      "last_update": "2026-10-14 09:16:20 +0200",
+      "last_update_unix": 1791962180,
+      "url": "https://github.com/nilovelez/classic-honeypot-for-cf7",
+      "status_url": "https://raw.githubusercontent.com/nilovelez/classic-honeypot-for-cf7/main/guppy/STATUS.md",
+      "icon": null
+    },
+    {
+      "id": "nilovelez-flypad-keepalive",
+      "title": "Flypad Keepalive",
+      "description": "Windows app that lets you use the Parrot Flypad Bluetooth controller in PC drone simulators by presenting it as an Xbox 360 controller.",
+      "status": "archived",
+      "status_text": "Version 1.0.0 is published on GitHub. No further work is planned.",
+      "last_update": "2026-10-08 21:37:47 +0200",
+      "last_update_unix": 1791488267,
+      "url": "https://github.com/nilovelez/flypad-keepalive",
+      "status_url": "https://raw.githubusercontent.com/nilovelez/flypad-keepalive/main/guppy/STATUS.md",
+      "icon": null
+    },
+    {
+      "id": "nilovelez-pdf-diva",
+      "title": "PDF Diva",
+      "description": "Free desktop app that gives any PDF a PowerPoint-style presenter view, for event technicians and streaming operators.",
+      "status": "active",
+      "status_text": "Version 1.5.0 is out on GitHub and the Microsoft Store. Promotion is paused on purpose; maintenance continues, and the Linux build will be checked against Ubuntu 26.",
+      "last_update": "2026-10-14 12:16:07 +0200",
+      "last_update_unix": 1791972967,
+      "url": "https://github.com/nilovelez/pdf-diva",
+      "status_url": "https://raw.githubusercontent.com/nilovelez/pdf-diva/main/guppy/STATUS.md",
+      "icon": null
+    },
+    {
+      "id": "nilovelez-quevedo",
+      "title": "Quevedo",
+      "description": "WordPress plugin with writing-focused tools: removes features single-author blogs don't need, simplifies the editor and adds Open Graph metadata.",
+      "status": "active",
+      "status_text": "Version 1.5 is tagged on GitHub and pending release to the WordPress.org plugin directory via SVN. Version 1.4 is still the published one.",
+      "last_update": "2026-10-13 19:00:35 +0200",
+      "last_update_unix": 1791910835,
+      "url": "https://github.com/nilovelez/quevedo",
+      "status_url": "https://raw.githubusercontent.com/nilovelez/quevedo/master/guppy/STATUS.md",
+      "icon": null
+    },
+    {
+      "id": "nilovelez-wp-agentic-workflow",
+      "title": "wp-agentic-workflow",
+      "description": "Public Claude Code skill that sets up and guides a WordPress plugin development workflow, from local test sites to WordPress.org submission.",
+      "status": "active",
+      "status_text": "The first version of the skill is written and awaiting review. Next: merge it and test it on a new plugin.",
+      "last_update": "2026-10-13 14:56:07 +0200",
+      "last_update_unix": 1791896167,
+      "url": "https://github.com/nilovelez/wp-agentic-workflow",
+      "status_url": "https://raw.githubusercontent.com/nilovelez/wp-agentic-workflow/main/guppy/STATUS.md",
+      "icon": null
+    }
+  ]
+}

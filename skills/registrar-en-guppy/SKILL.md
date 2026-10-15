@@ -13,12 +13,12 @@ Talk to Nilo in Spanish. Everything written to the repos is in US English, excep
 
 1. Clone github.com/manuelstone/guppy (with write access) into a folder **outside the project repo**, for example a temporary folder. Never clone it inside the project or copy its files into the project.
 2. If you cannot clone it or do not have write access, **stop here**: tell Nilo exactly what failed and make no changes to the project.
-3. Read the clone's whole `AGENTS.md`, especially the "When adding a project" ritual, and `templates/onboarding-message.md`.
+3. Read the clone's whole `AGENTS.md`, especially the "When adding a project" ritual, `docs/status-contract.md` and `templates/onboarding-message.md`.
 
 ## 2. Identify the project
 
 1. Get the project's GitHub repo URL (`git remote get-url origin`). If it has no GitHub repo, stop and tell Nilo.
-2. Work out the identifier as AGENTS.md describes and check whether its card already exists in `projects/` or whether it is in `projects/BACKLOG.md` (even under another name). If a card already exists, tell Nilo and update it instead of creating another.
+2. Work out the identifier as AGENTS.md describes and check whether `projects/<id>.json` already exists or whether the project is in `projects/BACKLOG.md` (even under another name). If the file already exists, tell Nilo and update it instead of creating another.
 
 ## 3. Local part, in the project
 
