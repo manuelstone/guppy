@@ -11,7 +11,7 @@ on:
       - 'projects/**'
       - 'site/**'
       - 'schema/**'
-      - 'scripts/generate.mjs'
+      - 'scripts/**'
       - '.github/workflows/publish.yml'
   workflow_dispatch:
 
