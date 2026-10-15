@@ -21,7 +21,7 @@ guppy/STATUS.json (summary) ──sync──▶ projects/<id>.json ──generat
 ```
 
 1. **In each project**, an agent updates `guppy/STATUS.md` and `guppy/STATUS.json`. `guppy/STATUS.md` holds the extended status and the work log, written for the agent working on that project. `guppy/STATUS.json` holds the summary defined below. It is the only file that is synced to Guppy.
-2. **A GitHub Action in each project** copies `guppy/STATUS.json` to `projects/<id>.json` in Guppy whenever it changes.
+2. **A GitHub Action in each project** validates `guppy/STATUS.json` and copies it to `projects/<id>.json` in Guppy whenever it changes. Setup: [sync-setup.md](sync-setup.md).
 3. **A GitHub Action in Guppy** regenerates `site/projects.json` and `site/projects.md` whenever anything in `projects/` changes, whether it came from a project sync or from a manual edit, and deploys `site/` to GitHub Pages in the same run.
 4. **Clients** read the public [endpoints](#endpoints).
 
@@ -69,9 +69,9 @@ Lives at `guppy/STATUS.json` in each project repo, and as `projects/<id>.json` i
 
 ### Identifier
 
-`<github-user>-<repo-slug>`, lowercase, ASCII only, words separated by hyphens. Example: `nilovelez-pdf-diva`. Projects without a repo use `nilovelez-<descriptive-slug>`.
+For a project with a GitHub repo, the identifier is its full name (`<owner>/<repo>`) in lowercase, with every run of characters other than `a-z` and `0-9` replaced by a single hyphen. Example: `nilovelez/pdf-diva` → `nilovelez-pdf-diva`. Projects without a repo use `nilovelez-<descriptive-slug>`, lowercase ASCII with hyphens.
 
-The identifier is also the file name in Guppy (`projects/<id>.json`). For projects with a repo, the sync action checks that `id` and `url` match the actual repository, so a renamed or transferred repo is detected automatically.
+The identifier is also the file name in Guppy (`projects/<id>.json`). For projects with a repo, the sync action checks that `id`, `url` and `status_url` match the actual repository and its default branch, so a renamed or transferred repo is detected automatically.
 
 ### Status values
 

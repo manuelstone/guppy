@@ -21,12 +21,16 @@ This repository and its site are public, including the full git history. **Every
 AGENTS.md                         ← this file: rules and workflow
 CLAUDE.md                         ← points to this file
 docs/status-contract.md           ← status data contract: read it before writing any project file
+docs/sync-setup.md                ← how a project syncs its status on its own (token, secret, workflow)
 schema/                           ← JSON Schemas for the contract
 projects/<id>.json                ← public status summary of each project
 projects/BACKLOG.md               ← project ideas not yet decided
+scripts/validate-status.mjs       ← validates a status file; shared by Guppy and the project sync action
 scripts/generate.mjs              ← validates projects/*.json and generates the site indexes
+scripts/sync-status.mjs           ← run by each project's sync action to write its status here
 site/                             ← public site, deployed to GitHub Pages
 .github/workflows/publish.yml     ← runs the generator and deploys site/ on every change
+templates/guppy-sync.yml          ← sync workflow to install in each project
 templates/STATUS.md               ← template for the guppy/STATUS.md that lives in each project
 templates/onboarding-message.md   ← onboarding message for each project's session
 skills/registrar-en-guppy/        ← skill to register a project from its own session
@@ -125,4 +129,5 @@ Commit and push with a clear message (`Update pdf-diva status: blocked waiting f
 - Failing to read a file does not mean it does not exist. If a read fails, report the failure as it is.
 - Do not edit other projects' repos from here unless explicitly asked.
 - Never edit `site/projects.json` or `site/projects.md` by hand: change `projects/*.json` and let the generator do the rest.
+- `scripts/validate-status.mjs`, `scripts/sync-status.mjs` and `schema/status.schema.json` are downloaded from `main` by every syncing project on each run. A breaking change there breaks every project at once: test locally (see "Checking a file locally" in `docs/sync-setup.md`) before pushing, and keep those paths stable.
 - If the `Publish site` action fails, the site keeps its previous version. Read the error, fix the project file it names and push again.
