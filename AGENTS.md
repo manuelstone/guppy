@@ -44,7 +44,9 @@ Guppy is moving to the data contract in [docs/status-contract.md](docs/status-co
 
 **The project side is not yet**: projects still keep the legacy `guppy/STATUS.md`, with a YAML header in Spanish (`estado`, `siguiente_paso`, `bloqueo`, `actualizado`), and they have no `guppy/STATUS.json` or sync action. Until each project is migrated, the Guppy agent keeps its `projects/<id>.json` up to date by hand, following the rituals below. Do not ask project agents to use the new format yet.
 
-Projects that already sync automatically: none yet.
+Projects that already sync automatically (their `projects/<id>.json` comes from their own `guppy/STATUS.json`; never edit it here):
+
+- `nilovelez-flypad-keepalive` (pilot, since 2026-10-15). Its agent instructions and the YAML header of its `guppy/STATUS.md` are still the legacy ones until the onboarding is updated.
 
 ## Model
 
@@ -82,6 +84,8 @@ The contract values, and the legacy values projects still use:
 2. Read `site/projects.md`. Open a project's `STATUS.md` only when the question requires it.
 
 ### When checking status ("what's half done", "what's blocked", "what do I pick up next")
+
+Projects that sync automatically need nothing: `site/projects.md` is already up to date for them. If one looks stale, its `guppy/STATUS.json` was not updated or its sync failed; check its Actions tab and tell the user, but do not fix it from here.
 
 For each project involved that does not sync automatically yet:
 
