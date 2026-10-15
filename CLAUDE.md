@@ -1,1 +1,1 @@
-Lee y sigue [AGENTS.md](AGENTS.md): contiene el flujo de trabajo completo de este repositorio.
+Read and follow [AGENTS.md](AGENTS.md): it contains this repository's full workflow.

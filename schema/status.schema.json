@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/manuelstone/guppy/schema/status.schema.json",
+  "title": "Guppy project status",
+  "description": "Summary of a project's status. Lives at guppy/STATUS.json in each project repo and as projects/<id>.json in Guppy. See docs/status-contract.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "description",
+    "status",
+    "status_text",
+    "last_update",
+    "last_update_unix",
+    "url",
+    "status_url",
+    "icon"
+  ],
+  "properties": {
+    "id": {
+      "description": "Project identifier: <github-user>-<repo-slug>, lowercase ASCII, hyphen-separated.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "description": "Display name.",
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "description": "What the project is, in one sentence.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "blocked", "inactive", "planned", "archived"]
+    },
+    "status_text": {
+      "description": "Where the project stands now. Plain text, one or two sentences.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^[^\\n\\r]*$"
+    },
+    "last_update": {
+      "description": "When the status last changed: YYYY-MM-DD HH:MM:SS ±HHMM.",
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} [+-]\\d{4}$"
+    },
+    "last_update_unix": {
+      "description": "The same instant as last_update, as a Unix timestamp in seconds.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "url": {
+      "description": "Main link: the repo, or the website if there is no repo.",
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "status_url": {
+      "description": "Raw URL of the project's guppy/STATUS.md, or null.",
+      "type": ["string", "null"],
+      "pattern": "^https://"
+    },
+    "icon": {
+      "description": "URL of a square icon (PNG or SVG), or null. Reserved for future use.",
+      "type": ["string", "null"],
+      "pattern": "^https://"
+    }
+  }
+}
