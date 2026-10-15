@@ -1,34 +1,36 @@
 ---
 name: registrar-en-guppy
-description: Registra el proyecto actual en Guppy, el gestor de proyectos de Nilo. Úsala cuando pida registrar, dar de alta o añadir este proyecto en Guppy.
+description: Registers the current project in Guppy, Nilo's project manager. Use it when he asks to register, add or sign up this project in Guppy ("registrar", "dar de alta" or "añadir en Guppy").
 ---
 
-# Registrar el proyecto actual en Guppy
+# Register the current project in Guppy
 
-Guppy es el gestor de proyectos de Nilo y vive en el repo privado github.com/manuelstone/guppy. Esta skill no lleva reglas propias: todas están en el AGENTS.md de Guppy y en su carpeta `plantillas/`. Léelas allí y síguelas; si algo de aquí contradice al AGENTS.md, manda el AGENTS.md.
+Guppy is Nilo's project manager and lives in the private repo github.com/manuelstone/guppy. This skill has no rules of its own: they are all in Guppy's AGENTS.md and its `templates/` folder. Read them there and follow them; if anything here contradicts AGENTS.md, AGENTS.md wins.
 
-## 1. Comprobar el acceso a Guppy (antes de tocar nada)
+Talk to Nilo in Spanish. Everything written to the repos is in US English, except the legacy Spanish keys and values the templates keep on purpose.
 
-1. Clona github.com/manuelstone/guppy (con permiso de escritura) en una carpeta **fuera del repo del proyecto**, por ejemplo una carpeta temporal. Nunca lo clones dentro del proyecto ni copies sus archivos al proyecto.
-2. Si no puedes clonarlo o no tienes permiso de escritura, **para aquí**: dile a Nilo exactamente qué ha fallado y no hagas ningún cambio en el proyecto.
-3. Lee entero el `AGENTS.md` del clon, en especial el ritual «Al añadir un proyecto», y `plantillas/mensaje-alta.md`.
+## 1. Check access to Guppy (before touching anything)
 
-## 2. Identificar el proyecto
+1. Clone github.com/manuelstone/guppy (with write access) into a folder **outside the project repo**, for example a temporary folder. Never clone it inside the project or copy its files into the project.
+2. If you cannot clone it or do not have write access, **stop here**: tell Nilo exactly what failed and make no changes to the project.
+3. Read the clone's whole `AGENTS.md`, especially the "When adding a project" ritual, and `templates/onboarding-message.md`.
 
-1. Saca la URL del repo de GitHub del proyecto (`git remote get-url origin`). Si no tiene repo en GitHub, para y díselo a Nilo.
-2. Calcula el identificador como dice el AGENTS.md y mira si ya existe su ficha en `proyectos/` o si está en `proyectos/BACKLOG.md` (aunque sea con otro nombre). Si ya hay ficha, díselo a Nilo y actualízala en lugar de crear otra.
+## 2. Identify the project
 
-## 3. Parte local, en el proyecto
+1. Get the project's GitHub repo URL (`git remote get-url origin`). If it has no GitHub repo, stop and tell Nilo.
+2. Work out the identifier as AGENTS.md describes and check whether its card already exists in `projects/` or whether it is in `projects/BACKLOG.md` (even under another name). If a card already exists, tell Nilo and update it instead of creating another.
 
-1. Aplica los pasos de `plantillas/mensaje-alta.md` en este repo, salvo el último (no hace falta pedir la URL: ya la tienes).
-2. El estado de `guppy/STATUS.md` debe ser el real. Sácalo del repo y de lo que diga Nilo; si no está claro, pregúntale. No lo inventes.
-3. Commit y push en el proyecto.
+## 3. Local part, in the project
 
-## 4. Parte central, en Guppy
+1. Apply the steps in `templates/onboarding-message.md` to this repo, except the last one (no need to ask for the URL: you already have it).
+2. The status in `guppy/STATUS.md` must be the real one. Get it from the repo and from what Nilo says; if it is not clear, ask him. Do not make it up.
+3. Commit and push in the project.
 
-1. Sigue el ritual «Al añadir un proyecto» del AGENTS.md, por la vía de la skill que describe (usa el `guppy/STATUS.md` que acabas de crear y no entregues mensaje de alta).
-2. Commit y push en Guppy, con un mensaje como `alta: <id>`.
+## 4. Central part, in Guppy
 
-## 5. Informar
+1. Follow the "When adding a project" ritual in AGENTS.md, through the skill route it describes (use the `guppy/STATUS.md` you have just created and do not hand over an onboarding message).
+2. Commit and push in Guppy, with a message like `add: <id>`.
 
-En pocas líneas: qué se ha creado en cada repo, los dos commits y el estado con el que queda el proyecto. Si alguna lectura o escritura ha fallado, dilo tal cual.
+## 5. Report
+
+In a few lines: what was created in each repo, the two commits and the status the project ends up with. If any read or write failed, say so as it is.

@@ -1,94 +1,104 @@
-# Guppy — instrucciones para agentes
+# Guppy — agent instructions
 
-Guppy es el gestor personal de proyectos de Nilo Vélez. Este repositorio es la **fuente central** del panorama de todos sus proyectos. Si eres un agente o una sesión nueva, lee este archivo entero antes de hacer nada: aquí está todo lo que necesitas para trabajar.
+Guppy is Nilo Vélez's personal project manager. This repository is the **central source** for the overview of all his projects. If you are an agent or a new session, read this whole file before doing anything: it has everything you need to work here.
 
-## Qué hay aquí
+## Language
+
+- Talk to Nilo in Spanish (Spain), concise.
+- Everything written to this repo (files, commit messages) is in US English.
+
+## What's here
 
 ```
-AGENTS.md                  ← este archivo: reglas y flujo de trabajo
-CLAUDE.md                  ← remite a este archivo
-proyectos/index.md         ← panorama: una línea por proyecto
-proyectos/<id>.md          ← ficha de cada proyecto
-proyectos/BACKLOG.md       ← ideas de proyectos sin decidir
-plantillas/ficha.md        ← plantilla para fichas nuevas
-plantillas/STATUS.md       ← plantilla del guppy/STATUS.md que vive en cada proyecto
-plantillas/mensaje-alta.md ← mensaje de alta para la sesión de cada proyecto
-skills/registrar-en-guppy/ ← skill para dar de alta un proyecto desde su propia sesión
+AGENTS.md                         ← this file: rules and workflow
+CLAUDE.md                         ← points to this file
+docs/status-contract.md           ← status data contract (being rolled out; see below)
+schema/                           ← JSON Schemas for the contract
+projects/index.md                 ← overview: one line per project
+projects/<id>.md                  ← card for each project
+projects/BACKLOG.md               ← project ideas not yet decided
+templates/project-card.md         ← template for new cards
+templates/STATUS.md               ← template for the guppy/STATUS.md that lives in each project
+templates/onboarding-message.md   ← onboarding message for each project's session
+skills/registrar-en-guppy/        ← skill to register a project from its own session
 ```
 
-## Modelo
+## Migration in progress
 
-Hay dos niveles de información y cada uno tiene un dueño:
+Guppy is moving to the data contract in [docs/status-contract.md](docs/status-contract.md): each project publishes a `guppy/STATUS.json`, a GitHub Action syncs it to `projects/<id>.json`, and another one generates `index.json` and `index.md`. Until that rollout is finished, **the workflow below is still the one in force**. The data formats it uses (card front matter and the YAML header of `guppy/STATUS.md`) keep their legacy Spanish keys and values on purpose: existing projects use them. Do not mix the two formats.
 
-| Dónde | Qué es | Quién lo escribe |
+## Model
+
+There are two levels of information, and each has an owner:
+
+| Where | What it is | Who writes it |
 |---|---|---|
-| `guppy/STATUS.md` en el repo de cada proyecto | Estado operativo y diario de trabajo. **Fuente de verdad del estado.** | El agente que trabaja en ese proyecto, al terminar cada sesión |
-| `proyectos/<id>.md` aquí | Ficha: de qué va, dependencias, relación con otros proyectos, notas, puntero al STATUS.md y una copia del estado | El agente de Guppy |
-| `proyectos/index.md` aquí | Una línea por proyecto para consultas rápidas | El agente de Guppy |
+| `guppy/STATUS.md` in each project repo | Operational status and work log. **Source of truth for the status.** | The agent working on that project, at the end of each session |
+| `projects/<id>.md` here | Card: what it is about, dependencies, relationships with other projects, notes, pointer to STATUS.md and a copy of the status | The Guppy agent |
+| `projects/index.md` here | One line per project for quick lookups | The Guppy agent |
 
-En cada proyecto, **todo lo de Guppy vive en el directorio `guppy/`** de la raíz del repo, para no mezclarlo con los archivos del propio proyecto. Hoy contiene `guppy/STATUS.md`; cualquier archivo nuevo de Guppy en un proyecto va también ahí.
+In each project, **everything Guppy-related lives in the `guppy/` directory** at the repo root, so it does not mix with the project's own files. Today it contains `guppy/STATUS.md`; any new Guppy file in a project also goes there.
 
-El `CHANGELOG.md` de cada proyecto, si existe, es para usuarios y **no** se usa como diario.
+Each project's `CHANGELOG.md`, if it exists, is for users and is **not** used as a work log.
 
-### Identificador de proyecto
+### Project identifier
 
-`<usuario-github>-<slug-del-repo>`, en minúsculas, sin acentos ni espacios. Ejemplo: `nilovelez-pdf-diva`. Para proyectos sin repo, `nilovelez-<slug-descriptivo>`.
+`<github-user>-<repo-slug>`, lowercase, no accents or spaces. Example: `nilovelez-pdf-diva`. For projects without a repo, `nilovelez-<descriptive-slug>`.
 
-### Estados posibles
+### Possible statuses (legacy values)
 
-- `activo` — se está trabajando en él
-- `bloqueado` — no puede avanzar hasta que pase algo (indicar qué y quién)
-- `en-pausa` — parado por decisión, sin bloqueo
-- `pendiente` — anotado, sin empezar
-- `terminado` — cerrado; se conserva la ficha
+- `activo` — being worked on
+- `bloqueado` — cannot move forward until something happens (say what and who)
+- `en-pausa` — stopped by choice, with no blocker
+- `pendiente` — noted down, not started
+- `terminado` — closed; the card is kept
 
-## Rituales
+## Rituals
 
-### Al empezar una sesión de Guppy
+### When starting a Guppy session
 
-1. Haz `git pull`.
-2. Lee `proyectos/index.md`. Abre fichas solo cuando la pregunta lo requiera.
+1. Run `git pull`.
+2. Read `projects/index.md`. Open cards only when the question requires it.
 
-### Al consultar el estado ("qué está a medias", "qué está bloqueado", "con cuál sigo")
+### When checking status ("what's half done", "what's blocked", "what do I pick up next")
 
-1. Para cada proyecto implicado, comprueba primero que su repo no ha cambiado de nombre ni de dueño: abre la página del repo (el campo `repo` de la ficha) y compara el `usuario/nombre` que muestra con el de la ficha. GitHub redirige las direcciones antiguas sin avisar, así que el hecho de que el STATUS.md se lea bien no demuestra que la URL de la ficha siga siendo la buena. Si ha cambiado, renombra la ficha al nuevo identificador, actualiza `id`, `repo`, `status_url` y su línea en `index.md`, anótalo en el historial de la ficha y avisa al usuario.
-2. Lee su `guppy/STATUS.md` por HTTP desde la URL raw de la ficha (`status_url`, en `raw.githubusercontent.com`), añadiendo siempre el parámetro `nocache` con la fecha Unix del momento de la lectura (`date +%s`), por ejemplo `.../guppy/STATUS.md?nocache=1791478800`. Así cada lectura usa una URL única y no puede devolver una versión en caché, ni un 404 antiguo ni un estado viejo. Usa ese nombre de parámetro y no `t`: con `?t=` se comprobó (2026-10-08) que seguía llegando un 404 cacheado de la URL sin parámetros. **No clones el repo del proyecto**: con muchos proyectos no escala y solo hace falta ese archivo.
-3. Si el estado ha cambiado, actualiza la cabecera de la ficha y su línea en `index.md`, con `actualizado:` a la fecha de hoy.
-4. Responde a partir del estado actualizado. Si no puedes leer un STATUS.md, dilo y usa el estado guardado indicando su fecha.
-5. No menciones los proyectos `terminado` salvo que el usuario pregunte por ellos expresamente. Sigue leyendo su STATUS.md igualmente: si alguno ha dejado de estar terminado (se ha reabierto), eso sí se cuenta.
+1. For each project involved, first check that its repo has not been renamed or transferred: open the repo page (the card's `repo` field) and compare the `user/name` it shows with the card's. GitHub silently redirects old addresses, so the fact that STATUS.md reads fine does not prove the card's URL is still right. If it has changed, rename the card to the new identifier, update `id`, `repo`, `status_url` and its line in `index.md`, note it in the card's history and tell the user.
+2. Read its `guppy/STATUS.md` over HTTP from the card's raw URL (`status_url`, on `raw.githubusercontent.com`), always adding the `nocache` parameter with the Unix time of the read (`date +%s`), for example `.../guppy/STATUS.md?nocache=1791478800`. That way each read uses a unique URL and cannot return a cached version, an old 404 or a stale status. Use that parameter name and not `t`: with `?t=`, a cached 404 for the parameterless URL kept coming back (checked 2026-10-08). **Do not clone the project repo**: it does not scale with many projects and only that file is needed.
+3. If the status has changed, update the card's header and its line in `index.md`, with `actualizado:` set to today's date.
+4. Answer from the updated status. If you cannot read a STATUS.md, say so and use the saved status, giving its date.
+5. Do not mention `terminado` projects unless the user explicitly asks about them. Keep reading their STATUS.md anyway: if one is no longer finished (it has been reopened), that does get reported.
 
-### Al añadir un proyecto
+### When adding a project
 
-Hay dos vías:
+There are two ways:
 
-- **Desde una sesión de Guppy** (como hasta ahora): sigue los pasos de abajo y entrega al usuario el mensaje de alta.
-- **Desde la sesión del propio proyecto en Claude Code local, con la skill `registrar-en-guppy`**, que vive en `skills/registrar-en-guppy/` de este repo. Se instala en cada equipo con `npx skills add manuelstone/guppy -g -a claude-code` y se actualiza con `npx skills update -g`. Si cambias la skill, haz commit aquí y recuérdale a Nilo que la actualice en sus equipos. La skill clona Guppy en una carpeta fuera del proyecto, aplica `plantillas/mensaje-alta.md` en el proyecto y después sigue estos mismos pasos aquí, con dos diferencias: el paso 1 usa el `guppy/STATUS.md` que acaba de crear en local (no hace falta leerlo por HTTP) y el paso 4 no aplica. La skill no lleva reglas propias: todo lo lee de este archivo y de `plantillas/`, así que cualquier cambio de flujo se hace aquí.
+- **From a Guppy session**: follow the steps below and give the user the onboarding message.
+- **From the project's own session in local Claude Code, with the `registrar-en-guppy` skill**, which lives in `skills/registrar-en-guppy/` in this repo. It is installed on each machine with `npx skills add manuelstone/guppy -g -a claude-code` and updated with `npx skills update -g`. If you change the skill, commit it here and remind Nilo to update it on his machines. The skill clones Guppy into a folder outside the project, applies `templates/onboarding-message.md` in the project and then follows these same steps here, with two differences: step 1 uses the `guppy/STATUS.md` it has just created locally (no need to read it over HTTP) and step 4 does not apply. The skill has no rules of its own: it reads everything from this file and from `templates/`, so any workflow change is made here.
 
-En los dos casos: si ya existe una ficha para ese repo, no crees otra; actualízala. Si el proyecto estaba en `BACKLOG.md` (aunque sea con otro nombre), quita su fila y anótalo en el historial de la ficha.
+In both cases: if a card already exists for that repo, do not create another; update it. If the project was in `BACKLOG.md` (even under another name), remove its row and note it in the card's history.
 
-1. Si el proyecto tiene repo, intenta leer su `guppy/STATUS.md` por la URL raw, con el parámetro de fecha Unix descrito en «Al consultar el estado». Si no puedes leerlo (un 404, un error o un bloqueo), dile al usuario exactamente eso: que no has podido leer el archivo y por qué. No concluyas ni escribas que no existe. Puede que aún no le haya pedido al agente del proyecto que lo cree (para eso es el mensaje del paso 4), pero eso lo confirma el usuario. Mientras no lo hayas leído, el estado de la ficha sale de lo que se haya leído en el repo o de lo que diga el usuario, y la ficha lo indica en sus notas.
-2. Crea `proyectos/<id>.md` a partir de `plantillas/ficha.md`.
-3. Añade su línea a `index.md`.
-4. Si el proyecto tiene repo, entrega al usuario el mensaje de `plantillas/mensaje-alta.md`, listo para pegar en una sesión de ese proyecto. Es autocontenido: el agente del proyecto no necesita acceso a Guppy.
+1. If the project has a repo, try to read its `guppy/STATUS.md` from the raw URL, with the Unix time parameter described in "When checking status". If you cannot read it (a 404, an error or a block), tell the user exactly that: that you could not read the file and why. Do not conclude or write that it does not exist. The user may not yet have asked the project agent to create it (that is what the message in step 4 is for), but only the user can confirm that. Until you have read it, the card's status comes from what was read in the repo or from what the user says, and the card says so in its notes.
+2. Create `projects/<id>.md` from `templates/project-card.md`.
+3. Add its line to `index.md`.
+4. If the project has a repo, give the user the message in `templates/onboarding-message.md`, ready to paste into a session of that project. It is self-contained: the project agent does not need access to Guppy.
 
-### Al añadir una idea al backlog
+### When adding an idea to the backlog
 
-1. Añade una fila arriba de la tabla de `proyectos/BACKLOG.md` (lo más reciente, primero): nombre de la idea, resumen de una frase y fecha de hoy. Usa las palabras del usuario; no amplíes la idea.
-2. El backlog es solo para proyectos nuevos sin decidir. Las mejoras de un proyecto que ya existe van al backlog de su propio repo, no aquí; si el usuario pide apuntar una, díselo.
+1. Add a row at the top of the table in `projects/BACKLOG.md` (most recent first): idea name, one-sentence summary and today's date. Use the user's words; do not expand the idea.
+2. The backlog is only for new, undecided projects. Improvements to an existing project go to that project's own backlog, not here; if the user asks to note one down, tell them.
 
-### Al sacar una idea del backlog para hacerla
+### When taking an idea out of the backlog to work on it
 
-1. Quita su fila de `BACKLOG.md`.
-2. Sigue el ritual de «Al añadir un proyecto», con estado `pendiente` o `activo` según diga el usuario. Así cada cosa está en un solo sitio.
+1. Remove its row from `BACKLOG.md`.
+2. Follow the "When adding a project" ritual, with status `pendiente` or `activo` as the user says. That way each thing lives in only one place.
 
-### Al terminar una sesión que haya cambiado algo
+### When ending a session that changed something
 
-Commit y push con un mensaje claro (`estado: pdf-diva bloqueado esperando prueba en Mac`). **Lo que no se commitea, no ha pasado.**
+Commit and push with a clear message (`status: pdf-diva blocked waiting for Mac test`). **What isn't committed didn't happen.**
 
-## Reglas
+## Rules
 
-- No inventes estado: si no lo has leído en un STATUS.md o no te lo ha dicho el usuario, no lo escribas.
-- No poder leer un archivo no significa que no exista. Si una lectura falla, informa del fallo tal cual.
-- No edites repos de otros proyectos desde aquí, salvo petición expresa.
-- La ficha es contexto y memoria; el estado de verdad está en el STATUS.md del proyecto.
-- Escribe en español de España, conciso.
+- Do not make up status: if you have not read it in a STATUS.md or the user has not told you, do not write it.
+- Failing to read a file does not mean it does not exist. If a read fails, report the failure as it is.
+- Do not edit other projects' repos from here unless explicitly asked.
+- The card is context and memory; the real status is in the project's STATUS.md.
