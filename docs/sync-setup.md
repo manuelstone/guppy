@@ -32,7 +32,7 @@ To create it, signed in as `manuelstone`:
 
 ## Setting up a project
 
-These steps are for a project that already has a valid `guppy/STATUS.json`.
+Normally the [onboarding message](../templates/onboarding-message.md) does all of this, and only asks Nilo for the secret. These are the manual steps, for a project that already has a valid `guppy/STATUS.json`.
 
 1. **Add the secret**, signed in as an account with admin rights on the project repo:
    - On the web: project repo → **Settings → Secrets and variables → Actions → New repository secret**. Name: `GUPPY_TOKEN`. Secret: the token.

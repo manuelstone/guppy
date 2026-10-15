@@ -1,13 +1,6 @@
----
-estado: activo               # activo | bloqueado | en-pausa | pendiente | terminado
-siguiente_paso: <one sentence>
-bloqueo: ""                  # what blocks it and what it is waiting for; empty if not applicable
-actualizado: YYYY-MM-DD
----
-
 # Status
 
-<Two or three sentences describing the current situation.>
+<Two or three sentences describing the current situation: what works, what is in progress, what comes next and what it is waiting for.>
 
 ## Log
 

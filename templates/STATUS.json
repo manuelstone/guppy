@@ -1,0 +1,12 @@
+{
+  "id": "<owner>-<repo>",
+  "title": "<Display name>",
+  "description": "<What the project is, in one sentence.>",
+  "status": "active",
+  "status_text": "<Where the project stands now and what comes next, in one or two sentences.>",
+  "last_update": "YYYY-MM-DD HH:MM:SS +HHMM",
+  "last_update_unix": 0,
+  "url": "https://github.com/<owner>/<repo>",
+  "status_url": "https://raw.githubusercontent.com/<owner>/<repo>/<default-branch>/guppy/STATUS.md",
+  "icon": null
+}

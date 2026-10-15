@@ -1,36 +1,20 @@
 ---
 name: registrar-en-guppy
-description: Registers the current project in Guppy, Nilo's project manager. Use it when he asks to register, add or sign up this project in Guppy ("registrar", "dar de alta" or "añadir en Guppy").
+description: Registers the current project in Guppy, Nilo's project manager, or migrates it to Guppy's current status format. Use it when he asks to register, add, sign up, migrate or update this project in Guppy ("registrar", "dar de alta", "añadir en Guppy", "migrar a Guppy").
 ---
 
 # Register the current project in Guppy
 
-Guppy is Nilo's project manager and lives in the public repo github.com/manuelstone/guppy. Everything written there is public: never put private information, credentials or secrets in it. This skill has no rules of its own: they are all in Guppy's AGENTS.md and its `templates/` folder. Read them there and follow them; if anything here contradicts AGENTS.md, AGENTS.md wins.
+Guppy is Nilo's project manager. It lives in the public repo github.com/manuelstone/guppy and publishes every project's status on a public website. Each project publishes its own `guppy/STATUS.json`, and a GitHub Action in the project copies it to Guppy. This skill never writes to Guppy: it only reads its public URLs and sets up the project.
 
-Talk to Nilo in Spanish. Everything written to the repos is in US English, except the legacy Spanish keys and values the templates keep on purpose.
+This skill has no rules of its own. Everything is in Guppy's onboarding message; if anything here contradicts it, the onboarding message wins.
 
-## 1. Check access to Guppy (before touching anything)
+Talk to Nilo in Spanish. Everything written to the repo is in US English.
 
-1. Clone github.com/manuelstone/guppy (with write access) into a folder **outside the project repo**, for example a temporary folder. Never clone it inside the project or copy its files into the project.
-2. If you cannot clone it or do not have write access, **stop here**: tell Nilo exactly what failed and make no changes to the project.
-3. Read the clone's whole `AGENTS.md`, especially the "When adding a project" ritual, `docs/status-contract.md` and `templates/onboarding-message.md`.
+## Steps
 
-## 2. Identify the project
-
-1. Get the project's GitHub repo URL (`git remote get-url origin`). If it has no GitHub repo, stop and tell Nilo.
-2. Work out the identifier as AGENTS.md describes and check whether `projects/<id>.json` already exists or whether the project is in `projects/BACKLOG.md` (even under another name). If the file already exists, tell Nilo and update it instead of creating another.
-
-## 3. Local part, in the project
-
-1. Apply the steps in `templates/onboarding-message.md` to this repo, except the last one (no need to ask for the URL: you already have it).
-2. The status in `guppy/STATUS.md` must be the real one. Get it from the repo and from what Nilo says; if it is not clear, ask him. Do not make it up.
-3. Commit and push in the project.
-
-## 4. Central part, in Guppy
-
-1. Follow the "When adding a project" ritual in AGENTS.md, through the skill route it describes (use the `guppy/STATUS.md` you have just created and do not hand over an onboarding message).
-2. Commit and push in Guppy, with a message like `add: <id>`.
-
-## 5. Report
-
-In a few lines: what was created in each repo, the two commits and the status the project ends up with. If any read or write failed, say so as it is.
+1. **Read the onboarding message**: https://raw.githubusercontent.com/manuelstone/guppy/main/templates/onboarding-message.md (add `?nocache=<unix time>` to skip the cache). If you cannot download it, stop and tell Nilo exactly what failed. Make no changes to the project.
+2. **Tell Nilo which case it is** before changing anything, in one line: a new project (no `guppy/STATUS.md`), a migration (a `guppy/STATUS.md` with a YAML header) or an update (it already has `guppy/STATUS.json`; check it against the contract and fix what is needed).
+3. **Apply the message** in this repo, step by step, as if Nilo had pasted it. Stop at the secret step and wait for his confirmation, as the message says.
+4. **Backlog.** If the project appears in https://raw.githubusercontent.com/manuelstone/guppy/main/projects/BACKLOG.md (even under another name), tell Nilo: its row has to be removed from a Guppy session, because this skill does not write to Guppy.
+5. **Report** as the message's last step says.
