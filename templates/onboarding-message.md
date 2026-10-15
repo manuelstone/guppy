@@ -66,7 +66,7 @@ Fix anything it reports until it says the file follows the contract. Without Nod
 
 **6. Sync workflow.** Download https://raw.githubusercontent.com/manuelstone/guppy/main/templates/guppy-sync.yml to `.github/workflows/guppy-sync.yml`, unchanged.
 
-**7. Packaging.** Check that no build, packaging or publishing rule (the packager, `.distignore`, `.gitattributes` with `export-ignore`, the website configuration) includes `guppy/`; if one would, exclude it.
+**7. Packaging.** Check that no build, packaging or publishing rule (the packager, `.distignore`, `.gitattributes` with `export-ignore`, the website configuration) includes `guppy/` or `.github/workflows/guppy-sync.yml`; if one would, exclude it. For a `.gitattributes` with `export-ignore`, exclude `/.github` as a whole.
 
 **8. Secret.** Stop here and ask me to confirm that the repo has the `GUPPY_TOKEN` Actions secret. Without it, the sync fails. I add it myself (https://github.com/manuelstone/guppy/blob/main/docs/sync-setup.md). Do not continue until I confirm.
 
