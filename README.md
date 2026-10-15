@@ -8,4 +8,4 @@ Nilo Vélez's personal project manager. It publishes a public summary and the cu
 
 To teach a new agent how to work with Guppy, just tell it: *"Connect to github.com/manuelstone/guppy and follow its AGENTS.md"*.
 
-To register projects from their own Claude Code session, install the skill on the machine with `npx skills add manuelstone/guppy -g -a claude-code` and say *"registra este proyecto en Guppy"* in the project.
+To register projects from their own Claude Code session, install the skill on the machine with `npx skills add manuelstone/guppy -g -a claude-code` and say *"registra este proyecto en Guppy"* (or *"migra este proyecto a Guppy"*) in the project. Without the skill, paste the [onboarding message](templates/onboarding-message.md) into the project's session.
