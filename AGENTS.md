@@ -2,6 +2,14 @@
 
 Guppy is Nilo Vélez's personal project manager. This repository is the **central source** for the overview of all his projects. If you are an agent or a new session, read this whole file before doing anything: it has everything you need to work here.
 
+## Guppy is public
+
+This repository and its site are public, including the full git history. **Everything written here is public**, and so is every project's `guppy/STATUS.json`, which is synced here.
+
+- Never write private information, credentials, keys, tokens, secrets, internal addresses or personal data in this repo or in a `STATUS.json`. Once committed, it stays in the history even if it is deleted later.
+- Guppy only holds each project's public summary and current status. The detail stays in each project's `guppy/STATUS.md`, which is never synced here. That is what lets a project live in a private repo while Guppy is public.
+- If you are unsure whether something can be public, leave it out and ask Nilo.
+
 ## Language
 
 - Talk to Nilo in Spanish (Spain), concise.

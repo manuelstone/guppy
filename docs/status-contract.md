@@ -29,6 +29,12 @@ guppy/STATUS.json (summary) ──sync──▶ projects/<id>.json ──generat
 
 Nothing runs on a schedule: every update cascades from a change. If the sync fails, each project keeps its own status up to date and nothing is lost.
 
+### Public by design
+
+Guppy and its site are public. **`STATUS.json` is public data**: it must never contain private information, credentials, keys, tokens, secrets, internal addresses or personal data. Write every field as if it were going on the project's website.
+
+`guppy/STATUS.md` is never synced. It stays in the project repo, with the same visibility as that repo, so private projects can still publish a public summary through Guppy.
+
 ## Project status: `STATUS.json`
 
 Lives at `guppy/STATUS.json` in each project repo, and as `projects/<id>.json` in Guppy. All fields are required. Fields with no value are `null`, never omitted. No other fields are allowed.

@@ -5,7 +5,7 @@ description: Registers the current project in Guppy, Nilo's project manager. Use
 
 # Register the current project in Guppy
 
-Guppy is Nilo's project manager and lives in the private repo github.com/manuelstone/guppy. This skill has no rules of its own: they are all in Guppy's AGENTS.md and its `templates/` folder. Read them there and follow them; if anything here contradicts AGENTS.md, AGENTS.md wins.
+Guppy is Nilo's project manager and lives in the public repo github.com/manuelstone/guppy. Everything written there is public: never put private information, credentials or secrets in it. This skill has no rules of its own: they are all in Guppy's AGENTS.md and its `templates/` folder. Read them there and follow them; if anything here contradicts AGENTS.md, AGENTS.md wins.
 
 Talk to Nilo in Spanish. Everything written to the repos is in US English, except the legacy Spanish keys and values the templates keep on purpose.
 

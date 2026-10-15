@@ -1,6 +1,6 @@
 # Project onboarding message
 
-When the user asks for "the session instructions" for a project, give them this message, complete and ready to paste. It is self-contained on purpose: the project agent does not need access to Guppy, which is private.
+When the user asks for "the session instructions" for a project, give them this message, complete and ready to paste. It is self-contained on purpose: the project agent does not need access to Guppy.
 
 Replace `<TODAY>`. Do not change anything else unless the user asks.
 
