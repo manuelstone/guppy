@@ -2,13 +2,13 @@
   "name": "Guppy",
   "description": "Nilo Vélez's personal project manager.",
   "pages": {
-    "home": "https://manuelstone.github.io/guppy/",
-    "dashboard": "https://manuelstone.github.io/guppy/projects/"
+    "home": "https://guppy.manolito.com.es/",
+    "dashboard": "https://guppy.manolito.com.es/projects/"
   },
   "endpoints": {
     "projects": {
-      "json": "https://manuelstone.github.io/guppy/projects.json",
-      "md": "https://manuelstone.github.io/guppy/projects.md",
+      "json": "https://guppy.manolito.com.es/projects.json",
+      "md": "https://guppy.manolito.com.es/projects.md",
       "schema": "https://github.com/manuelstone/guppy/blob/main/schema/projects.schema.json"
     }
   }

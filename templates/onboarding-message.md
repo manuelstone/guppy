@@ -73,6 +73,6 @@ Fix anything it reports until it says the file follows the contract. Without Nod
 **9. Publish.** Commit and push to the default branch, with a message like `Publish project status to Guppy`. Then check, waiting a couple of minutes if needed:
 
 - The **Guppy sync** run in the repo's Actions tab finishes successfully (`gh run list --workflow guppy-sync.yml`, if the GitHub CLI is available). If `guppy/STATUS.json` did not change in this push, no run starts; that is fine.
-- The project appears with its current status in https://manuelstone.github.io/guppy/projects.json (add `?nocache=<unix time>` to skip the cache).
+- The project appears with its current status in https://guppy.manolito.com.es/projects.json (add `?nocache=<unix time>` to skip the cache).
 
 **10. Report.** In a few lines: what changed in the repo, the commit, the status the project ends up with, and the result of both checks. If something failed, say exactly what.

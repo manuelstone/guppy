@@ -38,7 +38,7 @@ templates/STATUS.json             ← skeleton for the guppy/STATUS.json that li
 skills/registrar-en-guppy/        ← skill that applies the onboarding message from a project's own session
 ```
 
-Public endpoints: https://manuelstone.github.io/guppy/ (see "Endpoints" in the contract).
+Public endpoints: https://guppy.manolito.com.es/ (see "Endpoints" in the contract).
 
 ## Model
 

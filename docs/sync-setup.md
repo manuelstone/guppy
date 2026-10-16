@@ -39,7 +39,7 @@ Normally the [onboarding message](../templates/onboarding-message.md) does all o
    - Or with the GitHub CLI: `gh secret set GUPPY_TOKEN --repo <owner>/<repo>` (it asks for the value).
 2. **Add the workflow**: copy [`templates/guppy-sync.yml`](../templates/guppy-sync.yml) to `.github/workflows/guppy-sync.yml` in the project, unchanged.
 3. **Commit and push** to the default branch.
-4. **Check it**: the project's **Actions** tab shows a **Guppy sync** run. In Guppy, a `Sync <id> status from …` commit (only if the file changed) and a **Publish site** run follow, and the project appears on https://manuelstone.github.io/guppy/projects.md.
+4. **Check it**: the project's **Actions** tab shows a **Guppy sync** run. In Guppy, a `Sync <id> status from …` commit (only if the file changed) and a **Publish site** run follow, and the project appears on https://guppy.manolito.com.es/projects.md.
 
 To run it by hand: project repo → **Actions → Guppy sync → Run workflow**, or `gh workflow run guppy-sync.yml --repo <owner>/<repo>`.
 

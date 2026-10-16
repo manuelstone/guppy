@@ -153,13 +153,13 @@ Everything public lives in `site/` in the Guppy repo and is deployed to GitHub P
   "name": "Guppy",
   "description": "Nilo Vélez's personal project manager.",
   "pages": {
-    "home": "https://manuelstone.github.io/guppy/",
-    "dashboard": "https://manuelstone.github.io/guppy/projects/"
+    "home": "https://guppy.manolito.com.es/",
+    "dashboard": "https://guppy.manolito.com.es/projects/"
   },
   "endpoints": {
     "projects": {
-      "json": "https://manuelstone.github.io/guppy/projects.json",
-      "md": "https://manuelstone.github.io/guppy/projects.md",
+      "json": "https://guppy.manolito.com.es/projects.json",
+      "md": "https://guppy.manolito.com.es/projects.md",
       "schema": "https://github.com/manuelstone/guppy/blob/main/schema/projects.schema.json"
     }
   }
@@ -189,11 +189,11 @@ The same data in a Markdown document for humans and agents. Projects are grouped
 
 ## Endpoints
 
-- `https://manuelstone.github.io/guppy/` — human entry point
-- `https://manuelstone.github.io/guppy/projects/` — dashboard
-- `https://manuelstone.github.io/guppy/index.json` — API entry point
-- `https://manuelstone.github.io/guppy/projects.json`
-- `https://manuelstone.github.io/guppy/projects.md`
+- `https://guppy.manolito.com.es/` — human entry point
+- `https://guppy.manolito.com.es/projects/` — dashboard
+- `https://guppy.manolito.com.es/index.json` — API entry point
+- `https://guppy.manolito.com.es/projects.json`
+- `https://guppy.manolito.com.es/projects.md`
 
 GitHub Pages caches responses for a few minutes. Clients that need a fresh copy add a `nocache` query parameter with the current Unix timestamp, for example `projects.json?nocache=1792058400`.
 
