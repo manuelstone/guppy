@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Guppy Projects</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314252b'/%3E%3Cpath d='M14 32c6-9 15-12 22-10l12-8c-2 7-2 11 0 18-2 7-2 11 0 18l-12-8c-7 2-16-1-22-10z' fill='%23e8643a'/%3E%3Ccircle cx='21' cy='30' r='2.4' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../guppy.css">
+</head>
+<body>
+  <!-- Static page: it reads ../projects.json in the browser, so it never needs regenerating. -->
+  <main class="page">
+    <section class="launcher" aria-label="Projects">
+      <div class="search">
+        <a class="home-link" href="../" title="Guppy home" aria-label="Guppy home">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="16" fill="var(--fg)"/>
+            <path d="M14 32c6-9 15-12 22-10l12-8c-2 7-2 11 0 18-2 7-2 11 0 18l-12-8c-7 2-16-1-22-10z" fill="var(--accent)"/>
+            <circle cx="21" cy="30" r="2.4" fill="var(--bg)"/>
+          </svg>
+        </a>
+        <input id="q" type="search" placeholder="Search your projects" autocomplete="off" aria-label="Search projects">
+        <span class="stamp" id="stamp">Loading…</span>
+      </div>
+      <div class="cols">
+        <aside class="rail">
+          <h2 class="label">Working on</h2>
+          <ul class="recent" id="recent"></ul>
+        </aside>
+        <div class="grid-wrap">
+          <div class="filters" id="filters" role="group" aria-label="Filter by status"></div>
+          <div class="tiles" id="tiles"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const DATA_URL = '../projects.json';
+      const REFETCH_MS = 5 * 60 * 1000;   // pick up new statuses without a reload
+      const REDRAW_MS = 60 * 1000;        // keep the "ago" times fresh
+      const ORDER = ['blocked', 'active', 'planned', 'inactive', 'archived'];
+      const LABEL = { blocked: 'Blocked', active: 'Active', planned: 'Planned', inactive: 'Inactive', archived: 'Archived' };
+      const $ = (id) => document.getElementById(id);
+
+      let projects = [];
+      let generatedUnix = 0;
+      let filter = 'all';
+      // The chosen filter is remembered per browser; the page works without it.
+      try { filter = localStorage.getItem('guppy-filter') || 'all'; } catch (e) {}
+
+      const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+      const UNITS = [['year', 31557600], ['month', 2629800], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60], ['second', 1]];
+      function ago(unix) {
+        const s = unix - Date.now() / 1000;
+        const [unit, size] = UNITS.find(([, size]) => Math.abs(s) >= size) || UNITS[UNITS.length - 1];
+        return rtf.format(Math.round(s / size), unit);
+      }
+
+      function el(tag, cls, text) {
+        const e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text != null) e.textContent = text;
+        return e;
+      }
+
+      // Projects without an icon get their initials on a color derived from their id, so it never changes.
+      function hue(id) { let h = 0; for (const c of id) h = (h * 31 + c.charCodeAt(0)) % 360; return h; }
+      function initials(title) {
+        const words = title.replace(/[^\p{L}\p{N} -]/gu, ' ').split(/[\s-]+/).filter(Boolean);
+        if (!words.length) return '?';
+        return (words.length > 1 ? words[0][0] + words[1][0] : words[0].slice(0, 2)).toUpperCase();
+      }
+      function icon(p) {
+        const span = el('span', 'icon');
+        span.style.setProperty('--h', hue(p.id));
+        if (p.icon) {
+          const img = el('img');
+          img.src = p.icon;
+          img.alt = '';
+          span.append(img);
+        } else {
+          span.textContent = initials(p.title);
+        }
+        return span;
+      }
+
+      function link(cls, p) {
+        const a = el('a', cls);
+        a.href = p.url;
+        return a;
+      }
+
+      function matches(p, q) {
+        return !q || [p.title, p.description, p.status_text, p.id].join(' ').toLowerCase().includes(q);
+      }
+
+      function render() {
+        const q = $('q').value.trim().toLowerCase();
+        const visible = projects.filter((p) => matches(p, q));
+
+        // Working on: everything not archived, most recently updated first.
+        const recent = $('recent');
+        recent.replaceChildren();
+        visible
+          .filter((p) => p.status !== 'archived')
+          .sort((a, b) => b.last_update_unix - a.last_update_unix)
+          .forEach((p) => {
+            const a = link('', p);
+            const body = el('div');
+            const name = el('div', 'name');
+            name.append(el('i', `dot s-${p.status}`), p.title);
+            const when = el('div', 'when', `${LABEL[p.status]} · ${ago(p.last_update_unix)}`);
+            when.title = p.last_update;
+            body.append(name, when, el('div', 'text', p.status_text));
+            a.append(icon(p), body);
+            const li = el('li');
+            li.append(a);
+            recent.append(li);
+          });
+        if (!recent.children.length) recent.append(el('li', 'empty', projects.length ? 'Nothing in progress matches.' : ''));
+
+        // Status filters with counts, in contract order. Empty statuses are hidden unless selected.
+        const counts = { all: visible.length };
+        for (const s of ORDER) counts[s] = visible.filter((p) => p.status === s).length;
+        const filters = $('filters');
+        filters.replaceChildren();
+        for (const key of ['all', ...ORDER]) {
+          if (key !== 'all' && counts[key] === 0 && filter !== key) continue;
+          const b = el('button');
+          b.type = 'button';
+          b.setAttribute('aria-pressed', String(filter === key));
+          if (key !== 'all') b.append(el('i', `dot s-${key}`));
+          b.append(key === 'all' ? 'All' : LABEL[key], el('span', null, counts[key]));
+          b.addEventListener('click', () => {
+            filter = key;
+            try { localStorage.setItem('guppy-filter', key); } catch (e) {}
+            render();
+          });
+          filters.append(b);
+        }
+
+        // Tiles: grouped in contract order, most recently updated first within each status.
+        const tiles = $('tiles');
+        tiles.replaceChildren();
+        visible
+          .filter((p) => filter === 'all' || p.status === filter)
+          .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status) || b.last_update_unix - a.last_update_unix)
+          .forEach((p) => {
+            const a = link(`tile is-${p.status}`, p);
+            a.setAttribute('aria-label', `${p.title}, ${LABEL[p.status]}: ${p.status_text}`);
+            const meta = el('span', 'meta');
+            meta.append(el('i', `dot s-${p.status}`), ago(p.last_update_unix));
+            meta.title = p.last_update;
+            a.append(icon(p), el('span', 'title', p.title), meta, el('span', 'tip', p.status_text));
+            tiles.append(a);
+          });
+        if (!tiles.children.length && projects.length) tiles.append(el('p', 'empty', 'No project matches.'));
+
+        if (generatedUnix) $('stamp').textContent = `Updated ${ago(generatedUnix)}`;
+      }
+
+      async function load() {
+        try {
+          // no-cache revalidates with the server: an unchanged file costs a 304.
+          const res = await fetch(DATA_URL, { cache: 'no-cache' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          projects = data.projects;
+          generatedUnix = data.generated_unix;
+          render();
+        } catch (err) {
+          $('stamp').textContent = projects.length ? 'Offline: showing the last data' : 'Could not load the projects. Retrying in 5 minutes.';
+        }
+      }
+
+      $('q').addEventListener('input', render);
+      $('q').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const first = document.querySelector('.tile');
+          if (first) location.href = first.href;
+        }
+        if (e.key === 'Escape') {
+          e.target.value = '';
+          render();
+        }
+      });
+      // Typing anywhere starts a search.
+      document.addEventListener('keydown', (e) => {
+        if (e.target.matches('input, textarea') || e.metaKey || e.ctrlKey || e.altKey || e.key.length !== 1) return;
+        $('q').focus();
+      });
+
+      load();
+      setInterval(load, REFETCH_MS);
+      setInterval(render, REDRAW_MS);
+    })();
+  </script>
+</body>
+</html>
