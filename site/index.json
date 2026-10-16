@@ -1,6 +1,10 @@
 {
   "name": "Guppy",
   "description": "Nilo Vélez's personal project manager.",
+  "pages": {
+    "home": "https://manuelstone.github.io/guppy/",
+    "dashboard": "https://manuelstone.github.io/guppy/projects/"
+  },
   "endpoints": {
     "projects": {
       "json": "https://manuelstone.github.io/guppy/projects.json",

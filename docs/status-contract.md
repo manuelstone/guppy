@@ -137,8 +137,10 @@ Everything public lives in `site/` in the Guppy repo and is deployed to GitHub P
 
 | File | Maintained | Content |
 |---|---|---|
-| `site/index.html` | By hand | Human entry point: links to the published files. |
-| `site/index.json` | By hand | API entry point: lists the available endpoints. |
+| `site/index.html` | By hand | Human entry point: links to the published pages and files. |
+| `site/projects/index.html` | By hand | Dashboard: a static page that reads `projects.json` in the browser, so it never needs regenerating. |
+| `site/guppy.css` | By hand | Styles shared by both pages. |
+| `site/index.json` | By hand | API entry point: lists the pages and the available endpoints. |
 | `site/projects.json` | Generated | All project statuses. Nobody edits it by hand. |
 | `site/projects.md` | Generated | The same data for humans and agents. Nobody edits it by hand. |
 
@@ -150,6 +152,10 @@ Everything public lives in `site/` in the Guppy repo and is deployed to GitHub P
 {
   "name": "Guppy",
   "description": "Nilo Vélez's personal project manager.",
+  "pages": {
+    "home": "https://manuelstone.github.io/guppy/",
+    "dashboard": "https://manuelstone.github.io/guppy/projects/"
+  },
   "endpoints": {
     "projects": {
       "json": "https://manuelstone.github.io/guppy/projects.json",
@@ -160,7 +166,7 @@ Everything public lives in `site/` in the Guppy repo and is deployed to GitHub P
 }
 ```
 
-A new endpoint is added here when Guppy starts publishing something new.
+A new page or endpoint is added here when Guppy starts publishing something new.
 
 ### `projects.json`
 
@@ -184,6 +190,7 @@ The same data in a Markdown document for humans and agents. Projects are grouped
 ## Endpoints
 
 - `https://manuelstone.github.io/guppy/` — human entry point
+- `https://manuelstone.github.io/guppy/projects/` — dashboard
 - `https://manuelstone.github.io/guppy/index.json` — API entry point
 - `https://manuelstone.github.io/guppy/projects.json`
 - `https://manuelstone.github.io/guppy/projects.md`

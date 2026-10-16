@@ -5,29 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Guppy</title>
-  <style>
-    :root { color-scheme: light dark; --fg: #1f2328; --muted: #59636e; --bg: #ffffff; --link: #0969da; }
-    @media (prefers-color-scheme: dark) { :root { --fg: #e6edf3; --muted: #9198a1; --bg: #0d1117; --link: #4493f8; } }
-    body { margin: 0; padding: 3rem 1rem; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
-    main { max-width: 36rem; margin: 0 auto; }
-    h1 { margin: 0 0 .25rem; }
-    p { color: var(--muted); margin: 0 0 2rem; }
-    ul { padding-left: 1.25rem; }
-    li { margin: .5rem 0; }
-    a { color: var(--link); }
-    code { font-size: .9em; }
-  </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314252b'/%3E%3Cpath d='M14 32c6-9 15-12 22-10l12-8c-2 7-2 11 0 18-2 7-2 11 0 18l-12-8c-7 2-16-1-22-10z' fill='%23e8643a'/%3E%3Ccircle cx='21' cy='30' r='2.4' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="guppy.css">
 </head>
 <body>
-  <main>
-    <h1>Guppy</h1>
-    <p>Nilo Vélez's personal project manager.</p>
-    <ul>
-      <li><a href="projects.md">Projects</a> (<code>projects.md</code>): project status for humans and agents.</li>
-      <li><a href="projects.json">Projects</a> (<code>projects.json</code>): the same data as JSON.</li>
-      <li><a href="index.json">API entry point</a> (<code>index.json</code>): list of endpoints.</li>
-      <li><a href="https://github.com/manuelstone/guppy">Source on GitHub</a>, including the <a href="https://github.com/manuelstone/guppy/blob/main/docs/status-contract.md">status contract</a>.</li>
-    </ul>
+  <main class="page home">
+    <header class="home-head">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="var(--fg)"/>
+        <path d="M14 32c6-9 15-12 22-10l12-8c-2 7-2 11 0 18-2 7-2 11 0 18l-12-8c-7 2-16-1-22-10z" fill="var(--accent)"/>
+        <circle cx="21" cy="30" r="2.4" fill="var(--bg)"/>
+      </svg>
+      <div>
+        <h1>Guppy</h1>
+        <p>Nilo Vélez's project manager. Every project publishes its own status here.</p>
+      </div>
+    </header>
+
+    <div class="summary" id="summary" aria-label="Projects by status"></div>
+
+    <nav class="links" aria-label="Published pages and files">
+      <a class="link-card primary" href="projects/">
+        <span class="path">/projects/</span><strong>Dashboard</strong>
+        <span class="what">All projects at a glance. Made for a browser start page.</span>
+      </a>
+      <a class="link-card" href="projects.md">
+        <span class="path">/projects.md</span><strong>Status in Markdown</strong>
+        <span class="what">For people and AI agents.</span>
+      </a>
+      <a class="link-card" href="projects.json">
+        <span class="path">/projects.json</span><strong>Status as JSON</strong>
+        <span class="what">For any app that wants the data.</span>
+      </a>
+      <a class="link-card" href="index.json">
+        <span class="path">/index.json</span><strong>API entry point</strong>
+        <span class="what">Lists every endpoint and its schema.</span>
+      </a>
+    </nav>
+
+    <p class="foot">
+      Source and <a href="https://github.com/manuelstone/guppy/blob/main/docs/status-contract.md">status contract</a>
+      on <a href="https://github.com/manuelstone/guppy">github.com/manuelstone/guppy</a>.
+      <span id="updated"></span>
+    </p>
   </main>
+
+  <script>
+    (() => {
+      const ORDER = ['blocked', 'active', 'planned', 'inactive', 'archived'];
+      const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+      const UNITS = [['year', 31557600], ['month', 2629800], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60], ['second', 1]];
+      const ago = (unix) => {
+        const s = unix - Date.now() / 1000;
+        const [unit, size] = UNITS.find(([, size]) => Math.abs(s) >= size) || UNITS[UNITS.length - 1];
+        return rtf.format(Math.round(s / size), unit);
+      };
+
+      fetch('projects.json', { cache: 'no-cache' })
+        .then((res) => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+        .then((data) => {
+          const summary = document.getElementById('summary');
+          for (const status of ORDER) {
+            const n = data.projects.filter((p) => p.status === status).length;
+            if (!n) continue;
+            const chip = document.createElement('span');
+            chip.className = `chip s-${status}`;
+            const dot = document.createElement('i');
+            dot.className = 'dot';
+            chip.append(dot, `${n} ${status}`);
+            summary.append(chip);
+          }
+          document.getElementById('updated').textContent = `Data updated ${ago(data.generated_unix)}.`;
+        })
+        .catch(() => {});
+    })();
+  </script>
 </body>
 </html>
