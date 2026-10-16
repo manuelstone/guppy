@@ -35,7 +35,7 @@ templates/onboarding-message.md   ← message that sets up a project (same for e
 templates/guppy-sync.yml          ← sync workflow to install in each project
 templates/STATUS.md               ← template for the guppy/STATUS.md that lives in each project
 templates/STATUS.json             ← skeleton for the guppy/STATUS.json that lives in each project
-skills/registrar-en-guppy/        ← skill that applies the onboarding message from a project's own session
+skills/registrar-en-guppy/        ← skill for a project's own session: registers it, or changes its data in Guppy
 ```
 
 Public endpoints: https://guppy.manolito.com.es/ (see "Endpoints" in the contract).
@@ -97,7 +97,9 @@ Commit and push with a clear message (`Remove GlotPress Stats from the backlog`)
 
 ## The `registrar-en-guppy` skill
 
-It lives in `skills/registrar-en-guppy/`, is installed on each machine with `npx skills add manuelstone/guppy -g -a claude-code` and updated with `npx skills update -g`. It downloads the onboarding message from this repo and applies it in the project; it never writes to Guppy. It has no rules of its own, so any workflow change is made in the onboarding message. If you change the skill, commit it here and remind Nilo to update it on his machines.
+It lives in `skills/registrar-en-guppy/`, is installed on each machine with `npx skills add manuelstone/guppy -g -a claude-code` and updated with `npx skills update -g`. It downloads the onboarding message from this repo and applies it in the project, and it also changes a registered project's data in Guppy (icon, title, description, status) by editing the project's `guppy/STATUS.json`. It never writes to Guppy. It has no rules of its own, so any workflow change is made in the onboarding message or the contract.
+
+If Nilo asks a Guppy session to change a project's icon, title or description, the change belongs in that project: point him to the skill in the project's session ("cambia el icono del proyecto en Guppy a <url>"). If you change the skill, commit it here and remind Nilo to update it on his machines.
 
 ## Rules
 
