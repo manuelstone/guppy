@@ -28,7 +28,8 @@ projects/BACKLOG.md               ← project ideas not yet decided
 scripts/validate-status.mjs       ← validates a status file; shared by Guppy and the project sync action
 scripts/generate.mjs              ← validates projects/*.json and generates the site indexes
 scripts/sync-status.mjs           ← run by each project's sync action to write its status here
-site/                             ← public site, deployed to GitHub Pages
+site/                             ← public site, deployed to GitHub Pages (icons in site/icons/)
+assets/guppi.png                  ← source image for the site icons (GUPPI, from the Bobiverse books); not published
 .github/workflows/publish.yml     ← runs the generator and deploys site/ on every change
 templates/onboarding-message.md   ← message that sets up or migrates a project (same for every project)
 templates/guppy-sync.yml          ← sync workflow to install in each project

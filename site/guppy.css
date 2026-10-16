@@ -68,7 +68,7 @@ a { color: inherit; }
 /* ---------- Home ---------- */
 .home { display: grid; gap: 28px; padding-block: 24px; }
 .home-head { display: flex; align-items: center; gap: 16px; }
-.mark { width: 52px; height: 52px; flex: none; }
+.mark { width: 52px; height: 52px; flex: none; border-radius: 14px; }
 .home h1 { font-size: 34px; line-height: 1.1; margin: 0; letter-spacing: -0.02em; text-wrap: balance; }
 .home-head p { margin: 4px 0 0; color: var(--muted); }
 .summary { display: flex; flex-wrap: wrap; gap: 8px; min-height: 30px; }
@@ -91,7 +91,7 @@ a { color: inherit; }
 .search input::placeholder { color: var(--muted); opacity: 0.8; }
 .stamp { font: 400 12px var(--font-data); color: var(--muted); white-space: nowrap; }
 .home-link { display: inline-grid; place-items: center; width: 30px; height: 30px; flex: none; border-radius: 8px; }
-.home-link svg { width: 30px; height: 30px; }
+.home-link img { width: 30px; height: 30px; border-radius: 8px; display: block; }
 .cols { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); }
 .rail { border-right: 1px solid var(--line); padding: 18px 12px 22px; background: var(--panel-2); }
 .label { font: 600 11.5px var(--font-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 4px 10px 10px; }
