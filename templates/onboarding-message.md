@@ -51,7 +51,7 @@ Do not use CHANGELOG.md for this: it is for users. Do not edit `guppy-sync.yml`.
 
 - If Guppy already has a file for this project (step 2), start from it and keep `title`, `description` and `icon` unless I say otherwise. If `guppy/STATUS.md` describes a newer situation than its `status` and `status_text`, update them and take new dates as described in the section above; otherwise keep the dates.
 - If it is a new project, write `title` and `description` from the README (ask me if they are not clear), `status` and `status_text` from the real status, and the dates from a single timestamp taken now.
-- `url` is `https://github.com/<owner>/<repo>`, `status_url` is `https://raw.githubusercontent.com/<owner>/<repo>/<default-branch>/guppy/STATUS.md` and `icon` is `null`.
+- `url` is `https://github.com/<owner>/<repo>`, `status_url` is `https://raw.githubusercontent.com/<owner>/<repo>/<default-branch>/guppy/STATUS.md`. `icon` is a public URL of the project's icon, ideally a square 128×128 PNG (for a WordPress plugin published on WordPress.org, `https://ps.w.org/<plugin-slug>/assets/icon-128x128.png`); if there is none, ask me, and use `null` if I have none either.
 
 Validate it. This needs Node.js 18 or later:
 

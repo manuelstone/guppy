@@ -66,7 +66,7 @@
       "pattern": "^https://"
     },
     "icon": {
-      "description": "URL of a square icon (PNG or SVG), or null. Reserved for future use.",
+      "description": "Public URL of the project's icon, ideally a square 128x128 PNG, or null.",
       "type": ["string", "null"],
       "pattern": "^https://"
     }

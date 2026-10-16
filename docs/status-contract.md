@@ -65,13 +65,21 @@ Lives at `guppy/STATUS.json` in each project repo, and as `projects/<id>.json` i
 | `last_update_unix` | integer | The same instant as a Unix timestamp, in seconds. |
 | `url` | string | Main link for the project: its repo, or its website if it has no repo. |
 | `status_url` | string or `null` | Raw URL of the project's `guppy/STATUS.md`, or `null` if it has none. |
-| `icon` | string or `null` | URL of a square icon (PNG or SVG). Reserved for future use; `null` for now. |
+| `icon` | string or `null` | Public URL of the project's icon, or `null`. See [Icon](#icon). |
 
 ### Identifier
 
 For a project with a GitHub repo, the identifier is its full name (`<owner>/<repo>`) in lowercase, with every run of characters other than `a-z` and `0-9` replaced by a single hyphen. Example: `nilovelez/pdf-diva` → `nilovelez-pdf-diva`. Projects without a repo use `nilovelez-<descriptive-slug>`, lowercase ASCII with hyphens.
 
 The identifier is also the file name in Guppy (`projects/<id>.json`). For projects with a repo, the sync action checks that `id`, `url` and `status_url` match the actual repository and its default branch, so a renamed or transferred repo is detected automatically.
+
+### Icon
+
+`icon` is any public `https` URL, or `null` when the project has no icon (clients then draw a placeholder). The recommended format is a **square 128×128 PNG**, the size WordPress uses for plugin icons. Where to host it:
+
+- **An existing public copy**, such as the WordPress.org plugin CDN: `https://ps.w.org/<plugin-slug>/assets/icon-128x128.png`.
+- **The project repo**, through its raw URL, if the repo is public.
+- **Guppy**, for private repos or projects without a public copy: add the file as `site/icons/projects/<id>.png` in Guppy and use `https://guppy.manolito.com.es/icons/projects/<id>.png`.
 
 ### Status values
 

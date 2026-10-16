@@ -40,6 +40,7 @@
       const REFETCH_MS = 5 * 60 * 1000;   // pick up new statuses without a reload
       const REDRAW_MS = 60 * 1000;        // keep the "ago" times fresh
       const ORDER = ['blocked', 'active', 'planned', 'inactive', 'archived'];
+      const CURRENT = ['blocked', 'active'];
       const LABEL = { blocked: 'Blocked', active: 'Active', planned: 'Planned', inactive: 'Inactive', archived: 'Archived' };
       const $ = (id) => document.getElementById(id);
 
@@ -47,7 +48,8 @@
       let generatedUnix = 0;
       let filter = 'all';
       // The chosen filter is remembered per browser; the page works without it.
-      try { filter = localStorage.getItem('guppy-filter') || 'all'; } catch (e) {}
+      try { filter = localStorage.getItem('guppy-filter') || 'current'; } catch (e) {}
+      if (filter !== 'current' && !ORDER.includes(filter)) filter = 'current';
 
       const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
       const UNITS = [['year', 31557600], ['month', 2629800], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60], ['second', 1]];
@@ -120,18 +122,19 @@
           });
         if (!recent.children.length) recent.append(el('li', 'empty', projects.length ? 'Nothing in progress matches.' : ''));
 
-        // Status filters with counts, in contract order. Empty statuses are hidden unless selected.
-        const counts = { all: visible.length };
+        // Filters with counts: Current (the default: active and blocked), then each status in contract
+        // order. Empty statuses are hidden unless selected.
+        const counts = { current: visible.filter((p) => CURRENT.includes(p.status)).length };
         for (const s of ORDER) counts[s] = visible.filter((p) => p.status === s).length;
         const filters = $('filters');
         filters.replaceChildren();
-        for (const key of ['all', ...ORDER]) {
-          if (key !== 'all' && counts[key] === 0 && filter !== key) continue;
+        for (const key of ['current', ...ORDER]) {
+          if (key !== 'current' && counts[key] === 0 && filter !== key) continue;
           const b = el('button');
           b.type = 'button';
-          b.setAttribute('aria-pressed', String(filter === key));
-          if (key !== 'all') b.append(el('i', `dot s-${key}`));
-          b.append(key === 'all' ? 'All' : LABEL[key], el('span', null, counts[key]));
+          b.setAttribute('aria-pressed', String(!q && filter === key));
+          if (key !== 'current') b.append(el('i', `dot s-${key}`));
+          b.append(key === 'current' ? 'Current' : LABEL[key], el('span', null, counts[key]));
           b.addEventListener('click', () => {
             filter = key;
             try { localStorage.setItem('guppy-filter', key); } catch (e) {}
@@ -141,10 +144,12 @@
         }
 
         // Tiles: grouped in contract order, most recently updated first within each status.
+        // A search looks through every status, so archived projects can still be found.
+        const inFilter = (p) => q || (filter === 'current' ? CURRENT.includes(p.status) : p.status === filter);
         const tiles = $('tiles');
         tiles.replaceChildren();
         visible
-          .filter((p) => filter === 'all' || p.status === filter)
+          .filter(inFilter)
           .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status) || b.last_update_unix - a.last_update_unix)
           .forEach((p) => {
             const a = link(`tile is-${p.status}`, p);
