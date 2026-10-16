@@ -75,7 +75,7 @@ The identifier is also the file name in Guppy (`projects/<id>.json`). For projec
 
 ### Icon
 
-`icon` is any public `https` URL, or `null` when the project has no icon (clients then draw a placeholder). The recommended format is a **square 128×128 PNG**, the size WordPress uses for plugin icons. Where to host it:
+`icon` is any public `https` URL, or `null` when the project has no icon (clients then draw a placeholder). The recommended format is a **square 128×128 PNG**, the size WordPress uses for plugin icons. Icons are precomposed: they carry whatever background, effects and corners they need, and clients show them as they are, on a transparent background. Where to host it:
 
 - **An existing public copy**, such as the WordPress.org plugin CDN: `https://ps.w.org/<plugin-slug>/assets/icon-128x128.png`.
 - **The project repo**, through its raw URL, if the repo is public.
