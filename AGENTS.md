@@ -31,7 +31,7 @@ scripts/sync-status.mjs           ← run by each project's sync action to write
 site/                             ← public site, deployed to GitHub Pages (icons in site/icons/)
 assets/guppi.png                  ← source image for the site icons (GUPPI, from the Bobiverse books); not published
 .github/workflows/publish.yml     ← runs the generator and deploys site/ on every change
-templates/onboarding-message.md   ← message that sets up or migrates a project (same for every project)
+templates/onboarding-message.md   ← message that sets up a project (same for every project)
 templates/guppy-sync.yml          ← sync workflow to install in each project
 templates/STATUS.md               ← template for the guppy/STATUS.md that lives in each project
 templates/STATUS.json             ← skeleton for the guppy/STATUS.json that lives in each project

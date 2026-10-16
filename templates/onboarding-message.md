@@ -1,12 +1,12 @@
 # Project onboarding message
 
-The message below sets a project up to publish its status to Guppy, or migrates a project that still uses the legacy format (a YAML header in `guppy/STATUS.md`). It is the same for every project: give it to Nilo exactly as it is, ready to paste into a session of that project, or apply it directly when you are that session (the `registrar-en-guppy` skill does this). It is self-contained: the project agent only needs to read Guppy's public URLs, never to write to Guppy.
+The message below sets a project up to publish its status to Guppy. It is the same for every project: give it to Nilo exactly as it is, ready to paste into a session of that project, or apply it directly when you are that session (the `registrar-en-guppy` skill does this). It is self-contained: the project agent only needs to read Guppy's public URLs, never to write to Guppy.
 
 Everything below the line is the message.
 
 ---
 
-This project publishes its status to Guppy, my project manager (https://github.com/manuelstone/guppy). Set it up, or migrate it if it already has a `guppy/STATUS.md` with a YAML header, following these steps in order. Talk to me in Spanish; everything you write to the repo is in US English.
+This project publishes its status to Guppy, my project manager (https://github.com/manuelstone/guppy). Set it up following these steps in order. Talk to me in Spanish; everything you write to the repo is in US English.
 
 Guppy is public: `guppy/STATUS.json` ends up on a public website. Never put private information, credentials, keys, tokens, secrets, internal addresses or personal data in it.
 
@@ -45,7 +45,7 @@ Do not use CHANGELOG.md for this: it is for users. Do not edit `guppy-sync.yml`.
 **4. `guppy/STATUS.md`.**
 
 - If it does not exist, create it from https://raw.githubusercontent.com/manuelstone/guppy/main/templates/STATUS.md, with the project's real status, and a first Log entry: `<today>: guppy/STATUS.md created.`
-- If it exists with a YAML header (`estado`, `siguiente_paso`, `bloqueo`, `actualizado`): remove the header, making sure what it said about the next step and any blocker is in the Status section. Then translate the whole file into English, Log included, without dropping any content. Add a Log entry at the top: `<today>: migrated to the new Guppy format (STATUS.json).`
+- If it already exists, keep it and make sure its Status section describes the real, current status.
 
 **5. `guppy/STATUS.json`.** Create it following the contract. The skeleton is at https://raw.githubusercontent.com/manuelstone/guppy/main/templates/STATUS.json.
 
@@ -70,7 +70,7 @@ Fix anything it reports until it says the file follows the contract. Without Nod
 
 **8. Secret.** Stop here and ask me to confirm that the repo has the `GUPPY_TOKEN` Actions secret. Without it, the sync fails. I add it myself (https://github.com/manuelstone/guppy/blob/main/docs/sync-setup.md). Do not continue until I confirm.
 
-**9. Publish.** Commit and push to the default branch, with a message like `Publish project status to Guppy` (or `Migrate project status to the new Guppy format`). Then check, waiting a couple of minutes if needed:
+**9. Publish.** Commit and push to the default branch, with a message like `Publish project status to Guppy`. Then check, waiting a couple of minutes if needed:
 
 - The **Guppy sync** run in the repo's Actions tab finishes successfully (`gh run list --workflow guppy-sync.yml`, if the GitHub CLI is available). If `guppy/STATUS.json` did not change in this push, no run starts; that is fine.
 - The project appears with its current status in https://manuelstone.github.io/guppy/projects.json (add `?nocache=<unix time>` to skip the cache).
