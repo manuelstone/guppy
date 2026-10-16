@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-15 18:00:49 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-16 06:14:42 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a manual review by the WordPress.org plugin team after the duplicate
 Updated: 2026-10-14 09:16:20 +0200
 
 ## Active
+
+### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
+
+Version 1 of the skill is merged and was tested on the Quevedo plugin. Next: add the Quevedo lessons (Playground, SVN updates) to the skill and test it on a new plugin.
+
+Updated: 2026-10-16 08:14:02 +0200
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
@@ -23,12 +29,6 @@ Updated: 2026-10-14 12:16:07 +0200
 Version 1.5 is tagged on GitHub and pending release to the WordPress.org plugin directory via SVN. Version 1.4 is still the published one.
 
 Updated: 2026-10-13 19:00:35 +0200
-
-### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
-
-The first version of the skill is written and awaiting review. Next: merge it and test it on a new plugin.
-
-Updated: 2026-10-13 14:56:07 +0200
 
 ## Archived
 
