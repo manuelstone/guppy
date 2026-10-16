@@ -148,11 +148,11 @@
           .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status) || b.last_update_unix - a.last_update_unix)
           .forEach((p) => {
             const a = link(`tile is-${p.status}`, p);
-            a.setAttribute('aria-label', `${p.title}, ${LABEL[p.status]}: ${p.status_text}`);
+            a.setAttribute('aria-label', `${p.title}, ${LABEL[p.status]}: ${p.description}`);
             const meta = el('span', 'meta');
             meta.append(el('i', `dot s-${p.status}`), ago(p.last_update_unix));
             meta.title = p.last_update;
-            a.append(icon(p), el('span', 'title', p.title), meta, el('span', 'tip', p.status_text));
+            a.append(icon(p), el('span', 'title', p.title), meta, el('span', 'tip', p.description));
             tiles.append(a);
           });
         if (!tiles.children.length && projects.length) tiles.append(el('p', 'empty', 'No project matches.'));
