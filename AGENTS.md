@@ -60,6 +60,7 @@ Migrated projects (they sync on their own; never edit their `projects/<id>.json`
 
 - `nilovelez-flypad-keepalive`
 - `nilovelez-quevedo`
+- `nilovelez-pdf-diva`
 
 Every other project with a repo is a **legacy project**: it still has a YAML header in Spanish in its `guppy/STATUS.md` and no `guppy/STATUS.json`. For those, follow "Legacy projects" at the end of this file. That section disappears when the last one is migrated.
 
