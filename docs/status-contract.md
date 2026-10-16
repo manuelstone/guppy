@@ -8,7 +8,7 @@ This document defines the data format Guppy uses to publish the status of Nilo's
 
 The machine-readable version of this contract is in [`schema/`](../schema/). If this document and the schemas disagree, fix whichever is wrong; they must always say the same thing.
 
-> **Migration note.** Projects are being migrated one by one with the [onboarding message](../templates/onboarding-message.md). Until a project is migrated, it keeps a legacy YAML header in `guppy/STATUS.md` and the Guppy agent maintains its `projects/<id>.json` by hand. See [AGENTS.md](../AGENTS.md).
+New projects are set up with the [onboarding message](../templates/onboarding-message.md).
 
 ## Architecture
 
