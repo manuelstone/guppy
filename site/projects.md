@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-16 06:14:42 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-16 06:17:17 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-14 09:16:20 +0200
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
-Version 1 of the skill is merged and was tested on the Quevedo plugin. Next: add the Quevedo lessons (Playground, SVN updates) to the skill and test it on a new plugin.
+Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), folding each project's lessons into the skill as they come up.
 
-Updated: 2026-10-16 08:14:02 +0200
+Updated: 2026-10-16 08:16:41 +0200
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
