@@ -58,12 +58,12 @@ GITHUB_REPOSITORY=<owner>/<repo> DEFAULT_BRANCH=<default-branch> node scripts/sy
 ## Renewing the token
 
 1. Signed in as `manuelstone`, open the token and click **Regenerate token**. It keeps its settings and gets a new value.
-2. Update the `GUPPY_TOKEN` secret in every project that syncs. The list is in [AGENTS.md](../AGENTS.md) ("Projects that already sync automatically"). With the GitHub CLI:
+2. Update the `GUPPY_TOKEN` secret in every project that syncs: every `projects/*.json` whose `url` is a GitHub repo. From a Guppy checkout, with the GitHub CLI:
 
 ```bash
 read -rs TOKEN
-for repo in nilovelez/flypad-keepalive; do   # one entry per syncing project
-  printf '%s' "$TOKEN" | gh secret set GUPPY_TOKEN --repo "$repo"
+for repo in $(node -e 'for (const f of require("fs").readdirSync("projects").filter(f => f.endsWith(".json"))) { const m = /^https:\/\/github\.com\/([^/]+\/[^/]+)$/.exec(require("./projects/" + f).url); if (m) console.log(m[1]); }'); do
+  echo "$repo"; printf '%s' "$TOKEN" | gh secret set GUPPY_TOKEN --repo "$repo"
 done
 ```
 
