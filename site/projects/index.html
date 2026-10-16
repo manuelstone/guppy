@@ -77,6 +77,8 @@
         const span = el('span', 'icon');
         span.style.setProperty('--h', hue(p.id));
         if (p.icon) {
+          // A real icon is assumed to be precomposed (background, effects, corners): shown as is.
+          span.classList.add('has-image');
           const img = el('img');
           img.src = p.icon;
           img.alt = '';
