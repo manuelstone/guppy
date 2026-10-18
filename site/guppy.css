@@ -128,6 +128,10 @@ a { color: inherit; }
   .search input { font-size: 17px; }
   .stamp { display: none; }
 }
+@media (min-width: 1200px) {
+  .tiles { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .tile .icon { width: 128px; height: 128px; border-radius: 30px; font-size: 42px; }
+}
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
