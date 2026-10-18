@@ -1,6 +1,6 @@
 /* Shared styles for Guppy's public pages: the home page (index.html) and the dashboard (projects/index.html).
-   Layout: the dashboard is a launcher panel. A left rail lists what is moving now; the right side shows
-   every project as a tile, filtered by status. */
+   Layout: the dashboard is a launcher panel. Projects are filtered by status and shown in one of two views,
+   switched from the corner: details (rows with the full status text, the default) or icons (tiles). */
 
 :root {
   --bg: #eef2f3;
@@ -92,16 +92,21 @@ a { color: inherit; }
 .stamp { font: 400 12px var(--font-data); color: var(--muted); white-space: nowrap; }
 .home-link { display: inline-grid; place-items: center; width: 30px; height: 30px; flex: none; border-radius: 8px; }
 .home-link img { width: 30px; height: 30px; border-radius: 8px; display: block; }
-.cols { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); }
-.rail { border-right: 1px solid var(--line); padding: 18px 12px 22px; background: var(--panel-2); }
-.label { font: 600 11.5px var(--font-ui); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 4px 10px 10px; }
-.recent { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
-.recent a { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; padding: 10px; border-radius: 12px; text-decoration: none; }
-.recent a:hover { background: var(--panel); }
-.recent .name { font-weight: 600; display: flex; align-items: center; gap: 7px; }
-.recent .when { font: 400 12px var(--font-data); color: var(--muted); }
-.recent .text { color: var(--muted); font-size: 13.5px; margin-top: 3px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.grid-wrap { padding: 18px 22px 26px; min-width: 0; }
+.view-toggle { display: inline-grid; place-items: center; width: 34px; height: 34px; flex: none; padding: 0; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 9px; cursor: pointer; }
+.view-toggle:hover { color: var(--fg); background: var(--panel-2); }
+.view-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.body { padding: 18px 22px 26px; min-width: 0; }
+.rows { display: grid; gap: 2px; }
+.row { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid transparent; }
+.row:hover, .row:focus-visible { background: var(--panel-2); border-color: var(--line); }
+.row-body { display: grid; align-content: start; min-width: 0; }
+.row .name { font-weight: 600; display: flex; align-items: center; gap: 7px; }
+.row .when { font: 400 12px var(--font-data); color: var(--muted); }
+.row .text { color: var(--muted); font-size: 13.5px; margin-top: 3px; overflow-wrap: anywhere; }
+.row.is-archived .icon { filter: grayscale(0.85); opacity: 0.55; }
+.row .icon { width: 40px; height: 40px; border-radius: 11px; font-size: 15px; }
+.row .tip { left: 66px; top: calc(100% - 4px); transform: none; }
+.row:hover .tip, .row:focus-visible .tip { opacity: 1; }
 .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 .filters button { font: 500 13.5px var(--font-ui); color: var(--muted); background: none; border: 1px solid transparent; padding: 6px 12px; border-radius: 999px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
 .filters button span { font-family: var(--font-data); font-size: 12px; opacity: 0.8; }
@@ -113,15 +118,13 @@ a { color: inherit; }
 .tile .meta { display: inline-flex; align-items: center; gap: 6px; font: 400 11.5px var(--font-data); color: var(--muted); }
 .tile.is-archived .icon { filter: grayscale(0.85); opacity: 0.55; }
 .icon { width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center; font: 700 22px var(--font-ui); color: #fff; letter-spacing: -0.02em; background: linear-gradient(150deg, hsl(var(--h) 70% 58%), hsl(calc(var(--h) + 28) 65% 42%)); box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12); }
-.recent .icon { width: 40px; height: 40px; border-radius: 11px; font-size: 15px; }
 .icon.has-image { background: transparent; box-shadow: none; border-radius: 0; }
 .icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .tip { position: absolute; z-index: 2; left: 50%; top: calc(100% - 6px); transform: translateX(-50%); width: min(260px, 80vw); padding: 10px 12px; background: var(--fg); color: var(--bg); font-size: 13px; text-align: left; border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity 0.12s; }
 .tile:hover .tip, .tile:focus-visible .tip { opacity: 1; }
 
 @media (max-width: 760px) {
-  .cols { grid-template-columns: minmax(0, 1fr); }
-  .rail { border-right: 0; border-bottom: 1px solid var(--line); }
+  .body { padding: 14px 12px 20px; }
   .search input { font-size: 17px; }
   .stamp { display: none; }
 }
