@@ -1,16 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-16 08:48:57 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-18 15:14:57 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
-## Blocked
+## Active
 
 ### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
 
-Waiting for a manual review by the WordPress.org plugin team after the duplicate-plugin appeal. If approved, version 1.0.0 will be published.
+Approved by the WordPress.org plugin team. Version 1.0.1 adds a small security hardening and is the first one to be uploaded to the WordPress.org SVN repository.
 
-Updated: 2026-10-14 09:16:20 +0200
-
-## Active
+Updated: 2026-10-18 17:07:41 +0200
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
