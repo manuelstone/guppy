@@ -84,7 +84,7 @@ a { color: inherit; }
 .foot { color: var(--muted); font-size: 13px; margin: 0; }
 
 /* ---------- Dashboard ---------- */
-.launcher { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 18px 50px -24px var(--shadow); }
+.launcher { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 18px 50px -24px var(--shadow); }
 .search { display: flex; align-items: center; gap: 12px; padding: 16px 22px; border-bottom: 1px solid var(--line); }
 .search > svg { width: 20px; height: 20px; color: var(--muted); flex: none; }
 .search input { flex: 1; min-width: 0; font: 400 20px var(--font-ui); color: var(--fg); background: none; border: 0; outline: none; }
@@ -96,16 +96,16 @@ a { color: inherit; }
 .view-toggle:hover { color: var(--fg); background: var(--panel-2); }
 .view-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
 .body { padding: 18px 22px 26px; min-width: 0; }
-.rows { display: grid; gap: 2px; }
-.row { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid transparent; }
-.row:hover, .row:focus-visible { background: var(--panel-2); border-color: var(--line); }
+.rows { display: grid; }
+.row { position: relative; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 12px 0; text-decoration: none; }
+.row + .row { border-top: 1px solid var(--line); }
 .row-body { display: grid; align-content: start; min-width: 0; }
 .row .name { font-weight: 600; display: flex; align-items: center; gap: 7px; }
 .row .when { font: 400 12px var(--font-data); color: var(--muted); }
 .row .text { color: var(--muted); font-size: 13.5px; margin-top: 3px; overflow-wrap: anywhere; }
 .row.is-archived .icon { filter: grayscale(0.85); opacity: 0.55; }
-.row .icon { width: 40px; height: 40px; border-radius: 11px; font-size: 15px; }
-.row .tip { left: 66px; top: calc(100% - 4px); transform: none; }
+.row .icon { width: 48px; height: 48px; border-radius: 12px; font-size: 17px; }
+.row .tip { left: 62px; top: calc(100% - 4px); transform: none; }
 .row:hover .tip, .row:focus-visible .tip { opacity: 1; }
 .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 .filters button { font: 500 13.5px var(--font-ui); color: var(--muted); background: none; border: 1px solid transparent; padding: 6px 12px; border-radius: 999px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }

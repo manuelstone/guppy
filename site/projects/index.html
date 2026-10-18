@@ -131,7 +131,7 @@
           filters.append(b);
         }
 
-        // Projects: grouped in contract order, most recently updated first within each status.
+        // Projects: most recently updated first, whatever their status.
         // A search looks through every status, so archived projects can still be found.
         // Both views show the description as a tooltip on hover.
         const inFilter = (p) => q || (filter === 'current' ? CURRENT.includes(p.status) : p.status === filter);
@@ -140,7 +140,7 @@
         items.replaceChildren();
         visible
           .filter(inFilter)
-          .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status) || b.last_update_unix - a.last_update_unix)
+          .sort((a, b) => b.last_update_unix - a.last_update_unix)
           .forEach((p) => {
             if (view === 'details') {
               // Details: the full status text, never cut.
