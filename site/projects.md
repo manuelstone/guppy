@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-18 20:07:11 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-18 20:25:51 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-18 21:52:12 +0200
 
 ## Active
+
+### [Quevedo](https://github.com/nilovelez/quevedo)
+
+Version 1.5 is published in the WordPress.org plugin directory, requiring PHP 8.2 and tested up to WordPress 7.1. No work in progress.
+
+Updated: 2026-10-18 22:24:51 +0200
 
 ### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
 
@@ -23,12 +29,6 @@ Updated: 2026-10-18 21:16:44 +0200
 Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), folding each project's lessons into the skill as they come up.
 
 Updated: 2026-10-16 08:16:41 +0200
-
-### [Quevedo](https://github.com/nilovelez/quevedo)
-
-Version 1.5 is tagged on GitHub and pending release to the WordPress.org plugin directory via SVN. Version 1.4 is still the published one.
-
-Updated: 2026-10-13 19:00:35 +0200
 
 ## Archived
 
