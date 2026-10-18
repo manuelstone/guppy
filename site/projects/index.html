@@ -20,16 +20,11 @@
         </a>
         <input id="q" type="search" placeholder="Search your projects" autocomplete="off" aria-label="Search projects">
         <span class="stamp" id="stamp">Loading…</span>
+        <button class="view-toggle" id="view" type="button"></button>
       </div>
-      <div class="cols">
-        <aside class="rail">
-          <h2 class="label">Working on</h2>
-          <ul class="recent" id="recent"></ul>
-        </aside>
-        <div class="grid-wrap">
-          <div class="filters" id="filters" role="group" aria-label="Filter by status"></div>
-          <div class="tiles" id="tiles"></div>
-        </div>
+      <div class="body">
+        <div class="filters" id="filters" role="group" aria-label="Filter by status"></div>
+        <div id="items"></div>
       </div>
     </section>
   </main>
@@ -50,6 +45,12 @@
       // The chosen filter is remembered per browser; the page works without it.
       try { filter = localStorage.getItem('guppy-filter') || 'current'; } catch (e) {}
       if (filter !== 'current' && !ORDER.includes(filter)) filter = 'current';
+      // Same for the view: details (the default) or icons.
+      let view = 'details';
+      try { view = localStorage.getItem('guppy-view') || 'details'; } catch (e) {}
+      if (view !== 'icons') view = 'details';
+      const ICONS_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>';
+      const DETAILS_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4.5" width="4.5" height="4.5" rx="1"/><rect x="4" y="15" width="4.5" height="4.5" rx="1"/><path d="M11.5 5.5h8.5M11.5 8h6M11.5 16h8.5M11.5 18.5h6"/></svg>';
 
       const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
       const UNITS = [['year', 31557600], ['month', 2629800], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60], ['second', 1]];
@@ -103,26 +104,11 @@
         const q = $('q').value.trim().toLowerCase();
         const visible = projects.filter((p) => matches(p, q));
 
-        // Working on: everything not archived, most recently updated first.
-        const recent = $('recent');
-        recent.replaceChildren();
-        visible
-          .filter((p) => p.status !== 'archived')
-          .sort((a, b) => b.last_update_unix - a.last_update_unix)
-          .forEach((p) => {
-            const a = link('', p);
-            const body = el('div');
-            const name = el('div', 'name');
-            name.append(el('i', `dot s-${p.status}`), p.title);
-            const when = el('div', 'when', `${LABEL[p.status]} · ${ago(p.last_update_unix)}`);
-            when.title = p.last_update;
-            body.append(name, when, el('div', 'text', p.status_text));
-            a.append(icon(p), body);
-            const li = el('li');
-            li.append(a);
-            recent.append(li);
-          });
-        if (!recent.children.length) recent.append(el('li', 'empty', projects.length ? 'Nothing in progress matches.' : ''));
+        // The toggle shows the view it switches to.
+        const toggle = $('view');
+        toggle.innerHTML = view === 'details' ? ICONS_SVG : DETAILS_SVG;
+        toggle.title = view === 'details' ? 'Show as icons' : 'Show details';
+        toggle.setAttribute('aria-label', toggle.title);
 
         // Filters with counts: Current (the default: active and blocked), then each status in contract
         // order. Empty statuses are hidden unless selected.
@@ -145,24 +131,40 @@
           filters.append(b);
         }
 
-        // Tiles: grouped in contract order, most recently updated first within each status.
+        // Projects: grouped in contract order, most recently updated first within each status.
         // A search looks through every status, so archived projects can still be found.
+        // Both views show the description as a tooltip on hover.
         const inFilter = (p) => q || (filter === 'current' ? CURRENT.includes(p.status) : p.status === filter);
-        const tiles = $('tiles');
-        tiles.replaceChildren();
+        const items = $('items');
+        items.className = view === 'details' ? 'rows' : 'tiles';
+        items.replaceChildren();
         visible
           .filter(inFilter)
           .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status) || b.last_update_unix - a.last_update_unix)
           .forEach((p) => {
-            const a = link(`tile is-${p.status}`, p);
-            a.setAttribute('aria-label', `${p.title}, ${LABEL[p.status]}: ${p.description}`);
-            const meta = el('span', 'meta');
-            meta.append(el('i', `dot s-${p.status}`), ago(p.last_update_unix));
-            meta.title = p.last_update;
-            a.append(icon(p), el('span', 'title', p.title), meta, el('span', 'tip', p.description));
-            tiles.append(a);
+            if (view === 'details') {
+              // Details: the full status text, never cut.
+              const a = link(`row is-${p.status}`, p);
+              a.setAttribute('aria-label', `${p.title}, ${LABEL[p.status]}: ${p.description}`);
+              const body = el('span', 'row-body');
+              const name = el('span', 'name');
+              name.append(el('i', `dot s-${p.status}`), p.title);
+              const when = el('span', 'when', `${LABEL[p.status]} · ${ago(p.last_update_unix)}`);
+              when.title = p.last_update;
+              body.append(name, when, el('span', 'text', p.status_text));
+              a.append(icon(p), body, el('span', 'tip', p.description));
+              items.append(a);
+            } else {
+              const a = link(`tile is-${p.status}`, p);
+              a.setAttribute('aria-label', `${p.title}, ${LABEL[p.status]}: ${p.description}`);
+              const meta = el('span', 'meta');
+              meta.append(el('i', `dot s-${p.status}`), ago(p.last_update_unix));
+              meta.title = p.last_update;
+              a.append(icon(p), el('span', 'title', p.title), meta, el('span', 'tip', p.description));
+              items.append(a);
+            }
           });
-        if (!tiles.children.length && projects.length) tiles.append(el('p', 'empty', 'No project matches.'));
+        if (!items.children.length && projects.length) items.append(el('p', 'empty', 'No project matches.'));
 
         if (generatedUnix) $('stamp').textContent = `Updated ${ago(generatedUnix)}`;
       }
@@ -181,10 +183,15 @@
         }
       }
 
+      $('view').addEventListener('click', () => {
+        view = view === 'details' ? 'icons' : 'details';
+        try { localStorage.setItem('guppy-view', view); } catch (e) {}
+        render();
+      });
       $('q').addEventListener('input', render);
       $('q').addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-          const first = document.querySelector('.tile');
+          const first = document.querySelector('#items a');
           if (first) location.href = first.href;
         }
         if (e.key === 'Escape') {
