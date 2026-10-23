@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-23 00:18:35 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-23 00:19:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -31,12 +31,6 @@ Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), f
 Updated: 2026-10-16 08:16:41 +0200
 
 ## Planned
-
-### [1qr.es](https://github.com/nilovelez/1qres)
-
-Project decided but not started: no code yet. Next step is to define the scope of the QR code generator and the URL shortener.
-
-Updated: 2026-10-23 01:32:22 +0200
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
