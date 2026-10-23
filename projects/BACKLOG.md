@@ -4,6 +4,7 @@ Ideas for new projects, not yet decided. When one is decided, it leaves this lis
 
 | Idea | Summary | Added |
 |---|---|---|
+| YT-DLP GUI | Desktop app that puts a friendly graphical interface on yt-dlp, so people can use it without the command line | 2026-10-23 |
 | WordCamp Badges | Processes Camptix csv export files and generates PDF Badges ready to print | 2026-10-23 |
 | GlotPress Stats | Plugin para WordPress que genera un shortcode para mostrar las estadísticas de traducción de un locale concreto | 2026-10-10 |
 | WPTV Sessions list | Plugin para WordPress que ayuda a crear la información de las sesiones de WordPressTV en la hoja de cálculo de trabajo | 2026-10-10 |
