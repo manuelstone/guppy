@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-23 00:29:36 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-23 07:39:39 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-18 21:52:12 +0200
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
-Planning is done and the roadmap is in docs/PLAN.md. Next step is milestone 0: a first publishable QR code generator, to be deployed on the author's own domain.
+Milestone 0 is done: the QR code generator is live with a website and demo at ladyqr.nilovelez.com. Next is testing on a real 100 MB shared hosting plan, before the URL shortener.
 
-Updated: 2026-10-23 02:28:57 +0200
+Updated: 2026-10-23 09:39:12 +0200
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
