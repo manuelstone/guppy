@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-23 00:19:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-23 00:29:36 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-18 21:52:12 +0200
 
 ## Active
+
+### [LadyQR](https://github.com/nilovelez/ladyqr)
+
+Planning is done and the roadmap is in docs/PLAN.md. Next step is milestone 0: a first publishable QR code generator, to be deployed on the author's own domain.
+
+Updated: 2026-10-23 02:28:57 +0200
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
@@ -29,14 +35,6 @@ Updated: 2026-10-18 21:16:44 +0200
 Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), folding each project's lessons into the skill as they come up.
 
 Updated: 2026-10-16 08:16:41 +0200
-
-## Planned
-
-### [LadyQR](https://github.com/nilovelez/ladyqr)
-
-Project decided but not started: no code yet. Next step is to define the scope of the QR code generator and the URL shortener.
-
-Updated: 2026-10-23 01:32:22 +0200
 
 ## Archived
 
