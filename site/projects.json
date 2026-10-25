@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-25 17:32:24 +0000",
-  "generated_unix": 1792949544,
+  "generated": "2026-10-25 18:07:03 +0000",
+  "generated_unix": 1792951623,
   "projects": [
     {
       "id": "nilovelez-classic-honeypot-for-cf7",
@@ -32,8 +32,8 @@
       "description": "Privacy-oriented QR code generator and URL shortener.",
       "status": "active",
       "status_text": "LadyQR 1.0.0 is ready: QR code generator, optional link shortener and a web installer, in one zip. Next: automated tests and the encoder's alphanumeric mode (M7).",
-      "last_update": "2026-10-24 21:21:18 +0200",
-      "last_update_unix": 1792869678,
+      "last_update": "2026-10-25 19:06:35 +0100",
+      "last_update_unix": 1792951595,
       "url": "https://github.com/nilovelez/ladyqr",
       "status_url": "https://raw.githubusercontent.com/nilovelez/ladyqr/main/guppy/STATUS.md",
       "icon": "https://raw.githubusercontent.com/nilovelez/ladyqr/main/assets/icon-128.png"

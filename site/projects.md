@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-25 17:32:24 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-25 18:07:03 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -16,7 +16,7 @@ Updated: 2026-10-18 21:52:12 +0200
 
 LadyQR 1.0.0 is ready: QR code generator, optional link shortener and a web installer, in one zip. Next: automated tests and the encoder's alphanumeric mode (M7).
 
-Updated: 2026-10-24 21:21:18 +0200
+Updated: 2026-10-25 19:06:35 +0100
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
