@@ -61,7 +61,7 @@ Lives at `guppy/STATUS.json` in each project repo, and as `projects/<id>.json` i
 | `description` | string | What the project is, in one sentence. See [Writing `description`](#writing-description). |
 | `status` | string | One of the [status values](#status-values). |
 | `status_text` | string | Where the project stands now. See [Writing `status_text`](#writing-status_text). |
-| `last_update` | string | When the status last changed, human-readable: `YYYY-MM-DD HH:MM:SS ±HHMM`. |
+| `last_update` | string | When the status was last reported, human-readable: `YYYY-MM-DD HH:MM:SS ±HHMM`. |
 | `last_update_unix` | integer | The same instant as a Unix timestamp, in seconds. |
 | `url` | string | Main link for the project: its repo, or its website if it has no repo. |
 | `status_url` | string or `null` | Raw URL of the project's `guppy/STATUS.md`, or `null` if it has none. |
@@ -95,7 +95,7 @@ The list is closed. Adding a value is a contract change.
 
 ### Updating `last_update`
 
-`last_update` and `last_update_unix` record when the **status** last changed (`status` or `status_text`), not when the file was committed or synced. Sessions that do not change the status do not touch them.
+`last_update` and `last_update_unix` record when the status was last **reported**: the end of the last work session on the project, the one that added the newest entry to the Log in `guppy/STATUS.md`. Every work session updates them, even when `status` stays the same (an `active` project that keeps moving is updated after each session), so a stale date means nobody has worked on the project since. They are not the time the file was committed or synced, and changing only `title`, `description` or `icon` does not touch them.
 
 Both fields must describe the same instant. Take the timestamp once and format it, instead of reading the clock twice:
 

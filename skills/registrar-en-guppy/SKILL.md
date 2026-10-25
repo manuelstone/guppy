@@ -31,7 +31,7 @@ For requests like "change the project's icon in Guppy to <url>", or a new title,
    - `icon`: download the URL first and check that it answers 200 with an image. Tell Nilo if it is not a square 128×128 PNG (the recommended format); use it anyway if he confirms. `null` removes the icon.
    - `title`, `description`: as Nilo says, within the contract's limits.
    - `status`, `status_text`: also update the Status section and the Log of `guppy/STATUS.md`, and take new `last_update` and `last_update_unix` from a single timestamp, as the project's `CLAUDE.md` describes.
-   - Do not touch the dates for any other change: they record status changes only.
+   - Do not touch the dates when only `icon`, `title` or `description` change: they record when the status was last reported.
 4. **Validate** it with Guppy's validator (the commands are in step 5 of the onboarding message) and fix anything it reports.
 5. **Commit and push** to the default branch, with a message like `Update the Guppy icon`.
 6. **Check** that the Guppy sync run in the Actions tab succeeds and, after a couple of minutes, that https://guppy.manolito.com.es/projects.json shows the change (add `?nocache=<unix time>`).
