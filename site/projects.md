@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-25 18:52:13 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-25 19:36:27 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
-LadyQR 1.0.0 is published on GitHub. Next is M7: automated tests, numeric and alphanumeric encoder modes, and QR codes from the shortener.
+LadyQR 1.0.0 is published. M7 is done, not released yet: automated tests, smaller codes with new encoder modes, and a QR code for each short link.
 
-Updated: 2026-10-25 19:51:41 +0100
+Updated: 2026-10-25 20:19:57 +0100
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
