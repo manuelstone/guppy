@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 11:00:22 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 12:02:01 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
-LadyQR 1.1.0 is published on GitHub. The website was redesigned: a welcome with the ladybug and the real editor in the hero, and a section on the link shortener. Next: Nilo's fixes, then the backlog.
+LadyQR 1.2.0 is published on GitHub: the generator page can be customized with an optional theme folder, and the installer has a new look. The website was redesigned. Next: the backlog.
 
-Updated: 2026-10-26 11:59:56 +0100
+Updated: 2026-10-26 13:01:13 +0100
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
