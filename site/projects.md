@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 12:02:01 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 17:03:54 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [nilovelez.com](https://github.com/nilovelez/nilovelez)
+
+Folder structure is in place, with 43 talks and 83 events imported. Next: review the imported data and write the GitHub profile README.
+
+Updated: 2026-10-26 17:58:28 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
