@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 17:03:54 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 17:06:04 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -16,7 +16,7 @@ Updated: 2026-10-25 19:16:01 +0100
 
 Folder structure is in place, with 43 talks and 83 events imported. Next: review the imported data and write the GitHub profile README.
 
-Updated: 2026-10-26 17:58:28 +0100
+Updated: 2026-10-26 18:05:30 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
