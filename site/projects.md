@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 17:06:04 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-26 22:34:16 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
-Folder structure is in place, with 43 talks and 83 events imported. Next: review the imported data and write the GitHub profile README.
+Talks and events are reviewed and the web's content direction is set. Next: the story of PDF Diva for nilovelez.com, then the bios and the GitHub profile README.
 
-Updated: 2026-10-26 18:05:30 +0100
+Updated: 2026-10-26 23:33:31 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
