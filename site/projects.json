@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-26 22:34:16 +0000",
-  "generated_unix": 1793054056,
+  "generated": "2026-10-27 13:59:43 +0000",
+  "generated_unix": 1793109583,
   "projects": [
     {
       "id": "nilovelez-classic-honeypot-for-cf7",
@@ -43,9 +43,9 @@
       "title": "nilovelez.com",
       "description": "Everything related to my personal brand, content creation and social media presence",
       "status": "active",
-      "status_text": "Talks and events are reviewed and the web's content direction is set. Next: the story of PDF Diva for nilovelez.com, then the bios and the GitHub profile README.",
-      "last_update": "2026-10-26 23:33:31 +0100",
-      "last_update_unix": 1793054011,
+      "status_text": "The GitHub profile README is published and talks and events are reviewed. Worked in short sprints; next: the story of PDF Diva for nilovelez.com and the bios.",
+      "last_update": "2026-10-27 14:55:42 +0100",
+      "last_update_unix": 1793109342,
       "url": "https://github.com/nilovelez/nilovelez",
       "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
       "icon": null
