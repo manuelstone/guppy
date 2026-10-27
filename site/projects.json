@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-27 13:59:43 +0000",
-  "generated_unix": 1793109583,
+  "generated": "2026-10-27 22:19:28 +0000",
+  "generated_unix": 1793139568,
   "projects": [
     {
       "id": "nilovelez-classic-honeypot-for-cf7",
@@ -48,7 +48,7 @@
       "last_update_unix": 1793109342,
       "url": "https://github.com/nilovelez/nilovelez",
       "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
-      "icon": null
+      "icon": "https://www.nilovelez.com/wp-content/uploads/2018/07/mcgyver.png"
     },
     {
       "id": "nilovelez-pdf-diva",
