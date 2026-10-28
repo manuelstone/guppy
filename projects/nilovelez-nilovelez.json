@@ -3,9 +3,9 @@
   "title": "nilovelez.com",
   "description": "Everything related to my personal brand, content creation and social media presence",
   "status": "active",
-  "status_text": "The WordCamp Portugal 2026 talk post is published, reviewed and queued on Bluesky, LinkedIn and X via Buffer. The Valencia 2026 post is a draft waiting for its video. Next: older talks.",
-  "last_update": "2026-10-28 13:54:41 +0100",
-  "last_update_unix": 1793192081,
+  "status_text": "Talk posts for WordCamp Portugal 2026 and Galicia 2025 are closed; Valencia 2026 is ready to publish. Photo galleries are now in the repo, linked to their events. Next: gallery posts and older talks.",
+  "last_update": "2026-10-28 18:06:09 +0100",
+  "last_update_unix": 1793207169,
   "url": "https://github.com/nilovelez/nilovelez",
   "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
   "icon": "https://www.nilovelez.com/wp-content/uploads/2018/07/mcgyver.png"
