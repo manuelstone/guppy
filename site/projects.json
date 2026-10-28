@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-28 09:45:34 +0000",
-  "generated_unix": 1793180734,
+  "generated": "2026-10-28 12:50:47 +0000",
+  "generated_unix": 1793191847,
   "projects": [
     {
       "id": "nilovelez-classic-honeypot-for-cf7",
@@ -43,9 +43,9 @@
       "title": "nilovelez.com",
       "description": "Everything related to my personal brand, content creation and social media presence",
       "status": "active",
-      "status_text": "The WordCamp Valencia 2026 talk post is a draft on nilovelez.com with its slides; it goes live with the video. Next: the WordCamp Portugal 2026 post, then older talks.",
-      "last_update": "2026-10-28 10:44:57 +0100",
-      "last_update_unix": 1793180697,
+      "status_text": "The WordCamp Portugal 2026 talk post is published and reviewed. The Valencia 2026 post is a draft waiting for its video. Next: sharing posts via Buffer, then older talks.",
+      "last_update": "2026-10-28 13:50:06 +0100",
+      "last_update_unix": 1793191806,
       "url": "https://github.com/nilovelez/nilovelez",
       "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
       "icon": "https://www.nilovelez.com/wp-content/uploads/2018/07/mcgyver.png"

@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-28 09:45:34 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-28 12:50:47 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
-The WordCamp Valencia 2026 talk post is a draft on nilovelez.com with its slides; it goes live with the video. Next: the WordCamp Portugal 2026 post, then older talks.
+The WordCamp Portugal 2026 talk post is published and reviewed. The Valencia 2026 post is a draft waiting for its video. Next: sharing posts via Buffer, then older talks.
 
-Updated: 2026-10-28 10:44:57 +0100
+Updated: 2026-10-28 13:50:06 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
