@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-28 18:01:22 +0000",
-  "generated_unix": 1793210482,
+  "generated": "2026-10-28 19:05:21 +0000",
+  "generated_unix": 1793214321,
   "projects": [
     {
       "id": "nilovelez-classic-honeypot-for-cf7",
@@ -44,8 +44,8 @@
       "description": "Everything related to my personal brand, content creation and social media presence",
       "status": "active",
       "status_text": "Talk posts for WordCamp Portugal 2026 and Galicia 2025 are closed; Valencia 2026 is ready to publish. Photo galleries are now in the repo, linked to their events. Next: gallery posts and older talks.",
-      "last_update": "2026-10-28 19:00:49 +0100",
-      "last_update_unix": 1793210449,
+      "last_update": "2026-10-28 20:04:49 +0100",
+      "last_update_unix": 1793214289,
       "url": "https://github.com/nilovelez/nilovelez",
       "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
       "icon": "https://www.nilovelez.com/wp-content/uploads/2018/07/mcgyver.png"
