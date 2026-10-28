@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-28 17:06:50 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-28 17:46:10 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -16,7 +16,7 @@ Updated: 2026-10-25 19:16:01 +0100
 
 Talk posts for WordCamp Portugal 2026 and Galicia 2025 are closed; Valencia 2026 is ready to publish. Photo galleries are now in the repo, linked to their events. Next: gallery posts and older talks.
 
-Updated: 2026-10-28 18:06:09 +0100
+Updated: 2026-10-28 18:45:38 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
