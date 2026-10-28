@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-27 22:19:28 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-28 07:51:36 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
-The GitHub profile README is published and talks and events are reviewed. Worked in short sprints; next: the story of PDF Diva for nilovelez.com and the bios.
+Talk posts for WordCamp Valencia and Portugal 2026 are drafted for nilovelez.com. Next: more talk posts, newest first, then the story of PDF Diva and the bios.
 
-Updated: 2026-10-27 14:55:42 +0100
+Updated: 2026-10-28 08:50:53 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 

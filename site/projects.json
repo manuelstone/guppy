@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-27 22:19:28 +0000",
-  "generated_unix": 1793139568,
+  "generated": "2026-10-28 07:51:36 +0000",
+  "generated_unix": 1793173896,
   "projects": [
     {
       "id": "nilovelez-classic-honeypot-for-cf7",
@@ -43,9 +43,9 @@
       "title": "nilovelez.com",
       "description": "Everything related to my personal brand, content creation and social media presence",
       "status": "active",
-      "status_text": "The GitHub profile README is published and talks and events are reviewed. Worked in short sprints; next: the story of PDF Diva for nilovelez.com and the bios.",
-      "last_update": "2026-10-27 14:55:42 +0100",
-      "last_update_unix": 1793109342,
+      "status_text": "Talk posts for WordCamp Valencia and Portugal 2026 are drafted for nilovelez.com. Next: more talk posts, newest first, then the story of PDF Diva and the bios.",
+      "last_update": "2026-10-28 08:50:53 +0100",
+      "last_update_unix": 1793173853,
       "url": "https://github.com/nilovelez/nilovelez",
       "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
       "icon": "https://www.nilovelez.com/wp-content/uploads/2018/07/mcgyver.png"
