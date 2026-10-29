@@ -4,6 +4,7 @@ Ideas for new projects, not yet decided. When one is decided, it leaves this lis
 
 | Idea | Summary | Added |
 |---|---|---|
+| Pirate Box | Captive portal based on a Raspberry Pi | 2026-10-29 |
 | YT-DLP GUI | Desktop app that puts a friendly graphical interface on yt-dlp, so people can use it without the command line | 2026-10-23 |
 | WordCamp Badges | Processes Camptix csv export files and generates PDF Badges ready to print | 2026-10-23 |
 | GlotPress Stats | Plugin para WordPress que genera un shortcode para mostrar las estadísticas de traducción de un locale concreto | 2026-10-10 |
