@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-29 13:50:29 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-29 14:22:59 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
-Project just started and registered in Guppy. Next step is defining what the badge generator produces and how.
+Catalog of all 67 WordPress.org profile badges is built and in review. Next: a JavaScript function that draws a single badge as SVG or PNG.
 
-Updated: 2026-10-29 14:45:02 +0100
+Updated: 2026-10-29 15:15:12 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
