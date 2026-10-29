@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-29 17:23:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-29 18:23:51 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
-The JavaScript library that draws any of the 67 WordPress.org badges as SVG or PNG is done. Next: the plugin skeleton and its admin page.
+A first admin page draws any of the 67 WordPress.org badges as PNG or SVG and downloads it. Next: loading a user's own badges from their profile.
 
-Updated: 2026-10-29 18:22:53 +0100
+Updated: 2026-10-29 19:23:14 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
