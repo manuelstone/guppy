@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-29 13:17:18 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-29 13:50:29 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
+
+Project just started and registered in Guppy. Next step is defining what the badge generator produces and how.
+
+Updated: 2026-10-29 14:45:02 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
