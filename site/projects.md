@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:35:05 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:45:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,12 +11,6 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
-
-### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
-
-Version 1.0.2, tested with WordPress 7.1.4 and Contact Form 7 6.2.4.1, is published in the WordPress.org plugin directory and on GitHub. Next: maintenance and support.
-
-Updated: 2026-10-30 11:34:36 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
@@ -49,6 +43,12 @@ Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), f
 Updated: 2026-10-16 08:16:41 +0200
 
 ## Inactive
+
+### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
+
+Version 1.0.2, tested with WordPress 7.1.4 and Contact Form 7 6.2.4.1, is published on WordPress.org and GitHub. No work in progress; maintenance on demand.
+
+Updated: 2026-10-30 11:45:01 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
