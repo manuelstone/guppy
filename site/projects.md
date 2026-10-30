@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 07:53:24 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 08:38:59 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
+
+Version 0.7 is in production. Starting a view for translation editors listing subprojects with strings waiting for review; next, finding the translate.wordpress.org data source.
+
+Updated: 2026-10-30 09:38:10 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
@@ -47,14 +53,6 @@ Updated: 2026-10-18 21:16:44 +0200
 Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), folding each project's lessons into the skill as they come up.
 
 Updated: 2026-10-16 08:16:41 +0200
-
-## Inactive
-
-### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
-
-Version 0.7 works and provides a shortcode with a locale's translation digest. It is not published in the WordPress.org plugin directory and no work is in progress.
-
-Updated: 2026-10-30 08:52:24 +0100
 
 ## Archived
 
