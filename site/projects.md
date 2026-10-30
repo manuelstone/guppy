@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 09:16:39 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 09:55:42 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
-Version 0.7 is in production. The planned moderator view moved to a separate browser extension project; next steps for the translator views are in the backlog.
+Version 0.8 is published on GitHub with bug fixes for the translator views. The moderator view moved to a separate browser extension project based on GlotDict.
 
-Updated: 2026-10-30 10:14:32 +0100
+Updated: 2026-10-30 10:55:01 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
