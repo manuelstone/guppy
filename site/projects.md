@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 09:55:42 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:12:35 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -17,12 +17,6 @@ Updated: 2026-10-25 19:16:01 +0100
 Version 0.8 is published on GitHub with bug fixes for the translator views. The moderator view moved to a separate browser extension project based on GlotDict.
 
 Updated: 2026-10-30 10:55:01 +0100
-
-### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
-
-Cute WP Badges 1.0.0 is released on GitHub: badge images from a WordPress.org profile, as PNG or SVG grids, saved to the Media Library. Next: Nilo reviews the release.
-
-Updated: 2026-10-30 08:46:31 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
@@ -53,6 +47,14 @@ Updated: 2026-10-18 21:16:44 +0200
 Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), folding each project's lessons into the skill as they come up.
 
 Updated: 2026-10-16 08:16:41 +0200
+
+## Inactive
+
+### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
+
+Cute WP Badges 1.0.0 is released on GitHub: badge images from a WordPress.org profile, as PNG or SVG grids. Work is paused; nothing else is planned.
+
+Updated: 2026-10-30 11:12:00 +0100
 
 ## Archived
 
