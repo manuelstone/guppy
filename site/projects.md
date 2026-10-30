@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 11:31:15 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 11:34:00 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
-Version 0.8 is published on GitHub and the plugin backlog is empty. The moderator view moved to a separate browser extension project based on GlotDict.
+Version 0.8 is published and the plugin, for translators only, is in maintenance. The moderator features move to a separate Chrome extension, to be contributed later to GlotDict.
 
-Updated: 2026-10-30 12:30:30 +0100
+Updated: 2026-10-30 12:33:21 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
