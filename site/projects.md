@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 07:00:22 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 07:39:55 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
-The plugin loads a user's badges from their WordPress.org profile and builds PNG or SVG grids, saved per user. Next: saving images to the Media Library.
+The plugin builds PNG or SVG badge grids from a WordPress.org profile, saves them to the Media Library and exports designs. Next: version 1.0.0 on GitHub.
 
-Updated: 2026-10-30 07:59:47 +0100
+Updated: 2026-10-30 08:39:19 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
