@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:31:32 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:35:05 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-10-25 19:16:01 +0100
 
 ### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
 
-Version 1.0.2, tested with WordPress 7.1.4 and Contact Form 7 6.2.4.1, is released on GitHub. The WordPress.org update follows. Next: maintenance and support.
+Version 1.0.2, tested with WordPress 7.1.4 and Contact Form 7 6.2.4.1, is published in the WordPress.org plugin directory and on GitHub. Next: maintenance and support.
 
-Updated: 2026-10-30 11:30:58 +0100
+Updated: 2026-10-30 11:34:36 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
