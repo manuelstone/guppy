@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:12:35 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 10:31:32 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
+
+Version 1.0.2, tested with WordPress 7.1.4 and Contact Form 7 6.2.4.1, is released on GitHub. The WordPress.org update follows. Next: maintenance and support.
+
+Updated: 2026-10-30 11:30:58 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
@@ -35,12 +41,6 @@ Updated: 2026-10-26 13:01:13 +0100
 Version 1.5 is published in the WordPress.org plugin directory, requiring PHP 8.2 and tested up to WordPress 7.1. No work in progress.
 
 Updated: 2026-10-18 22:24:51 +0200
-
-### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
-
-Version 1.0.1 is published in the WordPress.org plugin directory. Next: maintenance and support.
-
-Updated: 2026-10-18 21:16:44 +0200
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
