@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-31 22:59:56 +0000",
-  "generated_unix": 1793487596,
+  "generated": "2026-10-31 23:03:45 +0000",
+  "generated_unix": 1793487825,
   "projects": [
     {
       "id": "nilovelez-camptix-badge-designer",
       "title": "CampTix Badge Designer",
-      "description": "Processes Camptix csv export files and generates PDF Badges ready to print",
+      "description": "WordPress plugin for WordCamp organizers: design attendee badges in a visual editor and generate a print-ready PDF in the browser from CampTix data.",
       "status": "active",
       "status_text": "Badge editor and in-browser PDF generation work with CampTix CSV exports. Next: a WordCamp sandbox reading CampTix attendees live, then a proposal to WordCamp.org.",
       "last_update": "2026-10-31 23:59:02 +0100",
