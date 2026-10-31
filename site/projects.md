@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-30 11:34:00 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-31 06:56:27 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [Camptix Badge Generator](https://github.com/nilovelez/camptix-badge-generator)
+
+Development is starting: the repository has been created and no code has been written yet. Next step is reading Camptix CSV exports.
+
+Updated: 2026-10-31 07:55:33 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
