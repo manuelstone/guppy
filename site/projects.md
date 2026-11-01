@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-10-31 23:03:45 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-01 12:40:09 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -17,6 +17,12 @@ Updated: 2026-10-25 19:16:01 +0100
 Badge editor and in-browser PDF generation work with CampTix CSV exports. Next: a WordCamp sandbox reading CampTix attendees live, then a proposal to WordCamp.org.
 
 Updated: 2026-10-31 23:59:02 +0100
+
+### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
+
+The skill is in use on real WordPress plugins. Lessons from five projects are now folded in (testing, SVN updates, Tailscale). Next: a plugin started from scratch.
+
+Updated: 2026-10-31 18:53:31 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
@@ -41,12 +47,6 @@ Updated: 2026-10-26 13:01:13 +0100
 Version 1.5 is published in the WordPress.org plugin directory, requiring PHP 8.2 and tested up to WordPress 7.1. No work in progress.
 
 Updated: 2026-10-18 22:24:51 +0200
-
-### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
-
-Version 1 of the skill is merged. Now in use on real plugins (first, Quevedo), folding each project's lessons into the skill as they come up.
-
-Updated: 2026-10-16 08:16:41 +0200
 
 ## Inactive
 
