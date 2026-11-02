@@ -87,11 +87,13 @@ The identifier is also the file name in Guppy (`projects/<id>.json`). For projec
 |---|---|
 | `active` | Being worked on. |
 | `blocked` | Cannot move forward until something outside the project happens. `status_text` says what and who it is waiting for. |
-| `inactive` | Stopped by choice, with no blocker. |
+| `inactive` | Not being worked on right now, and nothing to keep an eye on: paused, or finished and working. This is the normal status of a project that is done. |
 | `planned` | Decided, but work has not started. |
-| `archived` | Closed. No more work is expected. |
+| `archived` | Put away by Nilo: he no longer wants to see it among his projects. |
 
 The list is closed. Adding a value is a contract change.
+
+Only Nilo archives a project. An agent never sets `archived`, nor suggests it, on its own: a project that is finished, released or paused is `inactive`. Archived projects are hidden from Guppy's default views but can still be found.
 
 ### Updating `last_update`
 
@@ -137,7 +139,7 @@ Examples:
 
 - `blocked`: "Waiting for approval from the WordPress.org plugin directory to publish version 1.0."
 - `active`: "Working on the social media marketing strategy. Version 1.5.0 has been submitted to the Microsoft Store for certification."
-- `archived`: "Version 1.0.0 is published. No further work is planned."
+- `inactive`: "Version 1.0.0 is published and works. No further work is planned."
 
 ## Public site
 
