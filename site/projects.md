@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-02 17:45:38 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-02 19:48:48 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
+
+Cute WP Badges 1.0.0 is released on GitHub. A step-by-step user guide with screenshots is written for the README, waiting for Nilo's review.
+
+Updated: 2026-11-02 19:12:46 +0100
 
 ### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
 
@@ -55,12 +61,6 @@ Updated: 2026-10-18 22:24:51 +0200
 Version 1.0.2, tested with WordPress 7.1.4 and Contact Form 7 6.2.4.1, is published on WordPress.org and GitHub. No work in progress; maintenance on demand.
 
 Updated: 2026-10-30 11:45:01 +0100
-
-### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
-
-Cute WP Badges 1.0.0 is released on GitHub: badge images from a WordPress.org profile, as PNG or SVG grids. Work is paused; nothing else is planned.
-
-Updated: 2026-10-30 11:12:00 +0100
 
 ## Archived
 
