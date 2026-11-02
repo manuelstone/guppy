@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>About Guppy</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="../guppy.css">
+</head>
+<body>
+  <main class="page home">
+    <header class="home-head">
+      <img class="mark" src="../icons/icon-192.png" alt="" width="52" height="52">
+      <div>
+        <h1>Guppy</h1>
+        <p>Nilo Vélez's project manager. Every project publishes its own status here.</p>
+      </div>
+    </header>
+
+    <div class="summary" id="summary" aria-label="Projects by status"></div>
+
+    <nav class="links" aria-label="Published pages and files">
+      <a class="link-card primary" href="../">
+        <span class="path">/</span><strong>Dashboard</strong>
+        <span class="what">All projects at a glance. Made for a browser start page.</span>
+      </a>
+      <a class="link-card" href="../projects.md">
+        <span class="path">/projects.md</span><strong>Status in Markdown</strong>
+        <span class="what">For people and AI agents.</span>
+      </a>
+      <a class="link-card" href="../projects.json">
+        <span class="path">/projects.json</span><strong>Status as JSON</strong>
+        <span class="what">For any app that wants the data.</span>
+      </a>
+      <a class="link-card" href="../index.json">
+        <span class="path">/index.json</span><strong>API entry point</strong>
+        <span class="what">Lists every endpoint and its schema.</span>
+      </a>
+      <a class="link-card" href="https://github.com/manuelstone/guppy/blob/main/projects/BACKLOG.md">
+        <span class="path">projects/BACKLOG.md</span><strong>Backlog</strong>
+        <span class="what">Project ideas, not yet decided.</span>
+      </a>
+    </nav>
+
+    <p class="foot">
+      Source and <a href="https://github.com/manuelstone/guppy/blob/main/docs/status-contract.md">status contract</a>
+      on <a href="https://github.com/manuelstone/guppy">github.com/manuelstone/guppy</a>.
+      <span id="updated"></span>
+    </p>
+  </main>
+
+  <script>
+    (() => {
+      const ORDER = ['blocked', 'active', 'planned', 'inactive', 'archived'];
+      const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+      const UNITS = [['year', 31557600], ['month', 2629800], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60], ['second', 1]];
+      const ago = (unix) => {
+        const s = unix - Date.now() / 1000;
+        const [unit, size] = UNITS.find(([, size]) => Math.abs(s) >= size) || UNITS[UNITS.length - 1];
+        return rtf.format(Math.round(s / size), unit);
+      };
+
+      fetch('../projects.json', { cache: 'no-cache' })
+        .then((res) => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+        .then((data) => {
+          const summary = document.getElementById('summary');
+          for (const status of ORDER) {
+            const n = data.projects.filter((p) => p.status === status).length;
+            if (!n) continue;
+            const chip = document.createElement('span');
+            chip.className = `chip s-${status}`;
+            const dot = document.createElement('i');
+            dot.className = 'dot';
+            chip.append(dot, `${n} ${status}`);
+            summary.append(chip);
+          }
+          document.getElementById('updated').textContent = `Data updated ${ago(data.generated_unix)}.`;
+        })
+        .catch(() => {});
+    })();
+  </script>
+</body>
+</html>

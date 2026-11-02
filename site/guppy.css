@@ -1,4 +1,4 @@
-/* Shared styles for Guppy's public pages: the home page (index.html) and the dashboard (projects/index.html).
+/* Shared styles for Guppy's public pages: the dashboard (index.html, the home page) and the about page (about/index.html).
    Layout: the dashboard is a launcher panel. Projects are filtered by status and shown in one of two views,
    switched from the corner: details (rows with the full status text, the default) or icons (tiles). */
 

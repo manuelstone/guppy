@@ -2,7 +2,7 @@
 
 Nilo Vélez's personal project manager. It publishes a public summary and the current status of all his projects, as Markdown for humans and agents and as JSON for any app.
 
-- Dashboard: https://guppy.manolito.com.es/projects/
+- Dashboard: https://guppy.manolito.com.es/
 - Overview: https://guppy.manolito.com.es/projects.md (also as [JSON](https://guppy.manolito.com.es/projects.json); source in [site/](site/))
 - How it works: [AGENTS.md](AGENTS.md)
 - Status data contract: [docs/status-contract.md](docs/status-contract.md)

@@ -2,8 +2,8 @@
   "name": "Guppy",
   "description": "Nilo Vélez's personal project manager.",
   "pages": {
-    "home": "https://guppy.manolito.com.es/",
-    "dashboard": "https://guppy.manolito.com.es/projects/"
+    "dashboard": "https://guppy.manolito.com.es/",
+    "about": "https://guppy.manolito.com.es/about/"
   },
   "endpoints": {
     "projects": {
