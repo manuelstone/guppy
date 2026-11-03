@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-02 20:13:17 +0000",
-  "generated_unix": 1793650397,
+  "generated": "2026-11-03 13:06:43 +0000",
+  "generated_unix": 1793711203,
   "projects": [
     {
       "id": "nilovelez-camptix-badge-designer",
@@ -79,9 +79,9 @@
       "title": "nilovelez.com",
       "description": "Everything related to my personal brand, content creation and social media presence",
       "status": "active",
-      "status_text": "Events are now the hub of the repo: talks, galleries and 31 local communities link to them. Next: the event posts of the photo section, newest first, and the last talk descriptions.",
-      "last_update": "2026-10-29 14:16:40 +0100",
-      "last_update_unix": 1793279800,
+      "status_text": "Talk posts keep going newest first; WordCamp Valencia 2026 is published. Next: the career timeline from the LinkedIn archive, then the event posts of the photo section.",
+      "last_update": "2026-11-03 14:06:14 +0100",
+      "last_update_unix": 1793711174,
       "url": "https://github.com/nilovelez/nilovelez",
       "status_url": "https://raw.githubusercontent.com/nilovelez/nilovelez/main/guppy/STATUS.md",
       "icon": "https://www.nilovelez.com/wp-content/uploads/2018/07/mcgyver.png"

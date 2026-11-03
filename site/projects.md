@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-02 20:13:17 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-03 13:06:43 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [nilovelez.com](https://github.com/nilovelez/nilovelez)
+
+Talk posts keep going newest first; WordCamp Valencia 2026 is published. Next: the career timeline from the LinkedIn archive, then the event posts of the photo section.
+
+Updated: 2026-11-03 14:06:14 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
@@ -35,12 +41,6 @@ Updated: 2026-10-31 18:53:31 +0100
 Version 0.8 is published and the plugin, for translators only, is in maintenance. The moderator features move to a separate Chrome extension, to be contributed later to GlotDict.
 
 Updated: 2026-10-30 12:33:21 +0100
-
-### [nilovelez.com](https://github.com/nilovelez/nilovelez)
-
-Events are now the hub of the repo: talks, galleries and 31 local communities link to them. Next: the event posts of the photo section, newest first, and the last talk descriptions.
-
-Updated: 2026-10-29 14:16:40 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
