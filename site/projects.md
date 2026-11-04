@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 09:03:53 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 09:05:28 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -17,6 +17,12 @@ Updated: 2026-10-25 19:16:01 +0100
 The skill is in use on real WordPress plugins and now also runs on macOS (first setup on a Mac mini M1). Next: a plugin started from scratch, and Studio CLI 2.x tested.
 
 Updated: 2026-11-04 10:03:09 +0100
+
+### [LadyQR](https://github.com/nilovelez/ladyqr)
+
+LadyQR 1.2.0 is published on GitHub. The press kit has its BrandScript and development moved to a Mac with a regenerable test environment. Next: the backlog, such as the encoder as a library.
+
+Updated: 2026-11-04 09:36:14 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
@@ -41,12 +47,6 @@ Updated: 2026-11-02 18:44:27 +0100
 Version 0.8 is published and the plugin, for translators only, is in maintenance. The moderator features move to a separate Chrome extension, to be contributed later to GlotDict.
 
 Updated: 2026-10-30 12:33:21 +0100
-
-### [LadyQR](https://github.com/nilovelez/ladyqr)
-
-LadyQR 1.2.0 is published on GitHub: the generator page can be customized with an optional theme folder, and the installer has a new look. The website was redesigned. Next: the backlog.
-
-Updated: 2026-10-26 13:01:13 +0100
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
