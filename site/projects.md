@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 10:09:10 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 13:33:30 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
+
+Cute WP Badges 1.0.0 is released on GitHub. A step-by-step user guide with screenshots is written for the README, waiting for Nilo's review.
+
+Updated: 2026-11-04 14:32:54 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
@@ -29,12 +35,6 @@ Updated: 2026-11-04 10:03:09 +0100
 LadyQR 1.2.0 is published on GitHub. The press kit has its BrandScript and development moved to a Mac with a regenerable test environment. Next: the backlog, such as the encoder as a library.
 
 Updated: 2026-11-04 09:36:14 +0100
-
-### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
-
-Cute WP Badges 1.0.0 is released on GitHub. A step-by-step user guide with screenshots is written for the README, waiting for Nilo's review.
-
-Updated: 2026-11-02 21:12:43 +0100
 
 ### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
 
