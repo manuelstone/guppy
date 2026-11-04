@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-03 13:06:43 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 09:03:53 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
+
+The skill is in use on real WordPress plugins and now also runs on macOS (first setup on a Mac mini M1). Next: a plugin started from scratch, and Studio CLI 2.x tested.
+
+Updated: 2026-11-04 10:03:09 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
@@ -29,12 +35,6 @@ Updated: 2026-11-02 21:12:43 +0100
 Public demo and user guide are out, and the proposal is open as WordPress/wordcamp.org#2286. Next: a refinement milestone, then integration into WordCamp.org if agreed.
 
 Updated: 2026-11-02 18:44:27 +0100
-
-### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
-
-The skill is in use on real WordPress plugins. Lessons from five projects are now folded in (testing, SVN updates, Tailscale). Next: a plugin started from scratch.
-
-Updated: 2026-10-31 18:53:31 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
