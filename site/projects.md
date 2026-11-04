@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 20:12:12 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 20:28:15 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -8,7 +8,7 @@ Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](ht
 
 Waiting for a partner's Apple Developer ID certificate to sign and notarize the Mac build of PDF Diva 1.5.0, then testing it on a real Mac. Promotion is paused.
 
-Updated: 2026-11-04 21:11:33 +0100
+Updated: 2026-11-04 21:27:45 +0100
 
 ## Active
 
