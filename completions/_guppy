@@ -1,0 +1,15 @@
+#compdef guppy
+# zsh completion for guppy: repo folders and sessions to open, open sessions to close.
+
+_guppy() {
+  local -a names
+  if (( CURRENT == 2 )); then
+    names=( ${(f)"$(guppy __complete names 2>/dev/null)"} close )
+    compadd -a names
+  elif (( CURRENT == 3 )) && [[ $words[2] == close ]]; then
+    names=( ${(f)"$(guppy __complete sessions 2>/dev/null)"} )
+    compadd -a names
+  fi
+}
+
+_guppy "$@"

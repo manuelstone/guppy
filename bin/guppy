@@ -1,0 +1,203 @@
+#!/usr/bin/env zsh
+# guppy: open, list and close one tmux session per repo folder, each running Claude Code.
+#
+#   guppy               list every repo folder and every tmux session
+#   guppy <name>        join the session <name>, or create it in the repo folder <name>
+#   guppy close <name>  close the session <name>
+#
+# Only the repos folder and tmux matter here: a folder does not need to be a Guppy project.
+# The repos folder comes from $GUPPY_REPOS, then from ~/.guppy/config; the first run asks for it.
+
+emulate -L zsh
+setopt extended_glob null_glob
+zmodload zsh/datetime
+
+CONFIG_DIR="$HOME/.guppy"
+CONFIG_FILE="$CONFIG_DIR/config"
+
+die() { print -u2 -- "guppy: $*"; exit 1; }
+
+usage() {
+  print -- "Usage:
+  guppy               List repo folders and tmux sessions
+  guppy <name>        Join the session <name>, or open one in the repo folder <name>
+  guppy close <name>  Close the session <name>"
+}
+
+# The repos folder: $GUPPY_REPOS, then ~/.guppy/config. If neither is set, ask once and save it.
+repos_dir() {
+  local dir=$GUPPY_REPOS
+  if [[ -z $dir && -r $CONFIG_FILE ]]; then
+    local line
+    while IFS= read -r line; do
+      [[ $line == GUPPY_REPOS=* ]] && dir=${line#GUPPY_REPOS=}
+    done < $CONFIG_FILE
+    dir=${(Q)dir}
+  fi
+  if [[ -z $dir ]]; then
+    [[ -t 0 ]] || die "no repos folder set. Run guppy once in a terminal, or set GUPPY_REPOS."
+    # Talk on stderr: stdout is the folder, read by the caller.
+    local answer
+    print -u2 -n -- "Folder that holds your repos [~/repos]: "
+    read -r answer
+    [[ -z $answer ]] && answer='~/repos'
+    dir=${~answer}
+    [[ -d $dir ]] || die "$dir is not a folder."
+    mkdir -p $CONFIG_DIR || die "could not create $CONFIG_DIR."
+    print -r -- "GUPPY_REPOS=${(q)dir}" > $CONFIG_FILE || die "could not write $CONFIG_FILE."
+    print -u2 -- "Saved in $CONFIG_FILE."
+  fi
+  dir=${~dir}
+  [[ -d $dir ]] || die "the repos folder $dir does not exist. Fix it in $CONFIG_FILE or GUPPY_REPOS."
+  print -r -- ${dir%/}
+}
+
+# tmux sessions, one per line: name, windows, created (Unix time), attached clients, path.
+sessions() {
+  tmux list-sessions -F $'#{session_name}\t#{session_windows}\t#{session_created}\t#{session_attached}\t#{session_path}' 2>/dev/null
+}
+
+has_session() { tmux has-session -t "=$1" 2>/dev/null; }
+
+cmd_list() {
+  local repos
+  repos=$(repos_dir) || exit 1
+  local -A windows created attached spath
+  local name w c a p line
+  for line in ${(f)"$(sessions)"}; do
+    IFS=$'\t' read -r name w c a p <<< $line
+    windows[$name]=$w
+    created[$name]=$(strftime '%b %f %H:%M' $c)
+    (( a > 0 )) && attached[$name]=yes
+    spath[$name]=$p
+  done
+
+  # Every repo folder plus every session, once each, in alphabetical order.
+  local -a folders names
+  folders=( $repos/*(/N:t) )
+  names=( ${(ou)folders} ${(k)windows} )
+  names=( ${(ou)names} )
+
+  local width=4
+  for name in $names; (( ${#name} > width )) && width=${#name}
+
+  local green='' reset=''
+  if [[ -t 1 && -z $NO_COLOR ]]; then green=$'\e[32m'; reset=$'\e[0m'; fi
+
+  printf "  %-${width}s  %-7s  %-12s  %-8s  %s\n" NAME WINDOWS CREATED ATTACHED PATH
+  local mark path_col
+  for name in $names; do
+    path_col=${spath[$name]:-$repos/$name}
+    if (( ${+windows[$name]} )); then
+      printf "%s● %-${width}s%s  %-7s  %-12s  %-8s  %s\n" "$green" "$name" "$reset" \
+        "${windows[$name]}" "${created[$name]}" "${attached[$name]}" "$path_col"
+    else
+      printf "  %-${width}s  %-7s  %-12s  %-8s  %s\n" "$name" '' '' '' "$path_col"
+    fi
+  done
+
+  local n=${#windows}
+  print -- "\n$n open session$( (( n == 1 )) || print -n s ) · ${#folders} repo$( (( ${#folders} == 1 )) || print -n s ) in $repos"
+}
+
+# Claude keeps each folder's conversations in ~/.claude/projects/<path with every
+# non-alphanumeric character turned into a hyphen>.
+has_conversations() {
+  local dir=${1//[^a-zA-Z0-9]/-}
+  local -a files=( $HOME/.claude/projects/$dir/*.jsonl(N) )
+  (( ${#files} > 0 ))
+}
+
+go_to_session() {
+  if [[ -n $TMUX ]]; then
+    tmux switch-client -t "=$1"
+  else
+    tmux attach-session -t "=$1"
+  fi
+}
+
+cmd_open() {
+  local name=$1
+
+  # An open session wins, whether or not it has a repo folder.
+  if has_session $name; then
+    go_to_session $name
+    return
+  fi
+
+  local repos
+  repos=$(repos_dir) || exit 1
+  [[ $name != */* && $name != .* && -d $repos/$name ]] || die "the folder $repos/$name does not exist."
+
+  local dir=${${:-$repos/$name}:A}
+  local claude=${commands[claude]}
+  [[ -n $claude ]] || die "claude is not in the PATH."
+
+  # Ask how to start Claude only when there is a conversation to go back to.
+  local -a cmd=( $claude )
+  if has_conversations $dir; then
+    local key
+    print -n -- "Claude in $name: [c] continue the last conversation, [r] pick one, [n] new? "
+    read -k 1 key
+    [[ $key == $'\n' ]] || print
+    case $key in
+      c|C|$'\n') cmd+=( --continue ) ;;
+      r|R) cmd+=( --resume ) ;;
+      n|N) ;;
+      *) print -- "Cancelled."; return 1 ;;
+    esac
+  fi
+
+  # Claude is the only program in the session: leaving Claude closes it. Ctrl+B, D detaches.
+  if [[ -n $TMUX ]]; then
+    tmux new-session -d -s $name -c $dir -- $cmd || die "could not create the session $name."
+    tmux switch-client -t "=$name"
+  else
+    tmux new-session -s $name -c $dir -- $cmd
+  fi
+}
+
+cmd_close() {
+  local name=$1
+  has_session $name || die "there is no session named $name."
+  tmux kill-session -t "=$name" 2>/dev/null
+  if has_session $name; then
+    die "could not close the session $name."
+  fi
+  print -- "Closed the session $name."
+}
+
+# Used by the zsh completion: one name per line.
+cmd_complete() {
+  case $1 in
+    names)
+      local repos=$(repos_dir 2>/dev/null </dev/null)
+      local -a names=( ${repos:+$repos/*(/N:t)} ${(f)"$(tmux list-sessions -F '#{session_name}' 2>/dev/null)"} )
+      print -rl -- ${(ou)names}
+      ;;
+    sessions)
+      tmux list-sessions -F '#{session_name}' 2>/dev/null
+      ;;
+  esac
+}
+
+command -v tmux >/dev/null || die "tmux is not installed."
+
+case $# in
+  0) cmd_list ;;
+  1)
+    case $1 in
+      -h|--help|help) usage ;;
+      close) die "close needs a session name: guppy close <name>" ;;
+      *) cmd_open $1 ;;
+    esac
+    ;;
+  2)
+    case $1 in
+      close) cmd_close $2 ;;
+      __complete) cmd_complete $2 ;;
+      *) usage >&2; exit 1 ;;
+    esac
+    ;;
+  *) usage >&2; exit 1 ;;
+esac
