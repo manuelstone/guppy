@@ -25,7 +25,7 @@ guppy close <name>  Close the session <name>
 - Tab completes repo folders and sessions, and the open sessions after `close`.
 - The repos folder comes from `GUPPY_REPOS`, or from `~/.guppy/config`. If neither is set, the first run asks for it and saves it there.
 
-Install it from a clone of this repo with `zsh install.sh`. It links `~/.local/bin/guppy` to the script and sets up the completion in `~/.zshrc`. Update it with `git pull`.
+It lives in [cli/](cli/). Install it from a clone of this repo with `zsh cli/install.sh`. It links `~/.local/bin/guppy` to the script and sets up the completion in `~/.zshrc`. Update it with `git pull`.
 
 ## Registering projects
 

@@ -36,9 +36,9 @@ templates/guppy-sync.yml          ← sync workflow to install in each project
 templates/STATUS.md               ← template for the guppy/STATUS.md that lives in each project
 templates/STATUS.json             ← skeleton for the guppy/STATUS.json that lives in each project
 skills/registrar-en-guppy/        ← skill for a project's own session: registers it, or changes its data in Guppy
-bin/guppy                         ← local `guppy` command: one tmux session with Claude Code per repo folder (see README)
-completions/_guppy                ← zsh completion for `guppy`
-install.sh                        ← installs `guppy` from a clone: link in ~/.local/bin, completion in ~/.zshrc
+cli/guppy                         ← local `guppy` command: one tmux session with Claude Code per repo folder (see README)
+cli/completions/_guppy            ← zsh completion for `guppy`
+cli/install.sh                    ← installs `guppy` from a clone: link in ~/.local/bin, completion in ~/.zshrc
 ```
 
 The `guppy` command is independent of the project data: it only reads the local repos folder and tmux, never Guppy's files. When testing it, use a separate tmux server (`TMUX_TMPDIR` pointing to a scratch folder): the real sessions, this one included, live on the default server.
