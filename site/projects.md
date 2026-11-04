@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 09:05:28 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-04 10:09:10 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-10-25 19:16:01 +0100
 
 ## Active
+
+### [nilovelez.com](https://github.com/nilovelez/nilovelez)
+
+Talk posts are published newest first. Next: the career timeline from Nilo's LinkedIn archive, reviewed entry by entry, then the event posts of the photo section.
+
+Updated: 2026-11-04 11:08:19 +0100
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
@@ -23,12 +29,6 @@ Updated: 2026-11-04 10:03:09 +0100
 LadyQR 1.2.0 is published on GitHub. The press kit has its BrandScript and development moved to a Mac with a regenerable test environment. Next: the backlog, such as the encoder as a library.
 
 Updated: 2026-11-04 09:36:14 +0100
-
-### [nilovelez.com](https://github.com/nilovelez/nilovelez)
-
-Talk posts keep going newest first; WordCamp Valencia 2026 is published. Next: the career timeline from the LinkedIn archive, then the event posts of the photo section.
-
-Updated: 2026-11-03 14:06:14 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
