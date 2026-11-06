@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-06 22:34:15 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-06 22:55:55 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-11-04 21:27:45 +0100
 
 ### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
 
-Waiting for the WordCamp.org team in WordPress/wordcamp.org#2286 on publishing the call for testing; all review feedback so far is addressed.
+Call for testing open on the Make WordPress Community blog until 2026-11-20, with feedback in WordPress/wordcamp.org#2286. Next: act on it, then the WordCamp.org integration.
 
-Updated: 2026-11-06 23:33:35 +0100
+Updated: 2026-11-06 23:55:29 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
