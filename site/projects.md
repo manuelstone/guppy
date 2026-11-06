@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-05 20:34:19 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-06 08:08:32 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -11,6 +11,12 @@ Waiting for a partner's Apple Developer ID certificate to sign and notarize the 
 Updated: 2026-11-04 21:27:45 +0100
 
 ## Active
+
+### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
+
+Plugin 0.8, for translators, is in maintenance. Next: direct subproject links on the moderators' Waiting tab, built as a GlotDict feature for a pull request.
+
+Updated: 2026-11-06 09:07:59 +0100
 
 ### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
 
@@ -41,12 +47,6 @@ Updated: 2026-11-04 10:03:09 +0100
 LadyQR 1.2.0 is published on GitHub. The press kit has its BrandScript and development moved to a Mac with a regenerable test environment. Next: the backlog, such as the encoder as a library.
 
 Updated: 2026-11-04 09:36:14 +0100
-
-### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
-
-Version 0.8 is published and the plugin, for translators only, is in maintenance. The moderator features move to a separate Chrome extension, to be contributed later to GlotDict.
-
-Updated: 2026-10-30 12:33:21 +0100
 
 ### [Quevedo](https://github.com/nilovelez/quevedo)
 
