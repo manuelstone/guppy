@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-06 08:08:32 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-06 08:56:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Blocked
 
@@ -14,9 +14,9 @@ Updated: 2026-11-04 21:27:45 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
-Plugin 0.8, for translators, is in maintenance. Next: direct subproject links on the moderators' Waiting tab, built as a GlotDict feature for a pull request.
+Plugin 0.8 is in maintenance. Direct subproject links on the Waiting tab work in a GlotDict fork branch. Next: export the subproject URLs, then a pull request to GlotDict.
 
-Updated: 2026-11-06 09:07:59 +0100
+Updated: 2026-11-06 09:54:35 +0100
 
 ### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
 
