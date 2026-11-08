@@ -1,16 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-07 17:07:42 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-08 09:50:15 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
-## Blocked
+## Active
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
-Waiting for a partner's Apple Developer ID certificate to sign and notarize the Mac build of PDF Diva 1.5.0, then testing it on a real Mac. Promotion is paused.
+PDF Diva 1.5.1 (Electron 45, Electron fuses) is tagged. Next: publish it, then the first Mac build signed and notarized by Desafío Digital.
 
-Updated: 2026-11-04 21:27:45 +0100
-
-## Active
+Updated: 2026-11-08 10:49:40 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
