@@ -1,0 +1,12 @@
+{
+  "id": "nilovelez-live-captions",
+  "title": "Cockatiel",
+  "description": "Minimal Windows desktop app that shows live subtitles from the microphone using the built-in Windows speech recognition engine.",
+  "status": "active",
+  "status_text": "Working prototype: live subtitles, language selection and full-screen mode work on Windows 10/11. Next: further development and a first packaged release.",
+  "last_update": "2026-11-08 12:50:24 +0100",
+  "last_update_unix": 1794138624,
+  "url": "https://github.com/nilovelez/live-captions",
+  "status_url": "https://raw.githubusercontent.com/nilovelez/live-captions/main/guppy/STATUS.md",
+  "icon": "https://raw.githubusercontent.com/nilovelez/live-captions/main/assets/icono.png"
+}
