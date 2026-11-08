@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-08 11:52:34 +0000",
-  "generated_unix": 1794138754,
+  "generated": "2026-11-08 12:10:34 +0000",
+  "generated_unix": 1794139834,
   "projects": [
     {
       "id": "nilovelez-camptix-badge-designer",
@@ -84,7 +84,7 @@
       "last_update_unix": 1794138624,
       "url": "https://github.com/nilovelez/live-captions",
       "status_url": "https://raw.githubusercontent.com/nilovelez/live-captions/main/guppy/STATUS.md",
-      "icon": "https://raw.githubusercontent.com/nilovelez/live-captions/main/assets/icono.png"
+      "icon": "https://raw.githubusercontent.com/nilovelez/live-captions/main/assets/icono-128.png"
     },
     {
       "id": "nilovelez-nilovelez",
