@@ -1,14 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-09 15:13:57 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-09 16:35:51 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
-PDF Diva 1.5.1 is out, with the first Mac build signed and notarized by Desafío Digital; in Microsoft Store certification. Maintenance continues.
+PDF Diva 1.5.1 is out on GitHub and the Microsoft Store, with the first Mac build signed and notarized by Desafío Digital. Maintenance continues.
 
-Updated: 2026-11-09 16:13:01 +0100
+Updated: 2026-11-09 17:35:17 +0100
 
 ### [Cockatiel](https://github.com/nilovelez/live-captions)
 
