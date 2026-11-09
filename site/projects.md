@@ -1,20 +1,20 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-08 12:10:34 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-09 15:13:57 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [PDF Diva](https://github.com/nilovelez/pdf-diva)
+
+PDF Diva 1.5.1 is out, with the first Mac build signed and notarized by Desafío Digital; in Microsoft Store certification. Maintenance continues.
+
+Updated: 2026-11-09 16:13:01 +0100
 
 ### [Cockatiel](https://github.com/nilovelez/live-captions)
 
 Working prototype: live subtitles, language selection and full-screen mode work on Windows 10/11. Next: further development and a first packaged release.
 
 Updated: 2026-11-08 12:50:24 +0100
-
-### [PDF Diva](https://github.com/nilovelez/pdf-diva)
-
-PDF Diva 1.5.1 (Electron 45, Electron fuses) is tagged. Next: publish it, then the first Mac build signed and notarized by Desafío Digital.
-
-Updated: 2026-11-08 10:49:40 +0100
 
 ### [GlotPress Stats](https://github.com/nilovelez/glotpress-stats)
 
