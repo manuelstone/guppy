@@ -1,14 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-12 16:02:17 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-12 16:13:35 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
-PDF Diva 1.5.1 is out; its Linux package now runs on Wayland (Ubuntu 26.04). Next: study a patch to Electron to put each window on its display under Wayland.
+PDF Diva 1.5.1 is out on GitHub and the Microsoft Store; on Linux it now runs on Wayland. Next: study a patch to Electron to put each window on its display under Wayland.
 
-Updated: 2026-11-12 17:01:33 +0100
+Updated: 2026-11-12 17:12:56 +0100
 
 ### [Cockatiel](https://github.com/nilovelez/live-captions)
 
