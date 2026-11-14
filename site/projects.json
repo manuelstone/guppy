@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-12 16:13:35 +0000",
-  "generated_unix": 1794500015,
+  "generated": "2026-11-14 08:30:49 +0000",
+  "generated_unix": 1794645049,
   "projects": [
     {
       "id": "nilovelez-camptix-badge-designer",
@@ -60,6 +60,18 @@
       "last_update_unix": 1794071230,
       "url": "https://github.com/nilovelez/glotpress-stats",
       "status_url": "https://raw.githubusercontent.com/nilovelez/glotpress-stats/master/guppy/STATUS.md",
+      "icon": null
+    },
+    {
+      "id": "nilovelez-intentionally-blank",
+      "title": "Intentionally Blank",
+      "description": "This WordPress theme that does as little as possible, on purpose.",
+      "status": "inactive",
+      "status_text": "Version 3.2 is published in the WordPress.org theme directory and tested up to WordPress 6.9. No further work is planned.",
+      "last_update": "2026-11-14 09:29:42 +0100",
+      "last_update_unix": 1794644982,
+      "url": "https://github.com/nilovelez/intentionally-blank",
+      "status_url": "https://raw.githubusercontent.com/nilovelez/intentionally-blank/master/guppy/STATUS.md",
       "icon": null
     },
     {
