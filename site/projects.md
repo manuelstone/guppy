@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-14 08:32:50 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-14 09:07:40 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
 
@@ -62,9 +62,9 @@ Updated: 2026-10-18 22:24:51 +0200
 
 ### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
 
-Version 3.2 is published in the WordPress.org theme directory and tested up to WordPress 6.9. No further work is planned.
+Version 3.3 is approved in the WordPress.org theme directory and waiting to be deployed. It requires PHP 8.2 and WordPress 6.1 and is tested up to WordPress 7.1.
 
-Updated: 2026-11-14 09:29:42 +0100
+Updated: 2026-11-14 10:07:08 +0100
 
 ### [Classic Honeypot for CF7](https://github.com/nilovelez/classic-honeypot-for-cf7)
 
