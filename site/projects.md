@@ -1,14 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-14 17:32:31 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-14 18:10:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
 
 ### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
 
-Working on version 4.0: block editor styles and Elementor support are done; the theme directory listing comes next. Version 3.3 is awaiting deployment on WordPress.org.
+Version 3.3 is published in the WordPress.org theme directory. Version 4.0 is ready as a GitHub pre-release and will be published there after manual testing.
 
-Updated: 2026-11-14 18:31:57 +0100
+Updated: 2026-11-14 19:09:48 +0100
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
