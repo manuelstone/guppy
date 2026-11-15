@@ -1,8 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-14 18:10:25 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-15 09:38:09 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [nilovelez.com](https://github.com/nilovelez/nilovelez)
+
+Career timeline (17 positions from LinkedIn) is written and reviewed. Next: the event posts of the photo section, newest first, then bio, social accounts and projects.
+
+Updated: 2026-11-15 10:37:32 +0100
 
 ### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
 
@@ -39,12 +45,6 @@ Updated: 2026-11-06 23:55:29 +0100
 Cute WP Badges 1.0.0 is released on GitHub. A step-by-step user guide with screenshots is written for the README, waiting for Nilo's review.
 
 Updated: 2026-11-04 15:57:24 +0100
-
-### [nilovelez.com](https://github.com/nilovelez/nilovelez)
-
-Talk posts are published newest first. Next: the career timeline from Nilo's LinkedIn archive, reviewed entry by entry, then the event posts of the photo section.
-
-Updated: 2026-11-04 11:08:19 +0100
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
