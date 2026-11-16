@@ -1,20 +1,20 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-15 09:38:09 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-16 12:01:36 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
+
+Version 3.3 is live on WordPress.org. Version 4.0 (editor and page builder support) is a GitHub pre-release in testing, then goes to the theme directory.
+
+Updated: 2026-11-16 13:00:57 +0100
 
 ### [nilovelez.com](https://github.com/nilovelez/nilovelez)
 
 Career timeline (17 positions from LinkedIn) is written and reviewed. Next: the event posts of the photo section, newest first, then bio, social accounts and projects.
 
 Updated: 2026-11-15 10:37:32 +0100
-
-### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
-
-Version 3.3 is published in the WordPress.org theme directory. Version 4.0 is ready as a GitHub pre-release and will be published there after manual testing.
-
-Updated: 2026-11-14 19:09:48 +0100
 
 ### [PDF Diva](https://github.com/nilovelez/pdf-diva)
 
