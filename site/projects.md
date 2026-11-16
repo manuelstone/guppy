@@ -1,8 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-16 12:01:36 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-16 22:41:48 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
+
+The skill now uses WordPress Playground for almost every test site, with WP-CLI and Plugin Check, and Studio is optional. Next: themes, and a plugin started from scratch.
+
+Updated: 2026-11-16 23:41:15 +0100
 
 ### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
 
@@ -45,12 +51,6 @@ Updated: 2026-11-06 23:55:29 +0100
 Cute WP Badges 1.0.0 is released on GitHub. A step-by-step user guide with screenshots is written for the README, waiting for Nilo's review.
 
 Updated: 2026-11-04 15:57:24 +0100
-
-### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
-
-The skill is in use on real WordPress plugins and now also runs on macOS (first setup on a Mac mini M1). Next: a plugin started from scratch, and Studio CLI 2.x tested.
-
-Updated: 2026-11-04 10:03:09 +0100
 
 ### [LadyQR](https://github.com/nilovelez/ladyqr)
 
