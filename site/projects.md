@@ -1,14 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-16 22:41:48 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-17 11:26:46 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
-The skill now uses WordPress Playground for almost every test site, with WP-CLI and Plugin Check, and Studio is optional. Next: themes, and a plugin started from scratch.
+The November lessons are folded into the skill, which now uses WordPress Playground for almost every test site. Next: themes, and a plugin started from scratch.
 
-Updated: 2026-11-16 23:41:15 +0100
+Updated: 2026-11-17 12:26:12 +0100
 
 ### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
 
