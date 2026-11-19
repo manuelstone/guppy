@@ -1,8 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-17 23:16:20 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-19 12:10:58 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [Machete](https://github.com/nilovelez/machete)
+
+Version 5.4 (PHP 8.2+, tested up to WordPress 7.1) is ready and about to be published on WordPress.org. Next: a static plugin website at machete.nilovelez.com.
+
+Updated: 2026-11-19 13:09:31 +0100
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
