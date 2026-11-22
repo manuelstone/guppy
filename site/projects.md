@@ -1,20 +1,20 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-19 21:46:12 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-22 14:05:57 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
+
+The skill now covers WordPress themes as well as plugins, with Theme Check; theme releases on WordPress.org are not covered yet. Next: a plugin started from scratch.
+
+Updated: 2026-11-22 15:05:25 +0100
 
 ### [Machete](https://github.com/nilovelez/machete)
 
 Version 5.4 (PHP 8.2+, tested up to WordPress 7.1) is on WordPress.org, and the plugin website is live at machete.nilovelez.com on GitHub Pages. Next: update the Live Preview blueprint.
 
 Updated: 2026-11-19 22:45:43 +0100
-
-### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
-
-The skill now covers WordPress themes as well as plugins, with Theme Check; theme releases on WordPress.org are not covered yet. Next: a plugin started from scratch.
-
-Updated: 2026-11-18 00:15:57 +0100
 
 ### [Intentionally Blank](https://github.com/nilovelez/intentionally-blank)
 
