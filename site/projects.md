@@ -1,6 +1,6 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-22 14:05:57 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-23 13:47:43 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
 
@@ -8,7 +8,7 @@ Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](ht
 
 The skill now covers WordPress themes as well as plugins, with Theme Check; theme releases on WordPress.org are not covered yet. Next: a plugin started from scratch.
 
-Updated: 2026-11-22 15:05:25 +0100
+Updated: 2026-11-23 14:47:21 +0100
 
 ### [Machete](https://github.com/nilovelez/machete)
 
