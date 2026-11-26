@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-23 14:22:02 +0000",
-  "generated_unix": 1795443722,
+  "generated": "2026-11-26 16:33:52 +0000",
+  "generated_unix": 1795710832,
   "projects": [
     {
       "id": "nilovelez-camptix-badge-designer",
       "title": "CampTix Badge Designer",
       "description": "WordPress plugin for WordCamp organizers: design attendee badges in a visual editor and generate a print-ready PDF in the browser from CampTix data.",
       "status": "active",
-      "status_text": "Call for testing open on the Make WordPress Community blog until 2026-11-20, with feedback in WordPress/wordcamp.org#2286. Next: act on it, then the WordCamp.org integration.",
-      "last_update": "2026-11-06 23:55:29 +0100",
-      "last_update_unix": 1794005729,
+      "status_text": "Call for testing closed. WordCamp.org agreed to run it as a standalone plugin from the WordPress.org directory. Next: make it work without CampTix too, before publishing.",
+      "last_update": "2026-11-26 17:33:10 +0100",
+      "last_update_unix": 1795710790,
       "url": "https://github.com/nilovelez/camptix-badge-designer",
       "status_url": "https://raw.githubusercontent.com/nilovelez/camptix-badge-designer/main/guppy/STATUS.md",
       "icon": null

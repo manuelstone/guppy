@@ -1,8 +1,14 @@
 # Projects
 
-Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-23 14:22:02 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
+Status of Nilo Vélez's projects, generated from `projects/*.json` in [Guppy](https://github.com/manuelstone/guppy) on 2026-11-26 16:33:52 +0000. Do not edit by hand. Also available as [projects.json](projects.json).
 
 ## Active
+
+### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
+
+Call for testing closed. WordCamp.org agreed to run it as a standalone plugin from the WordPress.org directory. Next: make it work without CampTix too, before publishing.
+
+Updated: 2026-11-26 17:33:10 +0100
 
 ### [wp-agentic-workflow](https://github.com/nilovelez/wp-agentic-workflow)
 
@@ -45,12 +51,6 @@ Updated: 2026-11-08 12:50:24 +0100
 Plugin 0.8 is in maintenance. Direct subproject links on the Waiting tab work in a GlotDict fork branch. Next: export the subproject URLs, then a pull request to GlotDict.
 
 Updated: 2026-11-07 18:07:10 +0100
-
-### [CampTix Badge Designer](https://github.com/nilovelez/camptix-badge-designer)
-
-Call for testing open on the Make WordPress Community blog until 2026-11-20, with feedback in WordPress/wordcamp.org#2286. Next: act on it, then the WordCamp.org integration.
-
-Updated: 2026-11-06 23:55:29 +0100
 
 ### [Cute WP Badges](https://github.com/nilovelez/cute-wp-badges)
 
